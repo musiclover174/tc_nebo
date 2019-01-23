@@ -1,0 +1,45 @@
+.banner
+  &__car
+    .swiper-slide
+      df(center, flex-start)
+      oh()
+      padding 40px 0
+      min-height 418px
+      &-active ^[0]__img
+        transform scale(1.04)
+  &__img
+    pos absolute
+    t 0
+    l 0
+    min-width 100%
+    min-height 100%
+    z-index -1
+    transform scale(1)
+    will-change transform
+    transition 5s transform linear
+  &__title
+    c white
+    fontify 70px 800 70px
+    max-width 600px
+    ml -3px
+  &__btn
+    mt 30px
+
+.advert
+  mt 82px
+  &__img
+    max-width 100%
+    &_bordered
+      border 2px solid $gblue
+  &__row
+    df()
+    ml -15px
+    mr -15px
+  &__col
+    padding 0 15px
+    &_col4
+      flex 0 0 33.333333%
+      max-width 33.333333%
+    &_col8
+      flex 0 0 66.666667%
+      max-width 66.666667%

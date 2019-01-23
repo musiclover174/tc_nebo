@@ -1,0 +1,43 @@
+include ../bemto/bemto.pug
+
++b('header').header
+  .container
+    +e('section').top
+      +e('aside').top-left
+        +e('p').town Ханты-Мансийск
+        +e('p').time Время работы:
+          time 10:00 - 21:00
+      +e.imgover(href="#")
+        +e.img(src="img/logo.png")
+      +e('aside').top-right
+        +b('ul').socials
+          +e.item
+            +e.href(href="#", target="_blank", data-type="fb")
+          +e.item
+            +e.href(href="https://ok.ru/nebohanty", target="_blank", data-type="od")
+          +e.item
+            +e.href(href="https://vk.com/nebohanty", target="_blank", data-type="vk")
+        +e.actions
+          +e.subs(type="button", data-popup, data-src="#subs") Подписаться
+          +e.search(type="button", data-popup, data-src="#search") Поиск
+
+    +b('nav').menu
+      +e('ul').list
+        +e.item
+          +e.href._sub(href="#") О торговом центре
+          +e('ul').sublist
+            +e.sublist-href(href="#") Статьи
+            +e.sublist-href(href="#") Партнерам
+        +e.item
+          +e.href._active(href="#") Магазины
+        +e.item
+          +e.href(href="#") Новости и акции
+        +e.item
+          +e.href(href="#") Карта ТЦ
+        +e.item
+          +e.href(href="#") Арендаторам
+        +e.item
+          +e.href(href="#") Рекламодателям
+        +e.item
+          +e.href(href="#") Контакты
+

@@ -1,0 +1,78 @@
+include ../bemto/bemto.pug
+
++b('footer').footer
+  .container
+    +e.row
+      +e.col._col3
+        +e.logo(src="img/footer-logo.png")
+        +e('p').copy © ТРК «NEBO, 2018
+        +b('ul').socials
+          +e.item
+            +e.href(href="#", target="_blank", data-type="fb")
+          +e.item
+            +e.href(href="https://ok.ru/nebohanty", target="_blank", data-type="od")
+          +e.item
+            +e.href(href="https://vk.com/nebohanty", target="_blank", data-type="vk")
+      +e.col._col3
+        +e('nav').nav
+          +e('ul').list
+            +e.item
+              +e.item-href(href="#") О торговом центре
+            +e.item
+              +e.item-href(href="#") Магазины
+            +e.item
+              +e.item-href._active(href="#") Новости и акции
+            +e.item
+              +e.item-href(href="#") Карта ТЦ
+      +e.col._col3
+        +e('nav').nav
+          +e('ul').list
+            +e.item
+              +e.item-href(href="#") Арендаторам
+            +e.item
+              +e.item-href(href="#") Рекламодателям
+            +e.item
+              +e.item-href(href="#") Контакты
+      +e.col._col3
+        +e.actions
+          +e.search(type="button", data-popup, data-src="#search") Поиск
+          +e.subs(type="button", data-popup, data-src="#subs") Подписаться
+            span  на новости
+        +e.dextra(href="https://www.dextra.ru/", target="_blank")
+          span dextra
+          | Разработка<br>сайта
+
+.hidden-block
+  .popup__over
+    span.popup__bg.js-popbg
+    +b.popup._search#search
+      +e.close.js-popclose(type="button", title="Закрыть")
+      +e('form').form._search
+        input.popup__search-input(type="text", data-req="req", placeholder="Введите запрос")
+        button.popup__search-sbm(type="submit", title="Найти")
+    +b.popup#subs
+      +e.close.js-popclose(type="button", title="Закрыть")
+      +e('p').title(data-text="Подписка на новости") Подписка на новости
+      +e('p').subtitle Обратите внимание на то, что все поля обязательны для заполнения.
+      +e('form').form
+        .common__row
+          label.common__label Имя
+            span *
+          input.common__input(type="text", data-req="req")
+          span.common__inperror Поле незаполнено или заполнено неверно
+        .common__row
+          label.common__label E-mail
+            span *
+          input.common__input(type="text", data-req="req")
+          span.common__inperror Поле незаполнено или заполнено неверно
+        .common__row
+          .fakecheckbox
+            input(type="checkbox", value="", name="agreement", checked)#agreement.fakecheckbox__truecheck
+            label(for="agreement").fakecheckbox__label Согласен на 
+              a(href="#") обработку персональных данных
+        .common__row
+          button.common__submit.btn(type="submit") Отправить
+    +b.popup#text
+      +e.close.js-popclose(type="button", title="Закрыть")
+      +e('p').title(data-text="Текстовый попап") Текстовый попап
+      +e('p').subtitle Обратите внимание на то, что это текстовый попап для того, чтобы показать, что он вообще есть и им можно пользоваться, не боясь!

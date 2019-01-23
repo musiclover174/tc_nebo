@@ -1,0 +1,36 @@
+.decor
+  pos absolute
+  z-index -1
+  df()
+  opacity .2
+  &_vertical
+    transform rotate(90deg)
+  &__col
+    size 120px 452px
+    flex-grow 1
+    background url('../i/dotter.png') repeat top left
+    & + &
+      ml 40px
+
+.news 
+  .decor
+    t 70px
+    r -370px
+
+.advert 
+  .decor_left
+    t -45px
+    l -251px
+  .decor_right
+    t -45px
+    r -251px
+
+.impressions
+  .decor
+    l 628px
+    t -406px
+
+.contacts
+  .decor
+    b -156px
+    r -285px

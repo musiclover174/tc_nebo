@@ -1,0 +1,41 @@
+.socials
+  df()
+  &__item
+    & + &
+      ml 10px
+  &__href
+    db()
+    pos relative
+    size 24px
+    border 1px solid alpha(#252525, .5)
+    border-radius 50%
+    transition .7s background, .7s border-color
+    &:before
+      content ""
+      pos absolute
+      background-position center
+      background-repeat no-repeat
+      transition .7s filter
+    &[data-type="fb"]:before
+      size 6px 12px
+      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAMCAQAAADrXgSlAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjARYLMiG5WkmxAAAAVklEQVQI15XJoQ2DYAAF4a8vf1JZ0zXYgGEw3QFdyxzdgDFA4hAgMF0CRJtQ2zt1uUu46dSuXgWtB7gXVJg03sWHxYCs2b8+42QT6bOnj/g9/8RsNMMBS6URz3gRX6cAAAAASUVORK5CYII=') no-repeat center
+      t 5px
+      l 8px
+    &[data-type="od"]:before
+      size 8px 13px
+      background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAANCAQAAAA+y+ezAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjARYLICJYp2jYAAAApElEQVQI1y2OsUpCAQBFj2d84NAf5IMGJzcRwtEaXd6Sg0NufoMfobgJ9gF9Q0FLQ4RTS1/wlqAhEgLl3QblzOdwCMGFf8aNRSC4Nu6tjTvFS+NbCK6MlZTAMwBb4ArbxoMDu34YBwRLc2YaWt5T88mIgicKhvhrfLFy7IMx2PHR5qy8ek1OlaPxLpzGLnw3xm/7AUsb49xbY7zBnj8uQ3Dil7N/X7BFPlkQP0oAAAAASUVORK5CYII=')
+      t 4px
+      l 7px
+    &[data-type="vk"]:before
+      size 13px 8px
+      background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAICAQAAACIL71EAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjARYLIQntAKDZAAAAjklEQVQI11XNoWpCAQCF4Y8Jrt5q0QcwWfcIewlFfIXZBysW84JxYS9gt/gCYhG5CC6IFsFbLPMsbKL7T/zhPzVXHjQUKncMlebqnkX08GKl9ETbRQywF32Fo1h6hE/xpVCJrok46/wmmypxEHEUMbr99eTfNlo3+epbxNibiLWi9qdmps623n04OdlZ/ACTCDgSymua5AAAAABJRU5ErkJggg==')
+      t 7px
+      l 4px
+    &:hover
+      bgc black
+      border-color black
+      &:before
+        filter brightness(100%) invert(1)
+
+.header .socials
+  justify-content flex-end

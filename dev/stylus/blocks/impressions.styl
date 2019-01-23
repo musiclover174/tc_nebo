@@ -1,0 +1,51 @@
+.impressions
+  mt 98px
+  &__list
+    df(stretch, space-between)
+    mt 48px
+  &__item
+    pos relative
+    flex-grow 1
+    flex-basis 0
+    text-align center
+    bgc white
+    padding 52px 30px 60px
+    box-shadow 0 3px 34.3px 0.7px rgba(112, 118, 126, 0.15)
+    & + &
+      ml 42px
+    &-imgover
+      h 52px
+      dfv(center, flex-start)
+    &-icon
+      max-height 100%
+    &-title
+      fontify 21px 700 31px
+      mt 23px
+    &-text
+      mt 7px
+      fontify 16px 400 26px
+    &-hrefover
+      pos absolute
+      t calc(100% - 18px)
+      l 0
+      r 0
+      pb 37px
+      opacity 0
+      visibility hidden
+      bgc white
+      box-shadow 0 3px 34.3px 0.7px rgba(112, 118, 126, 0.15)
+      transition .7s opacity, .7s visibility, .7s top
+      &:before
+        content ""
+        pos absolute
+        l 0
+        r 0
+        h 20px
+        bgc white
+        t -20px
+      ^[-1]:hover &
+        opacity 1
+        visibility visible
+        t calc(100% - 12px)
+    &-href
+      padding 0 50px

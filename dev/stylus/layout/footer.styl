@@ -1,0 +1,91 @@
+.footer
+  pos relative
+  z-index 1
+  mt 100px
+  border-top 1px solid $gblue
+  bgc white
+  pt 70px
+  pb 60px
+  &__row
+    df()
+    ml -15px
+    mr -15px
+  &__col
+    padding 0 15px
+    &_col3
+      flex 0 0 25%
+      max-width 25%
+  &__copy
+    margin 30px 0 35px
+    fontify 16px 400 26px
+  &__nav
+    mt -7px
+  &__item
+    & + &
+      mt 19px
+    &-href
+      color black
+      fontify 16px 700 26px
+      border-bottom 1px solid transparent
+      transition .7s border-color
+      &:hover,
+      &_active
+        border-color $red
+  &__actions
+    dfv()
+    mt -4px
+  &__subs
+    pos relative
+    ml 29px
+    mt 27px
+    fontify 16px 400 18px
+    border-bottom 1px dashed $blue
+    transition .7s border
+    &:hover
+      border-color transparent
+    &:before
+      content ""
+      pos absolute
+      l -30px
+      t 1px
+      size 21px 15px
+      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAPCAQAAAChU0zgAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjARYLGBpnOmy9AAAA0ElEQVQoz43QK05DURAG4O8eCAsAw0MXgcSiimAD5WEooYLABsARggWNIShSUZJiUIQmGMICSBNU13AVCfIgeoHb9Pak/7jJl5nJZLU51/bNSyXXdjrryrFdT0m6o+07aDp0ayMBN93Yc5TVosyWew3vE2BHw5sYwIumx8rJ9QIiFK1eJa57+IX/tAqPwDId4u4fLq0ep/Qc6GpZdaJjuwwZfqCcdZfW9F34GOnHcTopMUzFiltzS1O4RfnMwrKWV19JuOLOc3Bm4FNMVt/A+Q/UvkUzYY6ngQAAAABJRU5ErkJggg==') no-repeat center
+  &__search
+    pos relative
+    ml 29px
+    fontify 16px 400 18px
+    border-bottom 1px dashed $blue
+    transition .7s border
+    &:hover
+      border-color transparent
+    &:before
+      content ""
+      pos absolute
+      l -28px
+      t 1px
+      size 16px 17px
+      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAARCAQAAAB+puRPAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjARYLGTsySE2iAAAA+0lEQVQoz3XRP0uCURTH8Y/21FSTYC4hBLo0hkOLhbRVS28hECT3BjdfQFtFQwVOTS2RDYKDS5BNbTmEEoH2BqLJhsenP/b0Xe7l/r7nHA43kQOW7SlKe9Nx5jl87CEJqroCNTtqAl1VXwSoqljVnxR1HGsaOwqFRC7rQWESR2R1FQzCEWUXUzED58rhNank2l9ulCIh4yVGGMlEwtBSjJA2jIS27RhhS/t7i66CQdwWYYeBuqbsr/hWPSqZSXEv6VLKhzkr9p2adeg1GhH9RcWaRSN3TuQ1bHr8KUyz68iGJ4LeVJIPjyvzWor6gf9oWNCynhjHdwg58P4JKR889nOOJ/AAAAAASUVORK5CYII=') no-repeat center
+  &__dextra
+    ib()
+    mt 69px
+    ml 81px
+    pos relative
+    color black
+    font-family Verdana, Geneva, sans-serif
+    fontify 9px 400 14px
+    text-transform uppercase
+    letter-spacing 0.18em
+    span
+      pos absolute
+      t 3px
+      r calc(100% + 11px)
+      bgc $red
+      color white
+      font-family Arial
+      fontify 12px 900 21px
+      text-transform uppercase
+      letter-spacing 0.1em
+      padding 0 4px
+      transition 0.7s background
+    &:hover span
+      background-color $dred

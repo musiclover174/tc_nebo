@@ -1,0 +1,91 @@
+.news
+  pos relative
+  z-index 1
+  mt 40px
+  &:before
+    content ""
+    pos absolute
+    l 0
+    t 47%
+    size 100% 30%
+    bgc $gblue
+  &__titleover
+    pos absolute
+    t 78px
+    l 46px
+    z-index 1
+    max-width 370px
+  &__row
+    df()
+    ml -15px
+    mr -15px
+    &_bottom
+      align-items flex-end
+    & + &
+      mt 30px
+  &__col
+    padding 0 15px
+    &_col3
+      flex 0 0 25%
+      max-width 25%
+    &_col4
+      flex 0 0 33.333333%
+      max-width 33.333333%
+    &_col5
+      flex 0 0 41.666667%
+      max-width 41.666667%
+    &_col8
+      flex 0 0 66.666667%
+      max-width 66.666667%
+  &__item
+    pos relative
+    oh()
+    w 100%
+    pt 70%
+    &_vertical
+      pt calc(95% + 1px)
+    &-img
+      pos absolute
+      l 0
+      t 0
+      size 100%
+      object-fit cover
+      object-position 100% 0
+      font-family 'object-fit: cover;'
+      transition 1.5s transform
+      will-change transform
+      -webkit-backface-visibility hidden
+      transform scale(1.017) translateZ(0)
+    &:hover &-img
+      transform scale(1) translateZ(0)
+    &-href
+      pos absolute
+      l 0
+      b 0
+      padding 28px 72px 28px 30px
+      bgc alpha($blue, .9)
+      transition .7s padding
+      &:hover 
+        &:after
+          opacity 1
+        & ^[0]__item-title
+          border-color white
+      &:after
+        content ""
+        pos absolute
+        r 30px
+        t 50%
+        mt -6px
+        size 23px 12px
+        opacity .4
+        background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAMCAQAAAAjMu5zAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjARYOMDTgeg0zAAAAZElEQVQoz43Quw2AMAwE0AtiBCZgDhPYv8gGFFQpKGlBR4HIp/I51UnvLCuBcGbEXcPg4gOxyfRe5Mn1Tz7vCgr/CpvOSyFwx+x9DgDgwoNJ3W7MXNRjjJmm3l6wwhus8FQx8QLLHeGDPNd41AAAAABJRU5ErkJggg==') no-repeat center right
+        transition .7s opacity
+    &-title
+      c white
+      fontify 16px 700 24px
+      border-bottom 1px solid transparent
+      transition .7s border
+  &__btn
+    w 100%
+    mt 30px
+    text-align center

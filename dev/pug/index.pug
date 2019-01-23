@@ -1,0 +1,258 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+  
+    +b('main').main
+
+      +b('section').banner.h-anim
+        +e.car.swiper-container.js-banner
+          .swiper-wrapper
+            .swiper-slide
+              +e.img(src="img/banner.jpg")
+              .container
+                +e('p').title Скидки до 50% в&nbsp;Oodji
+                +e.btn.btn_white(href="#") Узнать подробности
+            .swiper-slide
+              +e.img(src="img/banner.jpg")
+              .container
+                +e('p').title Одна строка
+                +e.btn.btn._white(href="#") Узнать подробности
+            .swiper-slide
+              +e.img(src="img/banner.jpg")
+              .container
+                +e('p').title Заголовок, где, наверное, даже 3 строки
+                +e.btn.btn._white(href="#") Узнать подробности
+          .swiper-pagination
+          .swiper-buttons
+            .swiper-button-prev
+            .swiper-button-next
+
+      +b('section').news.h-anim
+        .container.container_rel
+          figure.decor
+            span.decor__col
+            span.decor__col
+            span.decor__col
+          +e.titleover
+            p.common__title(data-text="Новости") Новости
+            .common__sub-over
+              p.common__sub 
+                span Будь в курсе событий
+          +e.row._bottom
+            +e.col._col4
+              +e('article').item
+                +e.item-img(src="img/news1.jpg")
+                +e.item-href(href="#")
+                  +e('span').item-title Осенняя обувь в Kari
+            +e.col._col8
+              +e('article').item
+                +e.item-img(src="img/news2.jpg")
+                +e.item-href(href="#")
+                  +e('span').item-title Осенняя коллекция уже в DEICHMANN!
+          +e.row
+            +e.col._col4
+              +e('article').item
+                +e.item-img(src="img/news3.jpg")
+                +e.item-href(href="#")
+                  +e('span').item-title Скидки до 30% в Спортмастере
+            +e.col._col5
+              +e('article').item
+                +e.item-img(src="img/news4.jpg")
+                +e.item-href(href="#")
+                  +e('span').item-title Новое поступление в Levi`s
+            +e.col._col3
+              +e('article').item._vertical
+                +e.item-img(src="img/news5.jpg")
+                +e.item-href(href="#")
+                  +e('span').item-title Зимняя одежда в&nbsp;Oodji для мальчиков
+              +e.btn.btn(href="#") Все новости
+
+      +b('section').about.h-anim
+        .container
+          +e.row
+            +e.col._col5._titleover
+              p.common__title(data-text="О торговом центре") О торговом центре
+              .common__sub-over
+                p.common__sub
+                  span Мы рады приветствовать вас в&nbsp;Торгово-развлекательном центре «NEBO», в мире ярких идей, впечатлений и эмоций!
+            +e.col._col7.imgover
+              +e.place(src="img/place.jpg")
+          +e.row
+            +e.col._col5
+              +e.href(href="#")
+                +e.tomap(src="img/tomap.jpg")
+            +e.col._col7
+              +e.text
+                p ТРЦ «NEBO» открылся осенью 2005 года и сразу стал одним из любимых торговых центров москвичей. ТРЦ создан для тех, кто ценит неординарность, любит делать приятные подарки себе и своим близким, следит за модой и сохраняет свою индивидуальность. Благодаря атмосфере праздника, царящей в торговом центре, к нам хочется возвращаться снова и снова!
+                p В «Фестивале» представлены ведущие российские и европейские бренды мужской и женской одежды, аксессуаров, кожгалантереи, обуви, парфюмерии и косметики, бытовой техники и многое другое.
+                a(href="#") Читать подробнее
+      
+        +b('section').clients.h-anim
+          .container
+            +e.car.swiper-container.js-clients
+              .swiper-wrapper
+                .swiper-slide
+                  +e.img(src="img/clients1.jpg")
+                .swiper-slide
+                  +e.img(src="img/clients2.jpg")
+                .swiper-slide
+                  +e.img(src="img/clients3.jpg")
+                .swiper-slide
+                  +e.img(src="img/clients4.jpg")
+                .swiper-slide
+                  +e.img(src="img/clients2.jpg")
+            .swiper-buttons
+              .swiper-button-prev.swiper-button-prev_red
+              .swiper-button-next.swiper-button-next_red
+
+        +b('section').advert.h-anim
+          .container.container_rel
+            figure.decor.decor_vertical.decor_left
+              span.decor__col
+              span.decor__col
+              span.decor__col
+            figure.decor.decor_vertical.decor_right
+              span.decor__col
+              span.decor__col
+              span.decor__col
+            +e.row
+              +e.col._col4
+                +e.href(href="#")
+                  +e.img(src="img/abanner1.jpg")
+              +e.col._col8
+                +e.href(href="#")
+                  +e.img(src="img/abanner2.jpg")
+
+        +b('section').poster.h-anim
+          .container
+            +e.titleover
+              p.common__title(data-text="Афиша") Афиша
+              .common__sub-over
+                p.common__sub
+                  span Ближайшие события<br>в трк «NEBO»
+            +e.carover
+              +e.car.swiper-container.js-posters
+                .swiper-wrapper
+                  .swiper-slide
+                    +e('article').item
+                      +e(href="#").item-imgover
+                        +e.item-img(src="img/poster1.jpg")
+                      +e.item-content
+                        +e('p').item-date 2 ноября 2018
+                        +e.item-href(href="#") «NEBO» отмечает свой день рождения
+                        +e('p').item-dsc В честь этого события ТРЦ приготовил для своих гостей грандиозный праздник.
+                  .swiper-slide
+                    +e('article').item
+                      +e(href="#").item-imgover
+                        +e.item-img(src="img/poster2.jpg")
+                      +e.item-content
+                        +e('p').item-date 11 сентября 2018
+                        +e.item-href(href="#") Межсезонная распродажа в магазине «Бегемотик»
+                        +e('p').item-dsc Межсезонная распродажа в магазине «Бегемотик» началась! Cкидки до -30%. Будь первой, кто получит любимые вещи с приятной скидкой!
+                  .swiper-slide
+                    +e('article').item
+                      +e(href="#").item-imgover
+                        +e.item-img(src="img/poster3.jpg")
+                      +e.item-content
+                        +e('p').item-date 11 сентября 2018
+                        +e.item-href(href="#") Скидки в магазине X-Fit!
+                        +e('p').item-dsc Приглашаем Вас посетить магазин фитнес -гаджетов «X-fit»
+              .swiper-buttons
+                .swiper-button-prev
+                .swiper-button-next
+
+        +b('section').impressions.h-anim
+          .container.container_rel
+            figure.decor
+              span.decor__col
+              span.decor__col
+              span.decor__col
+            p.common__title(data-text="Яркие впечатления") Яркие впечатления
+            +e('ul').list
+              +e.item
+                +e.item-imgover
+                  +e.item-icon(src="img/impressions1.png")
+                +e('p').item-title Обновить гардероб
+                +e('p').item-text Приезжайте всей семьей, обновки найдутся каждому
+                +e.item-hrefover
+                  +e.item-href.btn(href="#") Перейти
+              +e.item
+                +e.item-imgover
+                  +e.item-icon(src="img/impressions2.png")
+                +e('p').item-title Заняться спортом
+                +e('p').item-text Выберите классную форму и&nbsp;удобную обувь
+                +e.item-hrefover
+                  +e.item-href.btn(href="#") Перейти
+              +e.item
+                +e.item-imgover
+                  +e.item-icon(src="img/impressions3.png")
+                +e('p').item-title Выпить кофе
+                +e('p').item-text Выберите свой любимый напиток и десерт
+                +e.item-hrefover
+                  +e.item-href.btn(href="#") Перейти
+              +e.item
+                +e.item-imgover
+                  +e.item-icon(src="img/impressions4.png")
+                +e('p').item-title Пообедать
+                +e('p').item-text Устали? Подкрепитесь в&nbsp;кафе на фудкорте
+                +e.item-hrefover
+                  +e.item-href.btn(href="#") Перейти
+
+        +b('section').advert.h-anim
+          .container
+            +e.img._bordered(src="img/abanner3.jpg")
+
+        +b('section').gallery.h-anim
+          .container
+            p.common__title Фотогалерея
+          +e.car.swiper-container.js-gallery
+            .swiper-wrapper
+              .swiper-slide
+                +e.img(src="img/gallery1.jpg")
+              .swiper-slide
+                +e.img(src="img/gallery2.jpg")
+              .swiper-slide
+                +e.img(src="img/gallery3.jpg")
+              .swiper-slide
+                +e.img(src="img/gallery4.jpg")
+              .swiper-slide
+                +e.img(src="img/gallery5.jpg")
+              .swiper-slide
+                +e.img(src="img/gallery3.jpg")
+          +e.hrefover
+            +e.toall.btn(href="#") Смотреть все фото
+
+        +b('section').contacts.h-anim
+          .container.container_rel
+            figure.decor
+              span.decor__col
+              span.decor__col
+              span.decor__col
+            +e.row
+              +e.col._col7
+                script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+                +e.map#map.js-contacts-map(data-coords="61.006342, 69.040282")
+              +e.col._col5
+                p.common__title(data-text="Контакты") Контакты
+                +e('section').info
+                  +e.info-row
+                    +e('p').info-title Адрес
+                    +e('p').info-text Ханты-Мансийск, ул. Мира, д. 45
+                  +e.info-row
+                    +e('p').info-title Телефоны
+                    +e.info-text(href="tel:+73432221234") +7 (343) 222-12-34<br>
+                    +e.info-text(href="tel:+73433451234") +7 (343) 345-12-34
+                  +e.info-row
+                    +e('p').info-title E-mail
+                    +e.info-text(href="mailto:reklama@adva.ru") reklama@adva.ru
+                  +e.info-row
+                    +e('p').info-title Остались вопросы?
+                    +e.button.btn(type="button", data-fancybox, data-source="#callback") Связаться с нами
+
+    include layout/__scripts
+    include layout/__footer

@@ -1,0 +1,64 @@
+.poster
+  mt 96px
+  pb 100px
+  &__titleover
+    df()
+    mb 41px
+    .common__sub-over
+      ml 26px
+      mt -5px
+  &__carover
+    pos relative
+    z-index 1
+    .swiper-slide
+      df(stretch, flex-start)
+      h auto
+    &:before
+      content ""
+      pos absolute
+      z-index -1
+      size 100vw calc(100% - 6px)
+      bgc $orange
+      t 107px
+      l 50%
+      transform translateX(-50%)
+  &__item
+    h 100%
+    bgc white
+    &-imgover
+      pos relative
+      db()
+      pt 63%
+      overflow hidden
+    &-img
+      pos absolute
+      l 0
+      t 0
+      size 100%
+      object-fit cover
+      font-family 'object-fit: cover;'
+      transition .7s transform
+      will-change transform
+      -webkit-backface-visibility hidden
+      transform scale(1.017) translateZ(0)
+    &:hover &-img
+      transform scale(1) translateZ(0)
+    &-content
+      padding 27px 35px
+    &-date
+      c #252525
+      fontify 12px 400 12px
+      mb 10px
+      text-transform uppercase
+      letter-spacing .1em
+    &-href
+      color black
+      fontify 21px 700 28px
+      border-bottom 1px solid $blue
+      transition .7s border
+      &:hover
+        border-color transparent
+    &-dsc
+      color black
+      fontify 16px 400 26px
+      mt 16px

@@ -1,0 +1,40 @@
+.contacts
+  mt 100px
+  &__row
+    df(stretch, flex-start)
+    ml -15px
+    mr -15px
+  &__col
+    padding 0 15px
+    &_col5
+      pt 3px
+      flex 0 0 41.666667%
+      max-width 41.666667%
+    &_col7
+      flex 0 0 58.333333%
+      max-width 58.333333%
+  &__map
+    w calc(100% - 30px)
+    h 100%
+  &__info
+    pb 35px
+    mt 28px
+    &-row
+      & + &
+        mt 25px
+    &-title
+      fontify 21px 700 26px
+      mb 6px
+    &-text
+      color black
+      fontify 16px 400 26px
+      & + &
+        mt 5px
+      &[href^="mailto"]
+        border-bottom 1px solid $blue
+        transition .7s border-color
+        &:hover
+          border-color transparent
+  &__button
+    mt 7px
+    padding 0 40px
