@@ -4,8 +4,13 @@
     df(stretch, flex-start)
     ml -15px
     mr -15px
+    @media $desktopMedium
+      ml -10px
+      mr -10px
   &__col
     padding 0 15px
+    @media $desktopMedium
+      padding 0 10px
     &_col5
       pt 3px
       flex 0 0 41.666667%
@@ -16,6 +21,8 @@
   &__map
     w calc(100% - 30px)
     h 100%
+    @media $desktopMedium
+      w calc(100% - 20px)
   &__info
     pb 35px
     mt 28px

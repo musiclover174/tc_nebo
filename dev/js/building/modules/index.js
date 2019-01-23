@@ -40,7 +40,7 @@ export default class Index {
   }
 
   clientsInit() {
-    const bannerCarousel = new Swiper(this.clientsClass, {
+    const clientsCarousel = new Swiper(this.clientsClass, {
       speed: 700,
       slidesPerView: 4,
       spaceBetween: 0,
@@ -53,7 +53,7 @@ export default class Index {
   }
 
   postersInit() {
-    const bannerCarousel = new Swiper(this.postersClass, {
+    const posterCarousel = new Swiper(this.postersClass, {
       speed: 700,
       slidesPerView: 3,
       spaceBetween: 30,
@@ -62,11 +62,17 @@ export default class Index {
         nextEl: `${this.postersClass} ~ .swiper-buttons .swiper-button-next`,
         prevEl: `${this.postersClass} ~ .swiper-buttons .swiper-button-prev`,
       },
+      breakpoints: {
+        1270: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        }
+      },
     });
   }
 
   galleryInit() {
-    const bannerCarousel = new Swiper(this.galleryClass, {
+    const galleryCarousel = new Swiper(this.galleryClass, {
       speed: 700,
       slidesPerView: 'auto',
       spaceBetween: -30,

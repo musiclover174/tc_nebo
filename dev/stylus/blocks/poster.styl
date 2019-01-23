@@ -1,6 +1,8 @@
 .poster
   mt 96px
   pb 100px
+  @media $desktopTablet
+    pb 60px
   &__titleover
     df()
     mb 41px
@@ -22,6 +24,8 @@
       t 107px
       l 50%
       transform translateX(-50%)
+      @media $desktopTablet
+        h calc(100% - 47px)
   &__item
     h 100%
     bgc white

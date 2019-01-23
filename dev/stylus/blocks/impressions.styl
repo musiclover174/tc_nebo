@@ -11,8 +11,12 @@
     bgc white
     padding 52px 30px 60px
     box-shadow 0 3px 34.3px 0.7px rgba(112, 118, 126, 0.15)
+    @media $desktopMedium
+      padding 42px 20px 50px
     & + &
       ml 42px
+      @media $desktopMedium
+        ml 20px
     &-imgover
       h 52px
       dfv(center, flex-start)

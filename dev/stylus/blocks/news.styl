@@ -15,16 +15,25 @@
     l 46px
     z-index 1
     max-width 370px
+    @media $desktopMedium
+      l 30px
   &__row
     df()
     ml -15px
     mr -15px
+    @media $desktopMedium
+      ml -10px
+      mr -10px
     &_bottom
       align-items flex-end
     & + &
       mt 30px
+      @media $desktopMedium
+        mt 20px
   &__col
     padding 0 15px
+    @media $desktopMedium
+      padding 0 10px
     &_col3
       flex 0 0 25%
       max-width 25%
@@ -42,8 +51,14 @@
     oh()
     w 100%
     pt 70%
+    @media $desktopMax
+      pt 71%
+    @media $desktopMedium
+      pt 80%
     &_vertical
       pt calc(95% + 1px)
+      @media $desktopMedium
+        pt 102%
     &-img
       pos absolute
       l 0
@@ -65,6 +80,8 @@
       padding 28px 72px 28px 30px
       bgc alpha($blue, .9)
       transition .7s padding
+      @media $desktopMedium
+        padding 18px 52px 18px 20px
       &:hover 
         &:after
           opacity 1
@@ -80,6 +97,8 @@
         opacity .4
         background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAMCAQAAAAjMu5zAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjARYOMDTgeg0zAAAAZElEQVQoz43Quw2AMAwE0AtiBCZgDhPYv8gGFFQpKGlBR4HIp/I51UnvLCuBcGbEXcPg4gOxyfRe5Mn1Tz7vCgr/CpvOSyFwx+x9DgDgwoNJ3W7MXNRjjJmm3l6wwhus8FQx8QLLHeGDPNd41AAAAABJRU5ErkJggg==') no-repeat center right
         transition .7s opacity
+        @media $desktopMedium
+          r 15px
     &-title
       c white
       fontify 16px 700 24px

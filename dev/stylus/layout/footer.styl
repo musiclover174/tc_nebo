@@ -6,12 +6,19 @@
   bgc white
   pt 70px
   pb 60px
+  &__logo
+    max-width 90%
   &__row
     df()
     ml -15px
     mr -15px
+    @media $desktopMedium
+      ml -10px
+      mr -10px
   &__col
     padding 0 15px
+    @media $desktopMedium
+      padding 0 10px
     &_col3
       flex 0 0 25%
       max-width 25%
@@ -41,6 +48,9 @@
     fontify 16px 400 18px
     border-bottom 1px dashed $blue
     transition .7s border
+    span
+      @media $desktopMedium
+        dn()
     &:hover
       border-color transparent
     &:before

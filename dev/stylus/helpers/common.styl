@@ -10,6 +10,11 @@ body
   max-width 1270px
   padding 0 50px
   margin 0 auto
+  @media $desktopMax
+    max-width 1180px
+  @media $desktopMedium
+    max-width 900px
+    padding 0 30px
   &_rel
     pos relative
 .main
@@ -129,6 +134,8 @@ div[class\^="table-scroller"]
     c $blue
     fontify 72px 700 72px
     mb 5px
+    @media $desktopMedium
+      fontify 50px 700 50px
     &:before
       content attr(data-text)
       pos absolute
@@ -145,6 +152,8 @@ div[class\^="table-scroller"]
     fontify 21px 700 31px
     l 13px
     border-bottom 14px solid $shadow
+    @media $desktopMedium
+      fontify 18px 700 28px
     &-over
       max-width 370px
     span
