@@ -70,7 +70,6 @@ export default class Index {
       speed: 700,
       slidesPerView: 'auto',
       spaceBetween: -30,
-      centeredSlides: true,
       loop: true,
       loopedSlides: qsAll(`${this.galleryClass} .swiper-slide`).length,
     });
