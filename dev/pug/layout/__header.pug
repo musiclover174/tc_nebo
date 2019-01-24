@@ -10,6 +10,10 @@ include ../bemto/bemto.pug
       +e.imgover(href="#")
         +e.img(src="img/logo.png")
       +e('aside').top-right
+        +b.burger
+          +e(type="button", aria-label="открыть мобильное меню").button.js-burger
+            +e('span').button-meat
+          +e('span').shadow
         +b('ul').socials
           +e.item
             +e.href(href="#", target="_blank", data-type="fb")
@@ -26,8 +30,10 @@ include ../bemto/bemto.pug
         +e.item
           +e.href._sub(href="#") О торговом центре
           +e('ul').sublist
-            +e.sublist-href(href="#") Статьи
-            +e.sublist-href(href="#") Партнерам
+            +e.sublist-item
+              +e.sublist-href(href="#") Статьи
+            +e.sublist-item
+              +e.sublist-href(href="#") Партнерам
         +e.item
           +e.href._active(href="#") Магазины
         +e.item
@@ -40,4 +46,14 @@ include ../bemto/bemto.pug
           +e.href(href="#") Рекламодателям
         +e.item
           +e.href(href="#") Контакты
+        +e.item._tablet
+          +e.href(href="#") Поиск
+        +e.item._tablet
+          +b('ul').socials
+            +e.item
+              +e.href(href="#", target="_blank", data-type="fb")
+            +e.item
+              +e.href(href="https://ok.ru/nebohanty", target="_blank", data-type="od")
+            +e.item
+              +e.href(href="https://vk.com/nebohanty", target="_blank", data-type="vk")
 

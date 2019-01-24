@@ -4,6 +4,7 @@
     df()
     ml -15px
     mr -15px
+    flex-wrap wrap
     @media $desktopMedium
       ml -10px
       mr -10px
@@ -15,18 +16,24 @@
     padding 0 15px
     @media $desktopMedium
       padding 0 10px
-    &_col3
-      flex 0 0 25%
-      max-width 25%
-    &_col4
-      flex 0 0 33.333333%
-      max-width 33.333333%
-    &_col5
-      flex 0 0 41.666667%
-      max-width 41.666667%
-    &_col8
-      flex 0 0 66.666667%
-      max-width 66.666667%
+    @media $LandscapeMedium
+      flex 0 0 100%
+      max-width 100%
+      &_mapover
+        dn()
+    @media $LandscapeMediumMin
+      &_col3
+        flex 0 0 25%
+        max-width 25%
+      &_col4
+        flex 0 0 33.333333%
+        max-width 33.333333%
+      &_col5
+        flex 0 0 41.666667%
+        max-width 41.666667%
+      &_col7
+        flex 0 0 58.333333%
+        max-width 58.333333%
   &__text
     mt -8px
   &__place

@@ -4,11 +4,12 @@
   @media $desktopTablet
     pb 60px
   &__titleover
-    df()
-    mb 41px
-    .common__sub-over
-      ml 26px
-      mt -5px
+    @media $LandscapeMediumMin
+      df()
+      mb 41px
+      .common__sub-over
+        ml 26px
+        mt -5px
   &__carover
     pos relative
     z-index 1

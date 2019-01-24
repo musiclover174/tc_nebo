@@ -49,6 +49,14 @@ export default class Index {
         nextEl: `${this.clientsClass} ~ .swiper-buttons .swiper-button-next`,
         prevEl: `${this.clientsClass} ~ .swiper-buttons .swiper-button-prev`,
       },
+      breakpoints: {
+        650: {
+          slidesPerView: 2,
+        },
+        900: {
+          slidesPerView: 3,
+        },
+      },
     });
   }
 
@@ -66,7 +74,11 @@ export default class Index {
         1270: {
           slidesPerView: 2,
           spaceBetween: 20,
-        }
+        },
+        650: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
       },
     });
   }
@@ -78,6 +90,11 @@ export default class Index {
       spaceBetween: -30,
       loop: true,
       loopedSlides: qsAll(`${this.galleryClass} .swiper-slide`).length,
+      breakpoints: {
+        500: {
+          slidesPerView: 1,
+        },
+      },
     });
   }
 }

@@ -5,6 +5,11 @@
       oh()
       padding 40px 0
       min-height 418px
+      @media $LandscapeMedium
+        min-height 360px
+      @media $LandscapeMin
+        min-height 320px
+        padding 60px 0
       &-active ^[0]__img
         transform scale(1.04) translateX(-50%)
     .swiper-buttons
@@ -27,11 +32,16 @@
     ml -3px
     @media $desktopMedium
       fontify 50px 700 50px
+    @media $LandscapeMedium
+      fontify 40px 700 40px
   &__btn
     mt 30px
 
 .advert
   mt 82px
+  dn()
+  @media $PortraitMediumFrom
+    db()
   &__img
     max-width 100%
     &_bordered

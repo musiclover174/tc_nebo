@@ -3,20 +3,54 @@
   z-index 2
   pb 27px
   pt 57px
+  @media $LandscapeMedium
+    pt 27px
+  @media $LandscapeMin
+    pos fixed
+    t 0
+    l 0
+    w 100%
+    bgc white
+    padding 15px 0
+    z-index 5
+    box-shadow 0 3px 34.3px 0.7px rgba(112,118,126,0.15)
   &__top
     df(flex-start, space-between)
     mb 41px
+    @media $LandscapeMedium
+      mb 0
+      align-items center
+    @media $LandscapeMin
+      align-items center
     &-left,
     &-right
       w 270px
+      @media $LandscapeMedium
+        w 170px
     &-left
       mr 30px
       mt -5px
+      @media $LandscapeMedium
+        mt -3px
+      @media $LandscapeMin
+        dn()
     &-right
       ml 30px
       mt -6px
+      @media $LandscapeMedium
+        text-align right
+        mt 0
+        .socials
+          dn()
+      @media $LandscapeMin
+        ml 0
+  &__imgover
+    @media $LandscapeMin
+      max-height 30px
   &__img
     max-width 100%
+    @media $LandscapeMin
+      max-height 30px
   &__town
     ib()
     color black
@@ -35,6 +69,8 @@
     fontify 16px 400 19px
     ml 29px
     mt 30px
+    @media $LandscapeMedium
+      mt 18px
     &:before
       content ""
       pos absolute
@@ -46,6 +82,9 @@
     font-size 0
     text-align right
     mt 25px
+    @media $LandscapeMedium
+      mt 13px
+      dn()
   &__subs
     pos relative
     ib()
@@ -53,6 +92,8 @@
     fontify 16px 400 18px
     border-bottom 1px dashed $blue
     transition .7s border
+    @media $LandscapeMedium
+      dn()
     &:hover
       border-color transparent
     &:before
@@ -69,6 +110,8 @@
     fontify 16px 400 18px
     border-bottom 1px dashed $blue
     transition .7s border
+    @media $LandscapeMedium
+      dn()
     &:hover
       border-color transparent
     &:before

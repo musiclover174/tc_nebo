@@ -15,9 +15,16 @@ body
   @media $desktopMedium
     max-width 900px
     padding 0 30px
+  @media $LandscapeMedium
+    max-width 100%
+  @media $PortraitMedium
+    padding 0 15px
   &_rel
     pos relative
 .main
+  oh()
+  @media $LandscapeMin
+    pt 60px
   h1:not([class])
     color $red
     fontify 96px 700 100px
@@ -136,6 +143,8 @@ div[class\^="table-scroller"]
     mb 5px
     @media $desktopMedium
       fontify 50px 700 50px
+    @media $PortraitMedium
+      fontify 40px 700 40px
     &:before
       content attr(data-text)
       pos absolute
@@ -156,10 +165,16 @@ div[class\^="table-scroller"]
       fontify 18px 700 28px
     &-over
       max-width 370px
+      @media $LandscapeMedium
+        mb 35px
+        max-width 100%
     span
       pos relative
       l -10px
       t 10px
+      @media $LandscapeMedium
+        br
+          dn()
   &__label
     db()
     c #a3a3a3

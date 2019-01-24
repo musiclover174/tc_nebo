@@ -2,6 +2,8 @@
   pos relative
   z-index 1
   mt 40px
+  @media $LandscapeMedium
+    mt 70px
   &:before
     content ""
     pos absolute
@@ -9,6 +11,8 @@
     t 47%
     size 100% 30%
     bgc $gblue
+    @media $LandscapeMedium
+      dn()
   &__titleover
     pos absolute
     t 78px
@@ -17,8 +21,14 @@
     max-width 370px
     @media $desktopMedium
       l 30px
+    @media $LandscapeMedium
+      pos relative
+      l auto
+      t auto
+      max-width none
   &__row
     df()
+    flex-wrap wrap
     ml -15px
     mr -15px
     @media $desktopMedium
@@ -26,6 +36,8 @@
       mr -10px
     &_bottom
       align-items flex-end
+      @media $LandscapeMedium
+        align-items flex-start
     & + &
       mt 30px
       @media $desktopMedium
@@ -34,18 +46,32 @@
     padding 0 15px
     @media $desktopMedium
       padding 0 10px
-    &_col3
-      flex 0 0 25%
-      max-width 25%
-    &_col4
-      flex 0 0 33.333333%
-      max-width 33.333333%
-    &_col5
-      flex 0 0 41.666667%
-      max-width 41.666667%
-    &_col8
-      flex 0 0 66.666667%
-      max-width 66.666667%
+    @media $PortraitMedium
+      flex 0 0 100%
+      max-width 100%
+      & + &
+        mt 20px
+    @media (max-width:950px) and (min-width:501px)
+      flex 0 0 50%
+      max-width 50%
+    @media $LandscapeMedium
+      &_towide
+        flex 0 0 100%
+        max-width 100%
+        text-align center
+    @media $LandscapeMediumMin
+      &_col3
+        flex 0 0 25%
+        max-width 25%
+      &_col4
+        flex 0 0 33.333333%
+        max-width 33.333333%
+      &_col5
+        flex 0 0 41.666667%
+        max-width 41.666667%
+      &_col8
+        flex 0 0 66.666667%
+        max-width 66.666667%
   &__item
     pos relative
     oh()
@@ -59,6 +85,8 @@
       pt calc(95% + 1px)
       @media $desktopMedium
         pt 102%
+      @media $LandscapeMedium
+        dn()
     &-img
       pos absolute
       l 0
@@ -105,6 +133,7 @@
       border-bottom 1px solid transparent
       transition .7s border
   &__btn
-    w 100%
     mt 30px
-    text-align center
+    @media $LandscapeMediumMin
+      w 100%
+      text-align center

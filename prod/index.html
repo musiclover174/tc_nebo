@@ -24,6 +24,10 @@
                                                                         </p>
                                                       </aside><a class="header__imgover" href="#"><img class="header__img" src="img/logo.png" alt="" role="presentation"/></a>
                                                       <aside class="header__top-right">
+                                                                    <div class="burger">
+                                                                                      <button class="burger__button js-burger" type="button" aria-label="открыть мобильное меню"><span class="burger__button-meat"></span>
+                                                                                      </button><span class="burger__shadow"></span>
+                                                                    </div>
                                                                     <ul class="socials">
                                                                                       <li class="socials__item"><a class="socials__href" href="#" target="_blank" data-type="fb"></a>
                                                                                       </li>
@@ -43,7 +47,11 @@
                                 <nav class="menu">
                                                   <ul class="menu__list">
                                                                     <li class="menu__item"><a class="menu__href menu__href_sub" href="#">О торговом центре</a>
-                                                                                      <ul class="menu__sublist"><li><a class="menu__sublist-href" href="#">Статьи</a></li><li><a class="menu__sublist-href" href="#">Партнерам</a></li>
+                                                                                      <ul class="menu__sublist">
+                                                                                                        <li class="menu__sublist-item"><a class="menu__sublist-href" href="#">Статьи</a>
+                                                                                                        </li>
+                                                                                                        <li class="menu__sublist-item"><a class="menu__sublist-href" href="#">Партнерам</a>
+                                                                                                        </li>
                                                                                       </ul>
                                                                     </li>
                                                                     <li class="menu__item"><a class="menu__href menu__href_active" href="#">Магазины</a>
@@ -57,6 +65,18 @@
                                                                     <li class="menu__item"><a class="menu__href" href="#">Рекламодателям</a>
                                                                     </li>
                                                                     <li class="menu__item"><a class="menu__href" href="#">Контакты</a>
+                                                                    </li>
+                                                                    <li class="menu__item menu__item_tablet"><a class="menu__href" href="#">Поиск</a>
+                                                                    </li>
+                                                                    <li class="menu__item menu__item_tablet">
+                                                                                  <ul class="socials">
+                                                                                                    <li class="socials__item"><a class="socials__href" href="#" target="_blank" data-type="fb"></a>
+                                                                                                    </li>
+                                                                                                    <li class="socials__item"><a class="socials__href" href="https://ok.ru/nebohanty" target="_blank" data-type="od"></a>
+                                                                                                    </li>
+                                                                                                    <li class="socials__item"><a class="socials__href" href="https://vk.com/nebohanty" target="_blank" data-type="vk"></a>
+                                                                                                    </li>
+                                                                                  </ul>
                                                                     </li>
                                                   </ul>
                                 </nav>
@@ -120,7 +140,7 @@
                                                                                       <article class="news__item"><img class="news__item-img" src="img/news4.jpg" alt="" role="presentation"/><a class="news__item-href" href="#"><span class="news__item-title">Новое поступление в Levi`s</span></a>
                                                                                       </article>
                                                                     </div>
-                                                                    <div class="news__col news__col_col3">
+                                                                    <div class="news__col news__col_col3 news__col_towide">
                                                                                       <article class="news__item news__item_vertical"><img class="news__item-img" src="img/news5.jpg" alt="" role="presentation"/><a class="news__item-href" href="#"><span class="news__item-title">Зимняя одежда в&nbsp;Oodji для мальчиков</span></a>
                                                                                       </article><a class="news__btn btn" href="#">Все новости</a>
                                                                     </div>
@@ -136,11 +156,11 @@
                                                                         <p class="common__sub"><span>Мы рады приветствовать вас в&nbsp;Торгово-развлекательном центре «NEBO», в мире ярких идей, впечатлений и эмоций!</span></p>
                                                                       </div>
                                                                     </div>
-                                                                    <div class="about__col about__col_col7 imgover"><img class="about__place" src="img/place.jpg" alt="" role="presentation"/>
+                                                                    <div class="about__col about__col_col7 about__col_imgover"><img class="about__place" src="img/place.jpg" alt="" role="presentation"/>
                                                                     </div>
                                                   </div>
                                                   <div class="about__row">
-                                                                    <div class="about__col about__col_col5"><a class="about__href" href="#"><img class="about__tomap" src="img/tomap.jpg" alt="" role="presentation"/></a>
+                                                                    <div class="about__col about__col_col5 about__col_mapover"><a class="about__href" href="#"><img class="about__tomap" src="img/tomap.jpg" alt="" role="presentation"/></a>
                                                                     </div>
                                                                     <div class="about__col about__col_col7">
                                                                                       <div class="about__text">
@@ -189,7 +209,7 @@
                                                                 <div class="poster__titleover">
                                                                   <p class="common__title" data-text="Афиша">Афиша</p>
                                                                   <div class="common__sub-over">
-                                                                    <p class="common__sub"><span>Ближайшие события<br>в трк «NEBO»</span></p>
+                                                                    <p class="common__sub"><span>Ближайшие события <br>в трк «NEBO»</span></p>
                                                                   </div>
                                                                 </div>
                                                                 <div class="poster__carover">
@@ -366,7 +386,7 @@
                                                                                       </li>
                                                                     </ul>
                                                       </div>
-                                                      <div class="footer__col footer__col_col3">
+                                                      <div class="footer__col footer__col_col3 footer__col_menu">
                                                                         <nav class="footer__nav">
                                                                                           <ul class="footer__list">
                                                                                                             <li class="footer__item"><a class="footer__item-href" href="#">О торговом центре</a>
@@ -380,7 +400,7 @@
                                                                                           </ul>
                                                                         </nav>
                                                       </div>
-                                                      <div class="footer__col footer__col_col3">
+                                                      <div class="footer__col footer__col_col3 footer__col_menu">
                                                                         <nav class="footer__nav">
                                                                                           <ul class="footer__list">
                                                                                                             <li class="footer__item"><a class="footer__item-href" href="#">Арендаторам</a>

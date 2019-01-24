@@ -7,11 +7,11 @@ import {
 import Index from './modules/index';
 import Popup from './modules/popup';
 import Forms from './modules/forms';
-// import Burger from './modules/burger';
+import Burger from './modules/burger';
 import Contacts from './modules/contacts';
 
 document.addEventListener('DOMContentLoaded', () => {
-  // const burger = new Burger();
+  const burger = new Burger();
 
   if (qs('.js-banner')) {
     const index = new Index(

@@ -2,31 +2,47 @@
   mt 100px
   &__row
     df(stretch, flex-start)
+    flex-wrap wrap
     ml -15px
     mr -15px
     @media $desktopMedium
       ml -10px
       mr -10px
+    @media $LandscapeMedium
+      flex-direction column-reverse
   &__col
     padding 0 15px
     @media $desktopMedium
       padding 0 10px
-    &_col5
-      pt 3px
-      flex 0 0 41.666667%
-      max-width 41.666667%
-    &_col7
-      flex 0 0 58.333333%
-      max-width 58.333333%
+    @media $LandscapeMediumMin
+      &_col5
+        pt 3px
+        flex 0 0 41.666667%
+        max-width 41.666667%
+      &_col7
+        flex 0 0 58.333333%
+        max-width 58.333333%
   &__map
     w calc(100% - 30px)
     h 100%
     @media $desktopMedium
       w calc(100% - 20px)
+    @media $LandscapeMedium
+      w 100%
+      h 400px
+      max-height 60vh
   &__info
     pb 35px
     mt 28px
+    @media (max-width:950px) and (min-width:501px)
+      df()
+      flex-wrap wrap
     &-row
+      @media (max-width:950px) and (min-width:501px)
+        w calc(50% - 10px)
+        pr 15px
+        & + &:nth-child(2)
+          mt 0
       & + &
         mt 25px
     &-title
@@ -44,4 +60,5 @@
           border-color transparent
   &__button
     mt 7px
-    padding 0 40px
+    @media $LandscapeMinFrom
+      padding 0 40px
