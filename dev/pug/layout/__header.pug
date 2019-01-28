@@ -37,7 +37,12 @@ include ../bemto/bemto.pug
         +e.item
           +e.href._active(href="#") Магазины
         +e.item
-          +e.href(href="#") Новости и акции
+          +e.href._sub(href="#") Новости
+          +e('ul').sublist
+            +e.sublist-item
+              +e.sublist-href(href="#") Акции
+            +e.sublist-item
+              +e.sublist-href(href="#") События
         +e.item
           +e.href(href="#") Карта ТЦ
         +e.item

@@ -43,6 +43,16 @@
       letter-spacing 0
     @media $LandscapeMedium
       fontify 24px 600 32px
+    @media $LandscapeMediumMin
+      &_sub
+        mr 17px
+        &:before
+          content ""
+          pos absolute
+          t 6px
+          r -17px
+          size 9px 6px
+          background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAGCAMAAAAmGUT3AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAQlBMVEXxFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3///+/okeeAAAAFHRSTlMACJIWILwdk9TfuxXTNt4e3N0cuY8yBY4AAAABYktHRBXl2PmjAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4wEcDgkOR0+5XwAAADRJREFUCNcdxlsCgBAURdGdV1cp4cx/rGF9LQ7ngRATp8wTsi7uInuy3sqqdmY/tR3oY+UHM+QB1DjcfuYAAAAASUVORK5CYII=') no-repeat center
     &:after
       content ""
       pos absolute
