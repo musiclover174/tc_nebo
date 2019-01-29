@@ -27,8 +27,14 @@ body:not(.index) .main
 .main
   oh()
   pb 100px
+  &_index
+    @media $LandscapeMin
+      pt 60px
+  &:not(&_index)
+    pt 70px
+    @media $LandscapeMin
+      pt 110px
   @media $LandscapeMin
-    pt 60px
     pb 60px
   h1:not([class])
     color $blue
@@ -145,7 +151,6 @@ div[class\^="table-scroller"]
     w 100%
 
 .text
-  mt 70px
   padding 62px 100px
   box-shadow 0 3px 43px rgba(0, 0, 0, 0.08)
   @media $desktopMax
@@ -153,7 +158,7 @@ div[class\^="table-scroller"]
   @media $LandscapeMedium
     box-shadow none
     mt 0
-    padding 52px 0 0
+    padding 0
   &__content
     max-width 770px
     margin 0 auto

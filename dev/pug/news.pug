@@ -1,0 +1,101 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+  
+    +b('main').main
+      .container
+        +b('section').breadcrumbs
+          +e.href(href="#") Главная
+          +e('span').delim
+        h1 Новости
+        +b('section').news.js-news
+          +e.row
+            +e.col._col12
+              +e('article').item._large
+                +e.item-imgover(href="#")
+                  +e.item-img(src="img/news0.jpg")
+                +e.item-content
+                  +e('p').item-date 11 сентября 2018
+                  +e.item-href(href="#") Полумарафон превзойди себя в Ханты-Манийске
+                  +e('p').item-text Этой осенью в Ханты-Мансийске пройдет четвертый массовый югорский легкоатлетический полумарафон «Превзойди себя».
+            +e.col._col4
+              +e('article').item
+                +e.item-imgover(href="#")
+                  +e.item-img(src="img/news1.jpg")
+                +e.item-content
+                  +e('p').item-date 2 ноября 2018
+                  +e.item-href(href="#") «NEBO» отмечает свой день рождения
+                  +e('p').item-text В честь этого события ТРЦ приготовил для своих гостей грандиозный праздник.
+            +e.col._col4
+              +e('article').item
+                +e.item-imgover(href="#")
+                  +e.item-img(src="img/news2.jpg")
+                +e.item-content
+                  +e('p').item-date 11 сентября 2018
+                  +e.item-href(href="#") Межсезонная распродажа в магазине «Бегемотик»
+                  +e('p').item-text Межсезонная распродажа в магазине «Бегемотик» началась! Cкидки до -30%. Будь первой, кто получит любимые вещи с приятной скидкой!
+            +e.col._col4
+              +e('article').item
+                +e.item-imgover(href="#")
+                  +e.item-img(src="img/news3.jpg")
+                +e.item-content
+                  +e('p').item-date 11 сентября 2018
+                  +e.item-href(href="#") Скидки в магазине X-Fit!
+                  +e('p').item-text Приглашаем Вас посетить магазин фитнес -гаджетов «X-fit»
+            +e.col._col4
+              +e('article').item
+                +e.item-imgover(href="#")
+                  +e.item-img(src="img/news4.jpg")
+                +e.item-content
+                  +e('p').item-date 2 ноября 2018
+                  +e.item-href(href="#") «NEBO» отмечает свой день рождения
+                  +e('p').item-text В честь этого события ТРЦ приготовил для своих гостей грандиозный праздник.
+            +e.col._col4
+              +e('article').item
+                +e.item-imgover(href="#")
+                  +e.item-img(src="img/news5.jpg")
+                +e.item-content
+                  +e('p').item-date 11 сентября 2018
+                  +e.item-href(href="#") Межсезонная распродажа в магазине «Бегемотик»
+                  +e('p').item-text Межсезонная распродажа в магазине «Бегемотик» началась! Cкидки до -30%. Будь первой, кто получит любимые вещи с приятной скидкой!
+            +e.col._col4
+              +e('article').item
+                +e.item-imgover(href="#")
+                  +e.item-img(src="img/news6.jpg")
+                +e.item-content
+                  +e('p').item-date 11 сентября 2018
+                  +e.item-href(href="#") Скидки в магазине X-Fit!
+                  +e('p').item-text Приглашаем Вас посетить магазин фитнес -гаджетов «X-fit»
+            +e.col._col4
+              +e('article').item
+                +e.item-imgover(href="#")
+                  +e.item-img(src="img/news7.jpg")
+                +e.item-content
+                  +e('p').item-date 2 ноября 2018
+                  +e.item-href(href="#") «NEBO» отмечает свой день рождения
+                  +e('p').item-text В честь этого события ТРЦ приготовил для своих гостей грандиозный праздник.
+            +e.col._col4
+              +e('article').item
+                +e.item-imgover(href="#")
+                  +e.item-img(src="img/news8.jpg")
+                +e.item-content
+                  +e('p').item-date 11 сентября 2018
+                  +e.item-href(href="#") Межсезонная распродажа в магазине «Бегемотик»
+                  +e('p').item-text Межсезонная распродажа в магазине «Бегемотик» началась! Cкидки до -30%. Будь первой, кто получит любимые вещи с приятной скидкой!
+            +e.col._col4
+              +e('article').item
+                +e.item-imgover(href="#")
+                  +e.item-img(src="img/news9.jpg")
+                +e.item-content
+                  +e('p').item-date 11 сентября 2018
+                  +e.item-href(href="#") Скидки в магазине X-Fit!
+                  +e('p').item-text Приглашаем Вас посетить магазин фитнес -гаджетов «X-fit»
+          +e('section').moreover
+            +e.more.btn(href="#").js-news-more Показать больше
+    include layout/__footer
+    include layout/__scripts

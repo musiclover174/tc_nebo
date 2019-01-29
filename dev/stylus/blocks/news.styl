@@ -1,18 +1,23 @@
 .news
   pos relative
   z-index 1
-  mt 40px
-  @media $LandscapeMedium
-    mt 70px
-  &:before
-    content ""
-    pos absolute
-    l 0
-    t 47%
-    size 100% 30%
-    bgc $gblue
+  &:not(&_index)
+    mb -62px
+    @media $PortraitMedium
+      mb -30px
+  &_index
+    mt 40px
     @media $LandscapeMedium
-      dn()
+      mt 70px
+    &:before
+      content ""
+      pos absolute
+      l 0
+      t 47%
+      size 100% 30%
+      bgc $gblue
+      @media $LandscapeMedium
+        dn()
   &__titleover
     pos absolute
     t 78px
@@ -72,21 +77,58 @@
       &_col8
         flex 0 0 66.666667%
         max-width 66.666667%
+      &_col12
+        flex 0 0 100%
+        max-width 100%
   &__item
     pos relative
-    oh()
     w 100%
-    pt 70%
-    @media $desktopMax
-      pt 71%
-    @media $desktopMedium
-      pt 80%
+    &:not(&_index)
+      mb 62px
+      @media $PortraitMedium
+        mb 30px
+    &_index
+      oh()
+      pt 70%
+      @media $desktopMax
+        pt 71%
+      @media $desktopMedium
+        pt 80%
     &_vertical
       pt calc(95% + 1px)
       @media $desktopMedium
         pt 102%
       @media $LandscapeMedium
         dn()
+    &_large
+      @media (min-width:951px)
+        df()
+        padding 30px
+        box-shadow 0 3px 34.3px 0.7px rgba(112, 118, 126, 0.15)
+        & ^[0]__item
+          &-href
+            fontify 32px 700 38px
+          &-date
+            mb 17px
+      @media (min-width:1271px)
+        mt 43px
+        & ^[0]__item
+          &-imgover
+            mt -65px
+            mr 57px
+            w calc(50% + 30px)
+            pt 33%
+          &-content
+            w calc(50% - 95px)
+      @media (min-width:951px) and (max-width:1270px)
+        & ^[0]__item
+          &-imgover
+            mt 0
+            mr 40px
+            w calc(50% - 20px)
+            pt 41%
+          &-content
+            w calc(50% - 20px)
     &-img
       pos absolute
       l 0
@@ -101,7 +143,7 @@
       transform scale(1.017) translateZ(0)
     &:hover &-img
       transform scale(1) translateZ(0)
-    &-href
+    &-titleover
       pos absolute
       l 0
       b 0
@@ -132,6 +174,44 @@
       fontify 16px 700 24px
       border-bottom 1px solid transparent
       transition .7s border
+    &-imgover
+      db()
+      w 100%
+      pt 63%
+      overflow hidden
+      pos relative
+    &-content
+      max-width 80%
+      mt 29px
+    &-date
+      c #252525
+      fontify 10px 400 10px
+      text-transform uppercase
+      letter-spacing .1em
+      mb 12px
+    &-href
+      c black
+      fontify 21px 700 28px
+      border-bottom 1px solid $blue
+      transition .7s border
+      &:hover
+        border-color transparent
+    &-text
+      fontify 16px 400 26px
+      mt 15px
+  &__moreover
+    text-align center
+    mb 70px
+    @media $PortraitMedium
+      mt 30px
+  &__more:after
+    content ""
+    display inline-block
+    vertical-align top
+    size 8px 6px
+    ml 10px
+    mt 15px
+    background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAQAAABUDBdwAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAR0IACWGAOCBAAAASUlEQVQI1wXBwQ2CUABAsUc0XJ3kL8EYOpdOoBxZg3W4khhrm2EzS2abkR2ri8kbe4YDL08cRrI4wWlRkruvn4d0rWrt1tSn6g+zHDxaJdAq8wAAAABJRU5ErkJggg==') no-repeat center
   &__btn
     mt 30px
     @media $LandscapeMediumMin

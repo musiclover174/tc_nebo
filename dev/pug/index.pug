@@ -7,7 +7,7 @@ html
   body.index
     include layout/__header
   
-    +b('main').main
+    +b('main').main._index
 
       +b('section').banner.h-anim
         +e.car.swiper-container.js-banner
@@ -32,7 +32,7 @@ html
             .swiper-button-prev
             .swiper-button-next
 
-      +b('section').news.h-anim
+      +b('section').news._index.h-anim
         .container.container_rel
           figure.decor
             span.decor__col
@@ -45,30 +45,30 @@ html
                 span Будь в курсе событий
           +e.row._bottom
             +e.col._col4
-              +e('article').item
+              +e('article').item._index
                 +e.item-img(src="img/news1.jpg")
-                +e.item-href(href="#")
+                +e.item-titleover(href="#")
                   +e('span').item-title Осенняя обувь в Kari
             +e.col._col8
-              +e('article').item
+              +e('article').item._index
                 +e.item-img(src="img/news2.jpg")
-                +e.item-href(href="#")
+                +e.item-titleover(href="#")
                   +e('span').item-title Осенняя коллекция уже в DEICHMANN!
           +e.row
             +e.col._col4
-              +e('article').item
+              +e('article').item._index
                 +e.item-img(src="img/news3.jpg")
-                +e.item-href(href="#")
+                +e.item-titleover(href="#")
                   +e('span').item-title Скидки до 30% в Спортмастере
             +e.col._col5
-              +e('article').item
+              +e('article').item._index
                 +e.item-img(src="img/news4.jpg")
-                +e.item-href(href="#")
+                +e.item-titleover(href="#")
                   +e('span').item-title Новое поступление в Levi`s
             +e.col._col3._towide
-              +e('article').item._vertical
+              +e('article').item._index._vertical
                 +e.item-img(src="img/news5.jpg")
-                +e.item-href(href="#")
+                +e.item-titleover(href="#")
                   +e('span').item-title Зимняя одежда в&nbsp;Oodji для мальчиков
               +e.btn.btn(href="#") Все новости
 
