@@ -179,6 +179,8 @@ div[class\^="table-scroller"]
       fontify 50px 700 50px
     @media $PortraitMedium
       fontify 40px 700 40px
+    &_small
+      fontify 48px 700 50px
     &:before
       content attr(data-text)
       pos absolute
@@ -209,6 +211,14 @@ div[class\^="table-scroller"]
       @media $LandscapeMedium
         br
           dn()
+  &__back
+    ib()
+    c black
+    fontify 16px 700 20px
+    border-bottom 1px solid $blue
+    transition .7s border
+    &:hover
+      border-color transparent
   &__label
     db()
     c #a3a3a3

@@ -5,6 +5,12 @@
     mb -62px
     @media $PortraitMedium
       mb -30px
+  &_others
+    mt 50px
+    @media $LandscapeMedium
+      mt 70px
+    .common__title
+      mb 30px
   &_index
     mt 40px
     @media $LandscapeMedium
@@ -199,6 +205,62 @@
     &-text
       fontify 16px 400 26px
       mt 15px
+  &__elem
+    &-date
+      ib()
+      margin 12px 0 11px 29px
+      pos relative
+      c darkgrey
+      fontify 10px 400 10px
+      text-transform uppercase
+      letter-spacing .1em
+      &:before
+        content ""
+        pos absolute
+        l -29px
+        t -5px
+        size 19px 17px
+        background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAARCAQAAACVkV9MAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAR0IKDco5D9jAAAAgklEQVQoz82Q0Q2DMBBD350yBJmFLgAD3AKVulUGIHOwCoItwgckKgIi+ld/+cP2+SwDACQA5MxMAJQMqTFHR8DznXlgMTHzVgJWXHJmJhhB8Yx3SXu7Ee+eNAN3cF8gFpnUZAbEpDxC7nY773brhxf+NU2ZedXHiC2LDD2Bpqqb+KyTpyQOzd2mqwAAAABJRU5ErkJggg==') no-repeat center
+    &-carover
+      pos relative
+      margin 33px 0
+      .swiper-slide
+        background-size cover
+        background-position center
+        background-repeat no-repeat
+      .swiper-buttons
+        max-width 900px
+        t 225px
+        @media $desktopMedium
+          max-width 767px
+        @media $desktopTablet
+          t 0
+    &-car
+      .swiper-slide
+        h 450px
+        .glightbox
+          db()
+          h 100%
+    &-thumbs
+      mt 18px
+      .swiper-slide
+        cursor pointer
+        pt 13%
+        @media $LandscapeMin
+          pt 18%
+        @media $PortraitMedium
+          pt 28%
+        &:before
+          content ""
+          pos absolute
+          l 0
+          r 0
+          b 0
+          t 0
+          border 2px solid transparent
+          transition .7s border
+        &-thumb-active:before
+          border-color $red
   &__moreover
     text-align center
     mb 70px

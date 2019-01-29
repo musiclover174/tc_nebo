@@ -9,6 +9,7 @@ import Popup from './modules/popup';
 import Forms from './modules/forms';
 import Burger from './modules/burger';
 import Contacts from './modules/contacts';
+import News from './modules/news';
 
 document.addEventListener('DOMContentLoaded', () => {
   const burger = new Burger();
@@ -36,8 +37,18 @@ document.addEventListener('DOMContentLoaded', () => {
     window.popup = new Popup('[data-popup]');
   }
 
+  if (qs('.js-news-car')) {
+    const news = new News('.js-news-car', '.js-news-thumbs');
+  }
+
   if (qs('form')) {
     const forms = new Forms();
+  }
+
+  if (qs('.glightbox')) {
+    const lightBox = GLightbox({
+      selector: 'glightbox',
+    });
   }
 
   let eventScroll;

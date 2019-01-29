@@ -1,0 +1,91 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+  
+    +b('main').main
+      .container
+        +b('section').text
+          +b('section').breadcrumbs
+            +e.href(href="#") Главная
+            +e('span').delim
+            +e.href(href="#") Новости
+            +e('span').delim
+          h1 Беговой клуб Adidas<br>Run club
+          +e.content
+            p.news__elem-date 2 ноября 2018
+            p Приглашаем вас присоединиться к Adidas Runclub Авиапарк. Сбор в магазине adidas Performance (3 этаж). Тренировки проходят два раза в неделю на Ходынском бульваре и в парке Берёзовая Роща,а общая физическая подготовка – в помещении Академии adidas.
+            p Тренер: Роман Малых. МС по легкой атлетике, победитель и призер чемпионата России, призер первенства России по юниорам и молодежи на дистанциях 800 и 1500 метров, многократный победитель и призер первенств Москвы в беге на 800, 1500 и 3000 метров. Участник международных соревнований. Личные результаты: 800м - 1.50.1, 1500м - 3.45.8, 3000м - 8.15, 5000м - 14.15, полумарафон - 1.07.15, марафон 2.46.
+            img(src="img/text2.jpg")
+            p 
+              b Время тренировок:<br>
+              | Вторник 19:30<br>
+              | Четверг 19:30
+            p Для того чтобы принять участия в тренировках, нужно зарегистрироваться здесь: 
+              a(href="http://runners.adidas.ru/booking-runclub/horoshovskij", target="_blank") http://runners.adidas.ru/booking-runclub/horoshovskij
+            p 
+              b Подробности по телефону:<br>
+              | +7 929 968-13-55
+
+            section.news__elem-carover
+              section.news__elem-car.swiper-container.js-news-car
+                .swiper-wrapper
+                  .swiper-slide(style="background-image: url('img/ncar1.jpg')")
+                    a(href="img/ncar1.jpg").glightbox
+                  .swiper-slide(style="background-image: url('img/gallery1.jpg')")
+                    a(href="img/gallery1.jpg").glightbox
+                  .swiper-slide(style="background-image: url('img/ncar1.jpg')")
+                    a(href="img/ncar1.jpg").glightbox
+                  .swiper-slide(style="background-image: url('img/gallery1.jpg')")
+                    a(href="img/gallery1.jpg").glightbox
+                  .swiper-slide(style="background-image: url('img/ncar1.jpg')")
+                    a(href="img/ncar1.jpg").glightbox
+              section.news__elem-thumbs.swiper-container.js-news-thumbs
+                .swiper-wrapper
+                  .swiper-slide(style="background-image: url('img/tcar1.jpg')")
+                  .swiper-slide(style="background-image: url('img/tcar2.jpg')")
+                  .swiper-slide(style="background-image: url('img/tcar3.jpg')")
+                  .swiper-slide(style="background-image: url('img/tcar4.jpg')")
+                  .swiper-slide(style="background-image: url('img/tcar3.jpg')")
+              .swiper-buttons
+                button(type="button").swiper-button-prev.swiper-button-prev_red.js-news-prev
+                button(type="button").swiper-button-next.swiper-button-next_red.js-news-next
+
+            p В сезоне осень-зима 2018 коллекция от Дома моды HENDERSON стала еще более разнообразной. Дизайнеры уделили особое внимание верхней одежде: в коллекции появились стильные пальто как на раннюю осень, так и на более позднюю с утеплителем. Всего в этом сезоне 11 моделей пальто и плащей. Отдельное внимание уделено тканям, из которых выполнены изделия. Как правило это: шерсть/кашемир или шерсть/шелк. Также нельзя не отметить уникальную грязе- и водоотталкивающую обработку, благодаря которой можно не переживать за свой внешний вид даже в дождливую осень.
+            iframe(width="560", height="315", src="https://www.youtube.com/embed/T-J2TwRQePM", frameborder="0", allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", allowfullscreen)
+            p В сезоне осень-зима 2018 коллекция от Дома моды HENDERSON стала еще более разнообразной. Дизайнеры уделили особое внимание верхней одежде: в коллекции появились стильные пальто как на раннюю осень, так и на более позднюю с утеплителем. Всего в этом сезоне 11 моделей пальто и плащей. Отдельное внимание уделено тканям, из которых выполнены изделия. Как правило это: шерсть/кашемир или шерсть/шелк. Также нельзя не отметить уникальную грязе- и водоотталкивающую обработку, благодаря которой можно не переживать за свой внешний вид даже в дождливую осень.
+            a(href="#").common__back Вернуться к списку новостей
+
+        +b('section').news._others.h-anim
+          p.common__title.common__title_small(data-text="Другие новости") Другие новости
+          +e.row
+            +e.col._col4
+              +e('article').item
+                +e.item-imgover(href="#")
+                  +e.item-img(src="img/news1.jpg")
+                +e.item-content
+                  +e('p').item-date 2 ноября 2018
+                  +e.item-href(href="#") «NEBO» отмечает свой день рождения
+                  +e('p').item-text В честь этого события ТРЦ приготовил для своих гостей грандиозный праздник.
+            +e.col._col4
+              +e('article').item
+                +e.item-imgover(href="#")
+                  +e.item-img(src="img/news2.jpg")
+                +e.item-content
+                  +e('p').item-date 11 сентября 2018
+                  +e.item-href(href="#") Межсезонная распродажа в магазине «Бегемотик»
+                  +e('p').item-text Межсезонная распродажа в магазине «Бегемотик» началась! Cкидки до -30%. Будь первой, кто получит любимые вещи с приятной скидкой!
+            +e.col._col4
+              +e('article').item
+                +e.item-imgover(href="#")
+                  +e.item-img(src="img/news3.jpg")
+                +e.item-content
+                  +e('p').item-date 11 сентября 2018
+                  +e.item-href(href="#") Скидки в магазине X-Fit!
+                  +e('p').item-text Приглашаем Вас посетить магазин фитнес -гаджетов «X-fit»
+    include layout/__footer
+    include layout/__scripts
