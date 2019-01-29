@@ -223,7 +223,8 @@
         background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAARCAQAAACVkV9MAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAR0IKDco5D9jAAAAgklEQVQoz82Q0Q2DMBBD350yBJmFLgAD3AKVulUGIHOwCoItwgckKgIi+ld/+cP2+SwDACQA5MxMAJQMqTFHR8DznXlgMTHzVgJWXHJmJhhB8Yx3SXu7Ee+eNAN3cF8gFpnUZAbEpDxC7nY773brhxf+NU2ZedXHiC2LDD2Bpqqb+KyTpyQOzd2mqwAAAABJRU5ErkJggg==') no-repeat center
     &-carover
       pos relative
-      margin 33px 0
+      margin 33px auto
+      max-width 770px
       .swiper-slide
         background-size cover
         background-position center
@@ -279,3 +280,19 @@
     @media $LandscapeMediumMin
       w 100%
       text-align center
+  &__toall
+    @media $LandscapeMinFrom
+      pos absolute
+      r 0
+      t 2px
+      z-index 2
+    @media $LandscapeMin
+      mb 90px
+    &:after
+      content ""
+      display inline-block
+      vertical-align top
+      mt 15px
+      ml 10px
+      size 6px 8px
+      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAICAQAAABwz0azAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAR0OGAqrRzkzAAAARElEQVQI113MsQ1AUAAG4d+rzCJvBluYwyr20JmBdbQq+RQiwnWXXC6qVScisWDX39KacRgkophwGkteml/2GVTbs74ASKE6wqc+1iYAAAAASUVORK5CYII=') no-repeat center

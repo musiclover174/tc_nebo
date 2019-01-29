@@ -1,0 +1,55 @@
+.magazine
+  &__elem
+    &-backover
+      text-align center
+      mb 36px
+    &-info
+      df(stretch, flex-start)
+      mb 41px
+      @media $LandscapeMin
+        flex-direction column
+    &-side
+      border 1px solid #e3e3e3
+      border-left 0
+      padding 40px 40px 88px
+      w 370px
+      @media $LandscapeMin
+        w 100%
+        padding 40px
+        border-top 0
+        border-left 1px solid #e3e3e3
+    &-logoover
+      border-bottom 1px solid #e3e3e3
+      h 143px
+      dfv(center, center)
+      pb 42px
+      mb 26px
+    &-logo
+      max-width 90%
+      max-height 90%
+    &-row
+      fontify 16px 400 21px
+      & + &
+        mt 16px
+    &-tomap
+      c $blue
+      border-bottom 1px solid $blue
+      transition .7s border
+      &:hover
+        border-color transparent
+    &-tel
+      c black
+    &-link
+      c black
+      border-bottom 1px solid $blue
+      transition .7s border
+      &:hover
+        border-color transparent
+    &-bg
+      w calc(100% - 370px)
+      background-size cover
+      background-repeat no-repeat
+      background-position center
+      @media $LandscapeMin
+        w 100%
+        h 40vh
