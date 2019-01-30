@@ -1,0 +1,53 @@
+.filter
+  pos relative
+  z-index 1
+  mb 50px
+  df(stretch, flex-start)
+  flex-wrap wrap
+  ml -15px
+  mr -15px
+  @media $desktopMedium
+    ml -10px
+    mr -10px
+  &__col
+    pos relative
+    padding 0 15px
+    @media $desktopMedium
+      padding 0 10px
+    @media $PortraitMax
+      flex 0 0 100%
+      max-width 100%
+      & + &
+        mt 20px
+    @media $PortraitMaxFrom
+      &_col3
+        flex 0 0 25%
+        max-width 25%
+      &_col6
+        flex 0 0 50%
+        max-width 50%
+  &__input
+    w 100%
+    h 40px
+    padding 0 60px 0 20px
+    border 1px solid #e3e3e3
+    bgc transparent
+    color black
+    font-family $os
+    font-size 16px
+    line-height 400
+    transition .7s border
+    &:focus
+      border-color $blue
+  &__sbm
+    pos absolute
+    z-index 1
+    t 0
+    r 15px
+    size 40px
+    background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAARCAQAAAB+puRPAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjARcNGBwyaNJfAAAA30lEQVQoz32QPU4CcRBHH2TPQNDELNnGzhtgbSI2HoBGQ8P2FhyB1hL1EtYUhoRiEztsSIhgAa4HMFbPgvyB1c3+ppnJvPmsCQAJN5zTIOeFBxbsVAcgJSNiwBUDIjLSPYCYOrMlO4ud2Q8Rxn4V0lskN976dXo88U5RSx7phRFT23/qEdtOQ4cmH/zXJ81wxYaTEqDBJgBjOiXAJeOww8HGZVeEP8SF9JtpiCLgHnhlxDNrjuhwyw/Z4ScRE4dOnDtxaOKFuWf7EWV27drTKgC7rmxVAdh37nFNKnTH9y9AkMAQtzyvuQAAAABJRU5ErkJggg==') no-repeat center $red
+    transition .7s background-color
+    @media $desktopMedium
+      r 10px
+    &:hover
+      bgc $dred

@@ -4,6 +4,7 @@ export default class Form {
   constructor() {
     this.inputs = qsAll('.common__input, .common__textarea');
     this.forms = qsAll('form');
+    this.choices = qsAll('.js-select');
     this.digitsInput = qsAll('.js-digits');
 
     window.checkForm = this.constructor.checkForm();
@@ -17,6 +18,14 @@ export default class Form {
     });
 
     // $('.js-phone').mask('+7(999) 999-9999');
+    this.choices.forEach((select) => {
+      const choice = new Choices(select, {
+        searchEnabled: false,
+        itemSelectText: '',
+        position: 'bottom',
+        shouldSort: false,
+      });
+    });
 
     this.digitsInput.forEach((digitInput) => {
       digitInput.addEventListener('keydown', (e) => {

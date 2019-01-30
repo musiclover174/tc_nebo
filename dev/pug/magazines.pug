@@ -1,0 +1,73 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+  
+    +b('main').main
+      .container
+        +b('section').breadcrumbs
+          +e.href(href="#") Главная
+          +e('span').delim
+        +e.content
+          h1 Магазины
+          +b('section').magazines
+            +b('form').filter
+              +e.col._col6
+                +e('input').input(type="text", placeholder="Что вы ищете?")
+                +e.sbm(type="button")
+              +e.col._col3
+                +e('select').select.js-magazine-select.js-select
+                  option(value="0", selected) Все магазины
+                  option(value="1") Одежда
+                  option(value="2") Обувь
+                  option(value="3") Бельё
+                  option(value="4") Головные уборы
+                  option(value="5") Товары для дома
+                  option(value="6") Книги и канцтовары
+                  option(value="7") Еще пункт
+                  option(value="8") И еще один пункт
+              +e.col._col3
+                +e('select').select.js-magazine-select.js-select
+                  option(value="0", selected) Все этажи
+                  option(value="1") 1 Этаж
+                  option(value="2") 2 Этаж
+                  option(value="3") 3 Этаж
+            +e('ul').list.js-magazines-list
+              - var n = 0;
+              while n < 5
+                +e.list-item
+                  +e('article').item
+                    +e.item-logoover
+                      +e.item-logo(src="img/mag1.png")
+                    +e.item-bottom
+                      +e.item-nameover
+                        +e.item-href(href="#") Райт
+                      +e('aside').item-side 1 Этаж
+                      +e('p').item-info Магазин бытовой техники крупнейшей региональной торговой сети «НОРД».
+                +e.list-item
+                  +e('article').item
+                    +e.item-logoover
+                      +e.item-logo(src="img/mag2.png")
+                    +e.item-bottom
+                      +e.item-nameover
+                        +e.item-href(href="#") Парфюм Лидер
+                      +e('aside').item-side 2 Этаж
+                      +e('p').item-info Магазин бытовой техники крупнейшей региональной торговой сети «НОРД».
+                +e.list-item
+                  +e('article').item
+                    +e.item-logoover
+                      +e.item-logo(src="img/mag3.png")
+                    +e.item-bottom
+                      +e.item-nameover
+                        +e.item-href(href="#") Profmax
+                      +e('aside').item-side 1 Этаж
+                      +e('p').item-info Магазин бытовой техники крупнейшей региональной торговой сети «НОРД».
+                - n++;
+            +e('section').moreover
+              +e.more.btn(href="#").js-magazines-more Показать больше
+    include layout/__footer
+    include layout/__scripts
