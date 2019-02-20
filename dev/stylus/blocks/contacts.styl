@@ -1,10 +1,14 @@
 .contacts
-  mt 100px
+  &:not(&_inner)
+    mt 100px
   &__row
     df(stretch, flex-start)
     flex-wrap wrap
     ml -15px
     mr -15px
+    &_personals
+      mt 64px
+      mb -66px
     @media $desktopMedium
       ml -10px
       mr -10px
@@ -15,13 +19,22 @@
     @media $desktopMedium
       padding 0 10px
     @media $LandscapeMediumMin
+      &_col4
+        max-width 33.333333%
+        flex 0 0 33.333333%
       &_col5
         pt 3px
         flex 0 0 41.666667%
         max-width 41.666667%
+      &_col6
+        flex 0 0 50%
+        max-width 50%
       &_col7
         flex 0 0 58.333333%
         max-width 58.333333%
+      &_col8
+        flex 0 0 66.666667%
+        max-width 66.666667%
   &__map
     w calc(100% - 30px)
     h 100%
@@ -62,3 +75,218 @@
     mt 7px
     @media $LandscapeMinFrom
       padding 0 40px
+  &__contact
+    pos relative
+    pl 59px
+    pt 4px
+    @media $LandscapeMedium
+      mb 30px
+    &:before
+      content ""
+      pos absolute
+      l -2px
+      t -2px
+      size 40px
+      border-radius 50%
+      bgc $blue
+      background-position center
+      background-repeat no-repeat
+    &[data-type="address"]:before
+      background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAWCAQAAABnVgTKAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAhQLKAs/ZcjnAAABXUlEQVQoz32TPUuCURTH/748TWEJBgm9CFlUQ7u4xtMXqMUaipqb6wMIuSS0CwUR9SFKHSwaXKKhNIQcDHVzy4pfw6PX56nsnOXc//mdw7333OtDxhaVUlKzeldDd7rQk8ngeJhzmhyxSpxl1sjQ5Jywk3WQOSpkGUUuH+WYCnN9aJwqux6g73tUCTtQjuyfiBBZckgs0CA0FArRYDGoDV2pY84RlK0P5fXZW3d0qU1xjW3qLIqUKFHEMprNjV8zqpk+tiwllZQl22g1Tfv1pYARuib6MFFAX0G9Kq7nnlAQuhVCeQPNq+7jUFHtG8mSra4Krk4nehMxWv9eQYuYEKdkhkIZzpwbn6RN4k8kQZtof8DrvDDxC5mizvrgFYgD7hnzIGM8cOB+Ks4oy0TMKkJ5MHZ3bZoKSwixRIX0IOPdxQ5NUmzRZNut/9zsCo88suJVfa6P4NiIZ4aSpG8idV2iBf459gAAAABJRU5ErkJggg==')
+    &[data-type="time"]:before
+      background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAQAAAAngNWGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAhQLKCcNvaQEAAABFklEQVQoz4WSsU7CUBSGf0u8DAb7AMZFGXwFMSbEJ0BtWeoK71JWfQYGwsDekODu5GBNOkBk4AFcpMvnANjb1qbnH/8v595zzi/0J0OfMUu2fBMzxsdkbobdkzBnSBuDoc2QOQkPebBBSEzX6r5Tl5iQRgaGvHJawoRosSA8gB6fuJZJDnWJ8ZAwfHGTsyh07bDGiICoYFD6QMSTo54mqquJemJFu7bjJSvxY6+1AjRsHaVqlp7a79guRxudFbCjvbI618bRu25rh7nTm6OZ+rVgX7Pdwjv/nu+ga9Y0hfD5yJ0wL5cY/xCKEQtalaEY2TF7rozZix0zIR5JiBhwwTEnXDEgIsErJ1wYAqYsSUlZMiWwb/YLuMxtDMGAyTMAAAAASUVORK5CYII=')
+    &[data-type="phone"]:before
+      background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAQAAAAngNWGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAhQLKQS2weQ3AAABPklEQVQoz33SMUjUcRjG8ed/V0d4DjZEFI6S6dAatVRjmzg0q0tEgovR4FKzU1uU3dDY0CGBQ5uXkEQEIWe53SLoEOEiCMWnwUPvqv/9nun98f29vM/z/iJi0YG36lKuSpKnmcm1/Mha6ik/Fmy5IAovtAyXdYx9k92i8NK7cvBXT3nZoaIM3DXaLS7a8ri84xtzIoa1LZW7jikfRNz2ZVA8cUbHdVHTcXMQGDNaCnHPN0ODwIpN90W8sqpaDsakfROiqqnRh1b6wZi1bUTUvNc82c8TR1aPxzl9u2zTkDjrue9uiWWfXdKwrt4LFhpaRkRM6Wj75LworFhX7x248My2cRE1N5w7uV/R/NvdnD0PTi10dcXPf4MYs+GjO31fZcfD/2VWmLbjq3ljqq5qe9Rrpl8Vd73W8dvu8TL+AEjyuSCTSE22AAAAAElFTkSuQmCC')
+    &-title
+      c $blue
+      fontify 24px 700 26px
+    &-text,
+    &-phone
+      c black
+      fontify 16px 400 26px
+    &-text
+      mt 7px
+  &__scheme
+    pos relative
+    mt 63px
+    border 1px solid #e3e3e3
+    h 620px
+    @media $desktopMedium 
+      h 510px
+    @media $LandscapeMedium
+      mt 53px
+      h auto
+      border none
+    &-side
+      w 270px
+      padding 90px 50px 40px
+      @media $LandscapeMedium
+        w 100%
+        padding 0
+        mb 40px
+      .common__title
+        mb 20px
+    &-map
+      size 100%
+      &-wrapper
+        pos absolute
+        r -1px
+        t -1px
+        b -1px
+        l 270px
+        oh()
+        @media $LandscapeMedium
+          pos static
+          h 400px
+          max-height 60vh
+    &-href
+      c black
+      fontify 16px 400 26px
+      border-bottom 1px solid $blue
+      transition .7s border-color
+      &:hover
+        border-color transparent
+  &__personal
+    &-top
+      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAAAAAA6fptVAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAhQLMjA+Q9sYAAAACklEQVQI12N4DAAA5QDkvR9+MwAAAABJRU5ErkJggg==') repeat-x right bottom 14px
+      @media $desktopMedium
+        mr 20px
+        background-position right bottom 12px
+      @media $LandscapeMedium
+        mr 0
+      @media $PortraitMedium
+        background-position right bottom 11px
+    &-position
+      c $blue
+      fontify 24px 700 30px
+      bgc white
+      pr 20px
+      @media $desktopMedium
+        fontify 21px 800 26px
+      @media $PortraitMedium
+        fontify 19px 800 24px
+    &-main
+      df(center, flex-start)
+      mt 20px
+      mb 66px
+      @media $desktopMedium
+        mr 20px
+      @media $LandscapeMedium
+        mr 0
+      @media $PortraitMedium
+        flex-direction column
+        align-items flex-start
+    &-title
+      c $blue
+      fontify 32px 800 38px
+      mb 20px
+      @media $PortraitMax
+        fontify 24px 700 30px
+    &-text
+      max-width 410px
+      @media $desktopMedium
+        max-width 330px
+      @media $LandscapeMedium
+        max-width none
+    &-imgover
+      pos relative
+      size 142px
+      bgc #ebe9eb
+      border-radius 50%
+      oh()
+      mr 30px
+      flex-shrink 0
+      @media $PortraitMedium
+        mb 20px
+    &-img
+      pos absolute
+      l 0
+      b 0
+      size 100% calc(100% - 15px)
+      object-fit contain
+      font-family 'object-fit: contain;'
+    &-name
+      c black
+      fontify 16px 700 26px
+      text-transform uppercase
+      letter-spacing .02em
+      mb 5px
+    &-phones
+      color black
+      fontify 16px 400 26px
+      mb 5px
+    &-phone
+      color black
+    &-mail
+      color black
+      fontify 16px 400 26px
+      border-bottom 1px solid $blue
+      transition .7s border-color
+      &:hover
+        border-color transparent
+  &__company
+    pos relative
+    df(center, space-between)
+    mt 70px
+    bgc white
+    box-shadow 0 3px 43px rgba(0, 0, 0, 0.08)
+    padding 72px
+    @media $desktopMedium
+      padding 50px
+    @media $LandscapeMedium
+      flex-direction column
+      align-items flex-start
+      justify-content flex-start
+    @media $PortraitMax
+      padding 0
+      box-shadow none
+      bgc transparent
+    &:before
+      content ""
+      pos absolute
+      bgc #e3e3e3
+      width 1px
+      l 45%
+      t 72px
+      b 72px
+      @media $desktopMedium
+        l 42%
+        t 50px
+        b 50px
+      @media $LandscapeMedium
+        dn()
+    &-imgover
+      w 42%
+      text-align center
+      @media $desktopMedium
+        w 38%
+      @media $LandscapeMedium
+        w 100%
+        mb 30px
+        text-align left
+    &-img
+      max-width 90%
+    &-about
+      width 48.5%
+      @media $desktopMedium
+        w 52%
+      @media $LandscapeMedium
+        w 100%
+    &-name
+      c $blue
+      fontify 24px 700 30px
+      mb 25px
+      @media $desktopMedium
+        fontify 21px 800 26px
+      @media $PortraitMedium
+        fontify 19px 800 24px
+    &-address
+      c black
+      fontify 16px 400 26px
+    &-href
+      c black
+      fontify 16px 400 26px
+      border-bottom 1px solid $blue
+      transition .7s border-color
+      &:hover
+        border-color transparent

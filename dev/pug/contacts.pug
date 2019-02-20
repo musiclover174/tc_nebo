@@ -1,0 +1,104 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+  
+    +b('main').main
+      .container
+        +b('section').breadcrumbs
+          +e.href(href="#") Главная
+          +e('span').delim
+        +e.content
+          h1 Контакты
+          +b('section').contacts._inner
+            +e('section').row._top
+              +e.col._col4
+                +e.contact(data-type="address")
+                  +e('p').contact-title Адрес
+                  +e('p').contact-text Ханты-Мансийск, ул. Мира, д. 45
+              +e.col._col4
+                +e.contact(data-type="time")
+                  +e('p').contact-title Режим работы ТЦ
+                  +e('p').contact-text с 10:00 до 21:00
+              +e.col._col4
+                +e.contact(data-type="phone")
+                  +e('p').contact-title Телефон
+                  +e('p').contact-text 
+                    +e.contact-phone(href="tel:+73467318845") +7 (3467) 31-88-45
+            +e('section').scheme.h-anim
+              +e('aside').scheme-side
+                p.common__title.common__title_small(data-text="Схема проезда") Схема проезда
+                +e.scheme-href(href="#") Скачать схему в&nbsp;большом размере
+              +e.scheme-map-wrapper
+                script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+                +e.scheme-map#map.js-contacts-map(data-coords="61.006342, 69.040282")
+            +e('section').row._personals
+              +e.col._col6
+                +e.personal-top
+                  +e('span').personal-position Управляющий ТЦ
+                +e.personal-main
+                  +e('aside').personal-imgover
+                    +e.personal-img(src="img/personal1.jpg")
+                  +e.personal-info
+                    +e('p').personal-name Евсюкова Ирина Саитовна
+                    +e('p').personal-phones
+                      +e.personal-phone(href="tel:+79641745151") +7 964-174-51-51
+                    +e.personal-mail(href="mailto:i.evsyukova@adva.ru") i.evsyukova@adva.ru
+              +e.col._col6
+                +e.personal-top
+                  +e('span').personal-position Главный инженер ТЦ
+                +e.personal-main
+                  +e('aside').personal-imgover
+                    +e.personal-img(src="img/personal2.jpg")
+                  +e.personal-info
+                    +e('p').personal-name Черкашин Алексей Александрович
+                    +e('p').personal-phones
+                      +e.personal-phone(href="tel:+79505009378") +7 950-500-93-78
+                    +e.personal-mail(href="mailto:hm@adva.ru") hm@adva.ru
+              +e.col._col6
+                +e.personal-top
+                  +e('span').personal-position Руководитель отдела маркетинга
+                +e.personal-main
+                  +e('aside').personal-imgover
+                    +e.personal-img(src="img/coop1.png")
+                  +e.personal-info
+                    +e('p').personal-name Путилова Дарья ивановна
+                    +e('p').personal-phones
+                      +e.personal-phone(href="tel:+79090041005") +7 (909) 004-10-05
+                    +e.personal-mail(href="mailto:d.putilova@adva.ru") d.putilova@adva.ru
+              +e.col._col6
+                +e.personal-top
+                  +e('span').personal-position Специалист по вопросам аренды
+                +e.personal-main
+                  +e('aside').personal-imgover
+                    +e.personal-img(src="img/personal3.png")
+                  +e.personal-info
+                    +e('p').personal-name ЗАВЬЯЛОВА НАТАЛЬЯ ВЛАДИМИРОВНА
+                    +e('p').personal-phones
+                      +e.personal-phone(href="tel:+73432530253") +7 (343) 253-02-53
+                    +e.personal-mail(href="mailto:n.zavyalova@adva.ru") n.zavyalova@adva.ru
+              +e.col._col6
+                +e.personal-top
+                  +e('span').personal-position Специалист по вопросам рекламы
+                +e.personal-main
+                  +e('aside').personal-imgover
+                    +e.personal-img(src="img/personal4.png")
+                  +e.personal-info
+                    +e('p').personal-name ДЯГИЛЕВА ОЛЬГА НИКОЛАЕВНА
+                    +e('p').personal-phones
+                      +e.personal-phone(href="tel:+73432530253") +7 (343) 253-02-53
+                    +e.personal-mail(href="mailto:o.dyagileva@adva.ru") o.dyagileva@adva.ru
+            +e('section').company
+              +e('aside').company-imgover
+                +e.company-img(src="img/a2.png")
+              +e.company-about
+                +e('p').company-name Управление ТЦ NEBO осуществляет ООО&nbsp;«Управляющая компания» А2
+                +e('p').company-address Екатеринбург, ул. Народной воли, д. 65, БЦ «NEBO»
+                +e.company-href(href="#") www.adva.ru
+                
+    include layout/__footer
+    include layout/__scripts

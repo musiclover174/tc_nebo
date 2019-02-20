@@ -144,8 +144,9 @@
     &-imgover
       mt 40px
       mb 40px
-      & > ^[0]__col:last-child
-        dn()
+      @media $LandscapeMedium
+        & > ^[0]__col:last-child
+          dn()
   &__row
     df()
     flex-wrap wrap
