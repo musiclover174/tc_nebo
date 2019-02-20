@@ -6,6 +6,7 @@ export default class Form {
     this.forms = qsAll('form');
     this.choices = qsAll('.js-select');
     this.digitsInput = qsAll('.js-digits');
+    this.phones = qsAll('.js-phone');
 
     window.checkForm = this.constructor.checkForm();
 
@@ -17,7 +18,13 @@ export default class Form {
       form.addEventListener('submit', e => !this.constructor.checkForm(form) && e.preventDefault() && e.stopPropagation());
     });
 
-    // $('.js-phone').mask('+7(999) 999-9999');
+    const phoneMasks = [];
+    this.phones.forEach((phone) => {
+      phoneMasks.push(new IMask(phone, {
+        mask: '+{7}(000)000-00-00',
+      }));
+    });
+
     this.choices.forEach((select) => {
       const choice = new Choices(select, {
         searchEnabled: false,

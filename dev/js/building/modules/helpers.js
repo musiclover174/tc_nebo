@@ -61,7 +61,7 @@ function scrollTo(to, duration) {
 
   setTimeout(() => {
     element.scrollTop += perTick;
-    window.animation.scrollTo(to, duration - 10);
+    scrollTo(to, duration - 10);
   }, 10);
 }
 
@@ -106,6 +106,19 @@ function elemVisCheck() {
   });
 }
 
+function scrollToInit() {
+  qsAll('.js-scrollTo').forEach((elem) => {
+    elem.addEventListener('click', (e) => {
+      const toElem = qs(`[data-scrollId="${elem.getAttribute('data-to')}"]`);
+      const { top } = toElem.getBoundingClientRect();
+      const duration = elem.getAttribute('data-duration') || 1000;
+      
+      scrollTo(top, duration);
+      e.preventDefault();
+    })
+  });
+}
+
 export {
   fadeIn,
   fadeOut,
@@ -113,6 +126,7 @@ export {
   visChecker,
   resizeWatcher,
   elemVisCheck,
+  scrollToInit,
   qs,
   qsAll,
 };

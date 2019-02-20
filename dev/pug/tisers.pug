@@ -1,0 +1,198 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+  
+    +b('main').main
+      .container
+        +b('section').breadcrumbs
+          +e.href(href="#") Главная
+          +e('span').delim
+        +e.content
+          h1 Рекламодателям
+          +b('section').tisers
+            +e('section').top
+              +e.top-text
+                p По вопросам размещения рекламы обращаться в отдел рекламы и маркетинга Управляющей компания «А2», г. Екатеринбург, +7(343) 253 0 253, +7(965) 53 79592, 
+                  a(href="mailto:reklama@adva.ru") reklama@adva.ru
+                  |, 
+                  a(href="mailto:manager@adva.ru") manager@adva.ru
+                p Размещение рекламы в торговом центре осуществляется при наличии свободных сторон и с обязательным согласованием макетов. Печать и монтаж рекламных материалов возможны силами заказчика согласно техническим требованиям.
+                +e.top-btn.btn.js-scrollTo(type="button", data-to="order", data-duration="1000") Оставить заявку на рекламу
+              +e('aside').top-side
+                +e.file
+                  +e.file-download(href="#") Скачать презентацию для&nbsp;рекламодателей
+                  +e('p').file-info .pdf, 4,4 Мб
+            +e('section').coop.common__bluebg
+              +e.coop-left
+                +e('p').coop-title Сотрудничество
+                +e.coop-text
+                  p Если вы заинтересованы в сотрудничестве с ТЦ NEBO свяжитесь с нашим специалистом рекламе.
+              +e.coop-right
+                +e('aside').coop-imgover
+                  +e.coop-img(src="img/coop1.png")
+                +e.coop-info
+                  +e('p').coop-name Тарасенко Виктория
+                  +e('p').coop-phones
+                    +e.coop-phone(href="tel:83433441234") 8 (343) 344-12-34
+                    |, 
+                    +e.coop-phone(href="tel:89222240846") 8 (922) 224-08-46
+                  +e.coop-mail(href="mailto:v.tarasenko@adva.ru") v.tarasenko@adva.ru
+            +e('section').main
+              +e.main-img(src="img/tiser-main1.jpg")
+              +e('p').main-title Рекламные возможности в ТЦ NEBO
+              +e.main-variants.tisers__row
+                +e.col._col4
+                  +e.main-variant
+                    p 
+                      b(style="font-size: 18px;") Реклама входная с паркинга
+                    ul
+                      li Постеры в тамбуре входной группы из паркинга<br>
+                        b(style="color: darkgrey") Размер: 
+                        | 1х2 м
+                      li Наклейки (пленка) на дверях с двух сторон,<br>
+                        b(style="color: darkgrey") Размер: 
+                        | А3 / А2
+                  +e.main-variant
+                    p 
+                      b(style="font-size: 18px;") Реклама на входной группе 
+                    ul
+                      li Сетка центральная<br>
+                        b(style="color: darkgrey") Размер: 
+                        | 07х3,3 м
+                      li Баннеры боковые 2 шт., 5,5 х 1,04 м<br>
+                        b(style="color: darkgrey") Размер: 
+                        | 5,5 х 1,04 м
+                +e.col._col4
+                  +e.main-variant
+                    p 
+                      b(style="font-size: 18px;") Реклама в паркинге
+                    ul
+                      li Постеры на входной группе паркинга<br>
+                        b(style="color: darkgrey") Размер: 
+                        | 3х2 м
+                      li Баннер<br>
+                        b(style="color: darkgrey") Размер: 
+                        | 3х2 м
+                      li Баннер<br>
+                        b(style="color: darkgrey") Размер: 
+                        | 4х2 м
+                      li Баннер большого формата<br>
+                        b(style="color: darkgrey") Размер: 
+                        | 8х3 м
+                +e.col._col4
+                  +e.main-variant
+                    p 
+                      b(style="font-size: 18px;") Реклама на фасаде
+                    ul
+                      li Баннеры на фасаде<br>
+                        b(style="color: darkgrey") Размер: 
+                        | 2,7х2,9 м
+                      li Баннеры на фасаде<br>
+                        b(style="color: darkgrey") Размер: 
+                        | 2,9х2,85 м
+                      li Баннеры на фасаде<br>
+                        b(style="color: darkgrey") Размер: 
+                        | 2,7х 8,92 м
+                      li Баннеры на фасаде<br>
+                        b(style="color: darkgrey") Размер: 
+                        | 5,6х2,9 м
+                      li Баннеры на фасаде<br>
+                        b(style="color: darkgrey") Размер: 
+                        | 5,6х5,6 м
+              +e.main-imgover.tisers__row
+                +e.col._col8
+                  +e.main-img(src="img/tiser-main2.jpg")
+                +e.col._col4
+                  +e.main-img(src="img/tiser-main3.jpg")
+              +e.main-variants.tisers__row
+                +e.col._col4
+                  +e.main-variant
+                    p 
+                      b(style="font-size: 18px;") Реклама внутри траволаторы
+                    ul
+                      li Траволатор наклейка на поручни
+                      li Траволатор наклейка на защиту ступеней
+                  +e.main-variant
+                    p 
+                      b(style="font-size: 18px;") Реклама внутри эскалаторы
+                    ul
+                      li Эскалатор наклейка на поручни
+                      li Эскалатор наклейка на защиту ступеней
+                +e.col._col4
+                  +e.main-variant
+                    p 
+                      b(style="font-size: 18px;") Реклама внутри
+                    ul
+                      li Брендирование колонн, 1 и 2 этаж
+                      li Постеры в торговых галереях<br>
+                        b(style="color: darkgrey") Размер: 
+                        | 1х2 м
+                      li Постеры в торговых галереях<br>
+                        b(style="color: darkgrey") Размер: 
+                        | 1х2 м
+                      li Наклейки на зеркала в туалетной комнате<br>
+                        b(style="color: darkgrey") Размер: 
+                        | 0,2 х 0,1 м
+                +e.col._col4
+                  +e.main-variant
+                    p 
+                      b(style="font-size: 18px;") &nbsp;
+                    ul
+                      li Постеры в рамках А3 ( В лифте, 2 шт., в прилифтовой зоне, 4 шт., в туалетной комнате 4 шт.)<br>
+                        b(style="color: darkgrey") Размер: 
+                        | 0,25 х 0,37 м
+                      li Размещение рекламы на радио торгового центра
+            +e('section').others.common__bluebg
+              +e('p').others-title Прочие рекламные возможности
+              +e.row
+                +e.col._col4
+                  ul
+                    li Проведение промо-акций (раздача листовок, флаеров)
+                    li Проведение промо-мероприятий с установкой оборудования
+                +e.col._col4
+                  ul
+                    li Услуги: разработка дизайна, изготовление рекламных материалов (листовки, плакаты, вывески, ролики, прочие конструкции), проведение мероприятий, праздников.
+                +e.col._col4
+                  ul
+                    li Размещение штендера, ролл-ап, стойки с буклетами
+                    li Реклама в группе ТЦ ВКонтакте
+            +e('section').order(data-scrollId="order")
+              +e('p').common__title.common__title_small(data-text="Заявка на рекламу") Заявка на рекламу
+              +e('p').order-sub Если вы хотите заказать рекламу в ТЦ NEBO – просим максимально подробно заполнить заявку на аренду.
+              +e('p').order-hint Обратите внимание на то, что поля со звёздочкой обязательны для заполнения.
+              +e('form').order-form
+                .common__row.common__row_flex
+                  .common__col
+                    .common__row
+                      label.common__label Имя
+                        span *
+                      input.common__input(type="text", data-req="req")
+                      span.common__inperror Поле незаполнено или заполнено неверно
+                    .common__row
+                      label.common__label Телефон
+                      input.common__input.js-phone(type="text")
+                    .common__row
+                      label.common__label E-mail
+                        span *
+                      input.common__input(type="text", data-req="req", data-type="email")
+                      span.common__inperror Поле незаполнено или заполнено неверно
+                  .common__col
+                    .common__row
+                      label.common__label Текст обращения
+                      textarea.common__textarea
+                .common__row.common__row_flex
+                  .common__col
+                    .fakecheckbox
+                      input(type="checkbox", value="", name="agreement", checked)#agreement.fakecheckbox__truecheck
+                      label(for="agreement").fakecheckbox__label Согласен на 
+                        a(href="#") обработку персональных данных
+                  .common__col
+                    button.common__submit.btn(type="submit") Отправить
+
+    include layout/__footer
+    include layout/__scripts

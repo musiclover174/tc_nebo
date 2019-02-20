@@ -3,6 +3,7 @@ import {
   elemVisCheck,
   qs,
   qsAll,
+  scrollToInit,
 } from './modules/helpers';
 import Index from './modules/index';
 import Popup from './modules/popup';
@@ -49,6 +50,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const lightBox = GLightbox({
       selector: 'glightbox',
     });
+  }
+
+  if (qs('.js-scrollTo')) {
+    scrollToInit();
   }
 
   let eventScroll;
