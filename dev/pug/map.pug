@@ -1,0 +1,67 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+  
+    +b('main').main
+      .container
+        +b('section').breadcrumbs
+          +e.href(href="#") Главная
+          +e('span').delim
+        +e.content
+          h1 Карта ТЦ
+          +b('section').map
+            +e('section').wrapper.h-anim
+              +e.floors
+                +e.floors-btn.js-floor-change(type="button", data-to="-1") -1
+                +e.floors-btn.js-floor-change(type="button", data-to="1") 1
+                +e.floors-btn.active.js-floor-change(type="button", data-to="2") 2
+                +e.floors-btn.js-floor-change(type="button", data-to="3") 3
+                +e.floors-btn.js-floor-change(type="button", data-to="4") 4
+              +e.floor.js-floor(data-floor="-1")
+                +e('p').floor-title.common__title.common__title_small(data-text="-1 этаж") -1 этаж
+                +e.floor-img(src="img/floor.png")
+              +e.floor.js-floor(data-floor="1")
+                +e('p').floor-title.common__title.common__title_small(data-text="1 этаж") 1 этаж
+                +e.floor-img(src="img/floor.png")
+              +e.floor.active.js-floor(data-floor="2")
+                +e('p').floor-title.common__title.common__title_small(data-text="2 этаж") 2 этаж
+                +e.floor-img(src="img/floor.png")
+              +e.floor.js-floor(data-floor="3")
+                +e('p').floor-title.common__title.common__title_small(data-text="3 этаж") 3 этаж
+                +e.floor-img(src="img/floor.png")
+              +e.floor.js-floor(data-floor="4")
+                +e('p').floor-title.common__title.common__title_small(data-text="4 этаж") 4 этаж
+                +e.floor-img(src="img/floor.png")
+
+            +e('section').brief.h-anim
+              +e('p').brief-title.common__title.common__title_small Условные обозначения
+              +e('ul').brief-list
+                +e.brief-item
+                  +e('aside').brief-item-iconover
+                    +e.brief-item-icon(src="img/brief1.png")
+                  +e('span').brief-item-name Лифт
+                +e.brief-item
+                  +e('aside').brief-item-iconover
+                    +e.brief-item-icon(src="img/brief2.png")
+                  +e('span').brief-item-name Лестница
+                +e.brief-item
+                  +e('aside').brief-item-iconover
+                    +e.brief-item-icon(src="img/brief3.png")
+                  +e('span').brief-item-name Туалет
+                +e.brief-item
+                  +e('aside').brief-item-iconover
+                    +e.brief-item-icon(src="img/brief4.png")
+                  +e('span').brief-item-name Эскалатор
+                +e.brief-item
+                  +e('aside').brief-item-iconover
+                    +e.brief-item-icon(src="img/brief5.png")
+                  +e('span').brief-item-name Туалет для инвалидов
+
+                
+    include layout/__footer
+    include layout/__scripts

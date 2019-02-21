@@ -11,6 +11,7 @@ import Forms from './modules/forms';
 import Burger from './modules/burger';
 import Contacts from './modules/contacts';
 import News from './modules/news';
+import Floors from './modules/floors';
 
 document.addEventListener('DOMContentLoaded', () => {
   const burger = new Burger();
@@ -44,6 +45,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (qs('form')) {
     const forms = new Forms();
+  }
+
+  if (qs('.js-floor-change')) {
+    const floors = new Floors('.js-floor', '.js-floor-change');
   }
 
   if (qs('.glightbox')) {

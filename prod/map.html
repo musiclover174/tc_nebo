@@ -90,25 +90,73 @@
                 </header>
                 <main class="main" role="main">
                   <div class="container">
-                                <section class="text">
-                                              <section class="breadcrumbs"><a class="breadcrumbs__href" href="#">Главная</a><span class="breadcrumbs__delim">/ </span>
-                                              </section>
-                                                  <div class="text__content">
-                                                    <h1>Разводящая</h1>
-                                                    <ul>
-                                                      <li><a href="index">Главная</a></li>
-                                                      <li><a href="text">Типовая текстовая</a></li>
-                                                      <li><a href="news">Список новостей</a></li>
-                                                      <li><a href="news-inner">Внутренняя новости</a></li>
-                                                      <li><a href="polytics">Политика персональных данных</a></li>
-                                                      <li><a href="magazines">Список магазинов</a></li>
-                                                      <li><a href="magazine">Страница магазина</a></li>
-                                                      <li><a href="tisers">Рекламодателям</a></li>
-                                                      <li><a href="contacts">Контакты</a></li>
-                                                      <li><a href="map">Карта ТЦ</a></li>
-                                                    </ul>
-                                                  </div>
+                                <section class="breadcrumbs"><a class="breadcrumbs__href" href="#">Главная</a><span class="breadcrumbs__delim"></span>
                                 </section>
+                                    <div class="main__content">
+                                      <h1>Карта ТЦ</h1>
+                                                  <section class="map">
+                                                                    <section class="map__wrapper h-anim">
+                                                                                      <div class="map__floors">
+                                                                                                        <button class="map__floors-btn js-floor-change" type="button" data-to="-1">-1
+                                                                                                        </button>
+                                                                                                        <button class="map__floors-btn js-floor-change" type="button" data-to="1">1
+                                                                                                        </button>
+                                                                                                        <button class="map__floors-btn active js-floor-change" type="button" data-to="2">2
+                                                                                                        </button>
+                                                                                                        <button class="map__floors-btn js-floor-change" type="button" data-to="3">3
+                                                                                                        </button>
+                                                                                                        <button class="map__floors-btn js-floor-change" type="button" data-to="4">4
+                                                                                                        </button>
+                                                                                      </div>
+                                                                                      <div class="map__floor js-floor" data-floor="-1">
+                                                                                                        <p class="map__floor-title common__title common__title common__title_small" data-text="-1 этаж">-1 этаж
+                                                                                                        </p><img class="map__floor-img" src="img/floor.png" alt="" role="presentation"/>
+                                                                                      </div>
+                                                                                      <div class="map__floor js-floor" data-floor="1">
+                                                                                                        <p class="map__floor-title common__title common__title common__title_small" data-text="1 этаж">1 этаж
+                                                                                                        </p><img class="map__floor-img" src="img/floor.png" alt="" role="presentation"/>
+                                                                                      </div>
+                                                                                      <div class="map__floor active js-floor" data-floor="2">
+                                                                                                        <p class="map__floor-title common__title common__title common__title_small" data-text="2 этаж">2 этаж
+                                                                                                        </p><img class="map__floor-img" src="img/floor.png" alt="" role="presentation"/>
+                                                                                      </div>
+                                                                                      <div class="map__floor js-floor" data-floor="3">
+                                                                                                        <p class="map__floor-title common__title common__title common__title_small" data-text="3 этаж">3 этаж
+                                                                                                        </p><img class="map__floor-img" src="img/floor.png" alt="" role="presentation"/>
+                                                                                      </div>
+                                                                                      <div class="map__floor js-floor" data-floor="4">
+                                                                                                        <p class="map__floor-title common__title common__title common__title_small" data-text="4 этаж">4 этаж
+                                                                                                        </p><img class="map__floor-img" src="img/floor.png" alt="" role="presentation"/>
+                                                                                      </div>
+                                                                    </section>
+                                                                    <section class="map__brief h-anim">
+                                                                                      <p class="map__brief-title common__title common__title common__title_small">Условные обозначения
+                                                                                      </p>
+                                                                                      <ul class="map__brief-list">
+                                                                                                        <li class="map__brief-item">
+                                                                                                                          <aside class="map__brief-item-iconover"><img class="map__brief-item-icon" src="img/brief1.png" alt="" role="presentation"/>
+                                                                                                                          </aside><span class="map__brief-item-name">Лифт</span>
+                                                                                                        </li>
+                                                                                                        <li class="map__brief-item">
+                                                                                                                          <aside class="map__brief-item-iconover"><img class="map__brief-item-icon" src="img/brief2.png" alt="" role="presentation"/>
+                                                                                                                          </aside><span class="map__brief-item-name">Лестница</span>
+                                                                                                        </li>
+                                                                                                        <li class="map__brief-item">
+                                                                                                                          <aside class="map__brief-item-iconover"><img class="map__brief-item-icon" src="img/brief3.png" alt="" role="presentation"/>
+                                                                                                                          </aside><span class="map__brief-item-name">Туалет</span>
+                                                                                                        </li>
+                                                                                                        <li class="map__brief-item">
+                                                                                                                          <aside class="map__brief-item-iconover"><img class="map__brief-item-icon" src="img/brief4.png" alt="" role="presentation"/>
+                                                                                                                          </aside><span class="map__brief-item-name">Эскалатор</span>
+                                                                                                        </li>
+                                                                                                        <li class="map__brief-item">
+                                                                                                                          <aside class="map__brief-item-iconover"><img class="map__brief-item-icon" src="img/brief5.png" alt="" role="presentation"/>
+                                                                                                                          </aside><span class="map__brief-item-name">Туалет для инвалидов</span>
+                                                                                                        </li>
+                                                                                      </ul>
+                                                                    </section>
+                                                  </section>
+                                    </div>
                   </div>
                 </main>
                 <footer class="footer">

@@ -193,6 +193,10 @@ div[class\^="table-scroller"]
       fontify 40px 700 40px
     &_small
       fontify 48px 700 50px
+      @media $desktopMedium
+        fontify 44px 700 46px
+      @media $PortraitMedium
+        fontify 40px 700 40px
     &:before
       content attr(data-text)
       pos absolute

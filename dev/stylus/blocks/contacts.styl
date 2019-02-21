@@ -290,3 +290,87 @@
       transition .7s border-color
       &:hover
         border-color transparent
+
+.map
+  &__wrapper
+    pos relative
+    mr 0
+    ml auto
+    max-width 985px
+  &__floors
+    pos absolute
+    z-index 1
+    dfv()
+    r 0
+    t 50%
+    transform translateY(-50%)
+    &-btn
+      pos relative
+      size 60px
+      bgc $blue
+      c white
+      fontify 16px 800 60px
+      transition .7s background-color
+      @media $LandscapeMin
+        size 40px
+        fontify 14px 400 40px
+      &:not(:last-child):after
+        content ""
+        pos absolute
+        b 0
+        l 10px
+        size 40px 1px
+        bgc $dblue
+        transition .7s background
+        @media $LandscapeMin
+          w 26px
+          l 7px
+      &.active,
+      &:hover
+        bgc $red
+        &:after
+          bgc transparent
+  &__floor
+    pos relative
+    df(flex-end, flex-start)
+    &:not(.active)
+      dn()
+    &-img
+      max-width calc(100% - 83px)
+      @media $LandscapeMin
+        max-width calc(100% - 53px)
+    &-title
+      pos absolute
+      l 0
+      t 51px
+      @media $PortraitMax
+        dn()
+      &:before
+        white-space nowrap
+  &__brief
+    mt 64px
+    &-list
+      df()
+      flex-wrap wrap
+      ml -50px
+      w calc(100% + 50px)
+      mt 30px
+    &-item
+      pos relative
+      ml 50px
+      mb 30px
+      pl 67px
+      fontify 16px 400 25px
+      pt 12px
+      &-iconover
+        dfv(center, center)
+        pos absolute
+        l 0
+        t 0
+        size 48px
+        bgc #0066b3
+        border-radius 50%
+      &-icon
+        max-width 90%
+        max-height 90%
+  
