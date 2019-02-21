@@ -202,6 +202,7 @@ div[class\^="table-scroller"]
       pos absolute
       z-index -1
       color $shadow
+      w calc(100% + 10px)
       l 0
       t 0
       transition .7s 1s left, .7s 1s top
@@ -240,6 +241,9 @@ div[class\^="table-scroller"]
     c #a3a3a3
     fontify 16px 400 26px
     mb 6px
+    &_empty
+      @media $LandscapeMedium
+        line-height 17px
     span 
       c $red
   &__textarea,
@@ -320,6 +324,82 @@ div[class\^="table-scroller"]
       ml 11px
       size 6px 8px
       background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAICAQAAABwz0azAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjARcMMxxF2kUBAAAARElEQVQI113MsQmAQADF0M9VziI3g1u4x43iHnbOoOvYWsmzEBFNFwiJatOLSCzYDbd0ZhxGiSgmnFrJi1/2GVTrs74AcOE7wetvz7gAAAAASUVORK5CYII=') no-repeat center
+  &__fileover
+    w 100%
+    pos relative
+    transition .7s border
+    &.warning
+      border-color $red
+    & + &
+      mt 20px
+  &__file
+    pos absolute
+    w 0
+    h 0
+    l 0
+    t 0
+    opacity 0
+    &hint
+      ib()
+      c #a3a3a3
+      fontify 14px 400 16px
+      ml 16px
+      mt 4px
+      width calc(100% - 222px)
+      max-width 250px
+      @media (max-width:1270px) and (min-width:951px)
+        db()
+        w 100%
+        ml 0
+        mt 10px
+        fontify 13px 400 15px
+        max-width 250px
+      @media $PortraitMedium
+        db()
+        w 100%
+        ml 0
+        mt 10px
+        fontify 13px 400 15px
+        max-width 250px
+    &name
+      ib()
+      bgc #f0f0f0
+      pl 51px
+      pr 30px
+      pos relative
+      cursor pointer
+      c alpha(black , .5)
+      fontify 16px 800 40px
+      transition .7s color
+      &.choosed,
+      &:hover
+        c alpha(black , .8)
+      &:before
+        content ""
+        pos absolute
+        l 30px
+        t 14px
+        size 11px 12px
+        background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAMCAQAAAAeoI8VAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAhULHhyNFrswAAAA1UlEQVQY0z2QMUtCYQBFz5WveKIQErQZCC5KQ1AQhOXiaCAUurQ5RIP0h6opCIKgaAjB4RFCi2JQNEc0RENTvIiC62B6x7MczpWZTltsAE/cOdEEK8suBf4wcyScyYAWOCQidgxap85XClSkQ8StY1WU84BXskFr7ACXftQeK2ToAgQW+eXE79qnSN89VVnmY6psk+feXVWo8c1pAKU5mgjVpMwnx06CchwQ0XNfDcq8cO4fCGwTceUHtSjx7Iv/NFZp8MY8S4x8PSs2qrFJiqFvZj8wBpEgQ7OqTjiVAAAAAElFTkSuQmCC') no-repeat center
+      &.choosed + ^[-1]delete
+        ib()
+        cursor pointer
+      &.choosed ~ ^[-1]hint
+        dn()
+      &.choosed:after
+        content ""
+    &delete
+      dn()
+      c #a3a3a3
+      fontify 14px 400 16px
+      mt 13px
+      ml 16px
+      &:before
+        content ""
+        ib()
+        mr 11px
+        size 10px 16px
+        background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKBAMAAAB/HNKOAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAJFBMVEXxFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3xFR3///8vT7RgAAAACnRSTlMAAQ2Q1BWRDxbTPFveSAAAAAFiS0dECx/XxMAAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAhULJSHpzBgZAAAANUlEQVQI12NgVGBgEmAQdmUISWQoWRLq5c7A6uWypIGBIWSVBwOIdGUAiwQwVIJlxcAqwboAcEEMTA73I7gAAAAASUVORK5CYII=') no-repeat center
   
 .fakecheckbox
   ib()

@@ -27,21 +27,21 @@ html
                 +e.file
                   +e.file-download(href="#") Скачать презентацию для&nbsp;рекламодателей
                   +e('p').file-info .pdf, 4,4 Мб
-            +e('section').coop.common__bluebg
-              +e.coop-left
-                +e('p').coop-title Сотрудничество
-                +e.coop-text
+            +b('section').coop.common__bluebg
+              +e.left
+                +e('p').title Сотрудничество
+                +e.text
                   p Если вы заинтересованы в сотрудничестве с ТЦ NEBO свяжитесь с нашим специалистом рекламе.
-              +e.coop-right
-                +e('aside').coop-imgover
-                  +e.coop-img(src="img/coop1.png")
-                +e.coop-info
-                  +e('p').coop-name Тарасенко Виктория
-                  +e('p').coop-phones
-                    +e.coop-phone(href="tel:83433441234") 8 (343) 344-12-34
+              +e.right
+                +e('aside').imgover
+                  +e.img(src="img/coop1.png")
+                +e.info
+                  +e('p').name Тарасенко Виктория
+                  +e('p').phones
+                    +e.phone(href="tel:83433441234") 8 (343) 344-12-34
                     |, 
-                    +e.coop-phone(href="tel:89222240846") 8 (922) 224-08-46
-                  +e.coop-mail(href="mailto:v.tarasenko@adva.ru") v.tarasenko@adva.ru
+                    +e.phone(href="tel:89222240846") 8 (922) 224-08-46
+                  +e.mail(href="mailto:v.tarasenko@adva.ru") v.tarasenko@adva.ru
             +e('section').main
               +e.main-img(src="img/tiser-main1.jpg")
               +e('p').main-title Рекламные возможности в ТЦ NEBO
@@ -172,7 +172,6 @@ html
                       label.common__label Имя
                         span *
                       input.common__input(type="text", data-req="req")
-                      span.common__inperror Поле незаполнено или заполнено неверно
                     .common__row
                       label.common__label Телефон
                       input.common__input.js-phone(type="text")
@@ -180,7 +179,6 @@ html
                       label.common__label E-mail
                         span *
                       input.common__input(type="text", data-req="req", data-type="email")
-                      span.common__inperror Поле незаполнено или заполнено неверно
                   .common__col
                     .common__row
                       label.common__label Текст обращения

@@ -3,17 +3,14 @@ import { qs, qsAll } from './helpers';
 export default class Index {
   constructor({
     bannerClass,
-    clientsClass,
     postersClass,
     galleryClass,
   }) {
     this.bannerClass = bannerClass;
-    this.clientsClass = clientsClass;
     this.postersClass = postersClass;
     this.galleryClass = galleryClass;
 
     if (qs(bannerClass)) this.bannerInit();
-    if (qs(clientsClass)) this.clientsInit();
     if (qs(postersClass)) this.postersInit();
     if (qs(galleryClass)) this.galleryInit();
   }
@@ -35,27 +32,6 @@ export default class Index {
       },
       autoplay: {
         delay: 8000,
-      },
-    });
-  }
-
-  clientsInit() {
-    const clientsCarousel = new Swiper(this.clientsClass, {
-      speed: 700,
-      slidesPerView: 4,
-      spaceBetween: 0,
-      loop: true,
-      navigation: {
-        nextEl: `${this.clientsClass} ~ .swiper-buttons .swiper-button-next`,
-        prevEl: `${this.clientsClass} ~ .swiper-buttons .swiper-button-prev`,
-      },
-      breakpoints: {
-        650: {
-          slidesPerView: 2,
-        },
-        900: {
-          slidesPerView: 3,
-        },
       },
     });
   }

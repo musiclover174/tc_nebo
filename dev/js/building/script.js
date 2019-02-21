@@ -6,6 +6,7 @@ import {
   scrollToInit,
 } from './modules/helpers';
 import Index from './modules/index';
+import Clients from './modules/clients';
 import Popup from './modules/popup';
 import Forms from './modules/forms';
 import Burger from './modules/burger';
@@ -20,11 +21,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const index = new Index(
       {
         bannerClass: '.js-banner',
-        clientsClass: '.js-clients',
         postersClass: '.js-posters',
         galleryClass: '.js-gallery',
       },
     );
+  }
+
+  if (qs('.js-clients')) {
+    const clients = new Clients('.js-clients');
   }
 
   resizeWatcher();

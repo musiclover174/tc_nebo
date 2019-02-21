@@ -1,0 +1,155 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+  
+    +b('main').main
+      .container
+        +b('section').breadcrumbs
+          +e.href(href="#") Главная
+          +e('span').delim
+        +e.content
+          h1 Арендаторам
+          +b('section').rent
+            +e('section').top
+              +e.top-img(src="img/rent1.jpg")
+              +e('p').top-title ТЦ Nebo всегда открыт предложениям!
+
+            +e('section').partners
+              +e('section').partners-presentation
+                +e('aside').partners-presentation-left
+                  +e.partners-presentation-img(src="img/rent2.jpg")
+                +e('aside').partners-presentation-right
+                  p Мы рады видеть в качестве партнеров фотографов, организаторов культурных и&nbsp;массовых мероприятий, артистов и другие организации.
+                  +e.file
+                    +e.file-download(href="#") Скачать презентацию ТЦ&nbsp;NEBO
+                    +e('p').file-info .pdf, 4,4 Мб
+              +e('section').partners-about
+                +e('aside').partners-about-left
+                  +e('p').partners-about-title ТЦ NEBO —
+                +e.partners-about-right
+                  p крупнейший торговый центр города Ханты-Мансийск, имеет удобные подъездные пути и большую парковку. Торговый центр «NEBO» в г. Ханты-Мансийск - это яркий современный торгово-развлекательный центр, предназначенный для всех, кому нравится совершать приятные покупки, весело проводить время в семейном развлекательном комплексе, уютных кафе и ресторанах.
+              +e('section').partners-text
+                h3 Арендаторы ТЦ NEBO Ханты-Мансийск
+                p На первом этаже ТЦ расположен гипермаркет «Райт», самый крупный оператор региона в продуктовой линейке. Большой популярностью пользуется магазин распродаж – «Галамарт», где по очень низкой цене можно купить промышленные товары.
+                p На втором этаже расположено множество бутиков, магазинов одежды известных сетевых брендов: O’stin, oodji, Pompa, Concept Club, Adidas, Спортмастер, а также магазины модной и стильной обуви Respect, Kari, магазины детских товаров Acoola, Komod, БегемотиК. Активно отдохнуть всей семьей в ТЦ «NEBO» можно в  центре развлечений «PlayDay», на фудкорте вкусно перекусить приглашают Burger King, KFS, Travreler’s Coffee.
+                p На 4 этаже расположены офисы крупных компаний Сбербанк, Ипотечное агентство Югры.
+
+            +b('section').clients.h-anim
+              +e.car.swiper-container.js-clients
+                .swiper-wrapper
+                  .swiper-slide
+                    +e.img(src="img/clients1.jpg")
+                  .swiper-slide
+                    +e.img(src="img/clients2.jpg")
+                  .swiper-slide
+                    +e.img(src="img/clients3.jpg")
+                  .swiper-slide
+                    +e.img(src="img/clients4.jpg")
+                  .swiper-slide
+                    +e.img(src="img/clients2.jpg")
+              .swiper-buttons
+                .swiper-button-prev.swiper-button-prev_red
+                .swiper-button-next.swiper-button-next_red
+
+            +e('section').chars
+              +e.chars-col
+                +e('p').chars-title Среднесуточная посещаемость 
+                +e('p').chars-value 6200 <br>
+                  span человек
+              +e.chars-col
+                +e('p').chars-title Годовой прирост 
+                +e('p').chars-value +12,7
+                  i % 
+
+            +e('section').seo
+              h3 Аренда торговых площадей
+              p Торгово-развлекательный центр «NEBO» – один из ключевых объектов коммерческой недвижимости Ханты-Мансийска. Индивидуальный подход к сотрудничеству позволяет сформировать комфортные условия аренды торговых площадей для эффективного ведения бизнеса.
+              p Благодаря своему расположению, транспортной доступности, инфраструктуре, продуманному составу арендаторов, развлекательному сегменту и маркетинговым мероприятиям комплекс стал центром притяжения постоянно растущей аудитории со всех районов Ханты-Мансийска и гостей города.  Аренда коммерческой недвижимости в торговом центре «NEBO» позволяет получить стабильный поток покупателей, что отражается на объеме продаж.
+              h3 Аренда магазинов
+              p В ТРЦ «NEBO» доступны для аренды торговые помещения под магазины различной направленности и форматов, которые соответствуют существующей концепции. Торговая галерея включает отделы брендовой одежды и обуви, кожгалантереи и аксессуаров, нижнего белья, спортивных и детских товаров, бытовой техники и мобильной электроники, ювелирных украшений и подарков.
+              h3 Аренда площадей под островам
+              p В общих зонах торгового центра – в атриумах и галереях – сдаются площади для островной торговли различных направлений: аксессуары, украшения, услуги и прочее.
+              p При рассмотрении заявок на аренду под островные конструкции в торгово-развлекательном центре «NEBO», принимаются во внимание общая концепция отдела и ее ассортиментная матрица.
+
+            +b('section').coop.common__bluebg
+              +e.left
+                +e('p').title Поможем с арендой
+                +e.text
+                  p Если вы заинтересованы в сотрудничестве с ТЦ NEBO свяжитесь с нашим специалистом рекламе.
+              +e.right
+                +e('aside').imgover
+                  +e.img(src="img/coop1.png")
+                +e.info
+                  +e('p').name Тарасенко Виктория
+                  +e('p').phones
+                    +e.phone(href="tel:83433441234") 8 (343) 344-12-34
+                    |, 
+                    +e.phone(href="tel:89222240846") 8 (922) 224-08-46
+                  +e.mail(href="mailto:v.tarasenko@adva.ru") v.tarasenko@adva.ru
+
+            +e('section').order.h-anim(data-scrollId="order")
+              p.common__title.common__title_small(data-text="Заявка на аренду") Заявка на аренду
+              +e('p').order-sub Если вы хотите заказать рекламу в ТЦ NEBO – просим максимально подробно заполнить заявку на аренду.
+              +e('p').order-hint Обратите внимание на то, что поля со звёздочкой обязательны для заполнения.
+              +e('form').order-form
+                .common__row.common__row_flex
+                  .common__col
+                    .common__row
+                      label.common__label Имя
+                        span *
+                      input.common__input(type="text", data-req="req")
+                    .common__row
+                      label.common__label E-mail
+                        span *
+                      input.common__input(type="text", data-req="req", data-type="email")
+                    .common__row
+                      label.common__label Требуемая площадь
+                        span *
+                      input.common__input(type="text", data-req="req")
+                  .common__col
+                    .common__row
+                      label.common__label Телефон
+                      input.common__input.js-phone(type="text")
+                    .common__row
+                      label.common__label Название
+                        span *
+                      input.common__input(type="text", data-req="req")
+                    .common__row
+                      label.common__label.common__label_empty &nbsp;
+                      .common__fileover
+                        input(type="file", name="").common__file#file1.js-common-fileinput
+                        label(for="file1", data-default="Добавить файл").common__filename.js-common-file Добавить файл
+                        button(type="button").common__filedelete.js-common-filedelete Удалить
+                        span.common__filehint Прикрепите к заявке презентацию вашего магазина или бренда
+                .common__row.common__row_flex
+                  .common__col
+                    .fakecheckbox
+                      input(type="checkbox", value="", name="agreement", checked)#agreement.fakecheckbox__truecheck
+                      label(for="agreement").fakecheckbox__label Согласен на 
+                        a(href="#") обработку персональных данных
+                  .common__col
+                    button.common__submit.btn(type="submit") Отправить
+
+            +e('section').others.h-anim
+              +e('p').others-title Аренда площадей в других ТЦ
+              +e.others-row
+                +e.others-col._col4
+                  +e.others-imgover(href="#")
+                    +e.others-img(src="img/rent3.jpg")
+                  +e.others-href(href="#") Торговый центр NEBO г.&nbsp;Серов
+                +e.others-col._col4
+                  +e.others-imgover(href="#")
+                    +e.others-img(src="img/rent4.jpg")
+                  +e.others-href(href="#") Торговый центр NEBO г.&nbsp;Асбест
+                +e.others-col._col4
+                  +e.others-imgover(href="#")
+                    +e.others-img(src="img/rent5.jpg")
+                  +e.others-href(href="#") Торговый центр NEBO г.&nbsp;Ханты-Мансийск
+
+    include layout/__footer
+    include layout/__scripts

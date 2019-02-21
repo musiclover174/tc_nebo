@@ -6,6 +6,7 @@ export default class Form {
     this.forms = qsAll('form');
     this.choices = qsAll('.js-select');
     this.digitsInput = qsAll('.js-digits');
+    this.files = qsAll('.js-common-file');
     this.phones = qsAll('.js-phone');
 
     window.checkForm = this.constructor.checkForm();
@@ -50,6 +51,40 @@ export default class Form {
         }
       });
     });
+
+    if (this.files.length) {
+      const commonFile = qsAll('.js-common-fileinput');
+      const commonFileDelete = qsAll('.js-common-filedelete');
+
+      commonFile.forEach((fileInp) => {
+        fileInp.addEventListener('change', (e) => {
+          const el = fileInp.nextElementSibling;
+          const path = fileInp.value.split('\\');
+          let pathName = path[path.length - 1].split('');
+
+          if (pathName.length >= 17) {
+            pathName = `${pathName.slice(0, 14).join('')}...`;
+          } else {
+            pathName = pathName.join('');
+          }
+
+          if (pathName !== '') {
+            el.textContent = pathName;
+            el.classList.add('choosed');
+          }
+        });
+      });
+
+      commonFileDelete.forEach((fileDelete) => {
+        fileDelete.addEventListener('click', (e) => {
+          const el = fileDelete.previousElementSibling;
+          const fileInput = fileDelete.previousElementSibling.previousElementSibling;
+          el.textContent = el.getAttribute('data-default');
+          fileInput.value = '';
+          el.classList.remove('choosed');
+        });
+      });
+    }
   }
 
   static checkForm(form) {

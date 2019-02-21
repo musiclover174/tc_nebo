@@ -1,0 +1,253 @@
+.rent
+  &__top
+    pos relative
+    font-size 0
+    &-img
+      max-width 100%
+    &-title
+      c white
+      bgc $red
+      pos absolute
+      l 10%
+      t 86%
+      font-family $lf
+      fontify 32px 700 38px
+      padding 34px 33px 31px 39px
+      max-width 452px
+      @media $desktopMedium
+        fontify 24px 700 36px
+        padding 25px 31px 23px 33px
+        max-width 357px
+        t 85%
+      @media $PortraitMax
+        pos static
+        l 0
+        t 0
+        max-width none
+  &__partners
+    max-width 770px
+    margin 135px auto 0
+    @media $PortraitMax
+      mt 60px
+    &-presentation
+      df(center, space-between)
+      @media $LandscapeMin
+        flex-direction column-reverse
+        align-items flex-start
+        justify-content flex-start
+      &-left
+        w calc(50% - 15px)
+        @media $LandscapeMin
+          dn()
+      &-right
+        w calc(50% - 15px)
+        pl 30px
+        @media $LandscapeMin
+          w 100%
+          pl 0
+    &-about
+      df()
+      mt 60px
+      @media $LandscapeMin
+        flex-direction column
+        mt 80px
+      &-left
+        w 270px
+      &-right
+        w calc(100% - 270px)
+        pl 30px
+        @media $LandscapeMin
+          w 100%
+          pl 0
+          mt 10px
+      &-title
+        c $blue
+        fontify 44px 800 50px
+    &-text
+      mt 55px
+  &__file
+    pl 129px
+    mt 42px
+    pos relative
+    @media $LandscapeMin
+      pt 25px
+      mt 0px
+    @media $PortraitMedium
+      pl 80px
+      pt 15px
+    &:before
+      content ""
+      pos absolute
+      l 0
+      t 10px
+      size 100px
+      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEcAAABHCAQAAAD/uZKUAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAhUKNzYTKYc6AAACkUlEQVRo3u2asWsTURzHPykiooXUSrQolIIV3HRwcGm9Ls6uTmZwcjGL6J+gkwjSqUOdXPwLpNBrunZQ6GAxQktbqRYxhVqk0H4dgrkLJr53710vyZHvLXfvfu/3Pvl9710eeSkIb43wE4Dz1H1TDfnTpKkBTh/hFBQ2z0tcdstBEYA93ObFV3YjnBSmVnrqObPKzfO73Ac+U81s9GmuAW9532xRdFQkSfMis2NeklSJWnrMrAHOAMdVpxLEnmXWaYxHHJwEzmkeOOFU7HH62Ky/esFvq7gzPM0C57nlInQkOU4OzAKY4WXHeys8zBqnyI2O9+quMLkxq6EvbW2pdwtnn9C7IC3KlVkNXeFJy3WN193EKfG45XrJHSeHZu3yquW61l2cbSopZAFyZtYwQZvWOh+6g3OVxTatS20hrZQTs/b42PFeF2bWIjfTqkhcOTDrmfXSPROcxAtye/WxWYe8cRrj8GRwDiifREXi6jGzBjgDHFf9O7PGuZfZ6ONmnBlmsq1IXD1s1hZLHeMucR34xUriEW5xDvjEt44RW7Fzy92DOUnSrMO+w6wkac4u2tasKQCnvZxqrL9ZVtRjamjMoTqJ+tpVJwBgjR2H6uywFsthUBKc0AEm6meFY7fAuAPApuNyfTOWw6CCxc5sie+OdWnVxWhHuJNszLL6XOnksTErAGCfH84gFxgGAt4ZIy2m36okqeyxBVuWJK2aI82pRnUsSZrwwJmQJB1r1P+9M00B2GDd46lZZwMoMG0KNOM0npzQAybqH6SFs+yJs2yHY3K9qCNJ0qTHk4PQpCTpSEW/Z2eKIWDb5zcbAGpsA0Omb3YTTqO8oSdMlMNgl+k1uMAIQSr/Walym5CF/wf9AdrOLeoYMWZVAAAAAElFTkSuQmCC') no-repeat center $red
+      @media $PortraitMedium
+        size 60px
+        background-size 80%
+    &-download
+      c black
+      fontify 24px 800 30px
+      border-bottom 1px solid $blue
+      transition .7s border-color
+      @media $desktopMedium
+        fontify 21px 800 26px
+      @media $PortraitMedium
+        fontify 19px 800 24px
+      &:hover
+        border-color transparent
+    &-info
+      c black
+      fontify 16px 400 26px
+      mt 5px
+  &__chars
+    df(flex-start, space-between)
+    margin 66px auto 0
+    max-width 770px 
+    @media $PortraitMax
+      flex-direction column
+      justify-content flex-start
+    &-col
+      w calc(50% - 15px)
+      @media $PortraitMax
+        w 100%
+        & + &
+          mt 20px
+    &-title
+      c $blue
+      fontify 21px 400 26px
+    &-value
+      mt 20px
+      c $blue
+      fontify 70px 800 60px
+      letter-spacing .05em
+      @media $PortraitMedium
+        fontify 50px 800 40px
+      i,
+      span
+        display inline-block
+        vertical-align bottom
+        font-size 40px
+        font-style normal
+        line-height 40px
+        letter-spacing 0
+        @media $PortraitMedium
+          font-size 25px
+          line-height 25px
+      span
+        vertical-align top
+  &__seo
+    max-width 770px 
+    margin 34px auto 0
+  &__order
+    mt 70px
+    bgc white
+    box-shadow 0 3px 43px rgba(0, 0, 0, 0.08)
+    padding 50px 70px 70px
+    @media $PortraitMax
+      padding 0
+      box-shadow none
+      bgc transparent
+    &-sub
+      mt 40px
+    &-hint
+      mt 25px
+    &-form
+      mt 30px
+      .fakecheckbox
+        mt 27px
+        @media $LandscapeMedium
+          mt 16px
+  &__others
+    mt 60px
+    &-title
+      c $blue
+      fontify 44px 800 50px
+      mb 30px
+      @media $desktopMedium
+        fontify 40px 700 44px
+      @media $PortraitMax
+        fontify 30px 700 34px
+    &-imgover
+      db()
+      w 100%
+      pt 63%
+      overflow hidden
+      pos relative
+      mb 20px
+    &-img
+      pos absolute
+      l 0
+      t 0
+      size 100%
+      object-fit cover
+      object-position 100% 0
+      font-family 'object-fit: cover;'
+      transition 1.5s transform
+      will-change transform
+      -webkit-backface-visibility hidden
+      transform scale(1.017) translateZ(0)
+    &-imgover:hover &-img
+      transform scale(1) translateZ(0)
+    &-href
+      c black
+      fontify 21px 700 28px
+      border-bottom 1px solid $blue
+      transition .7s border, .7s color
+      &:hover
+        c $red
+        border-color transparent
+    &-imgover:hover + &-href
+      c $red
+      border-color transparent
+    &-row
+      df()
+      flex-wrap wrap
+      ml -15px
+      mr -15px
+      mb -40px
+      @media $desktopMedium
+        ml -10px
+        mr -10px
+      &_bottom
+        align-items flex-end
+        @media $LandscapeMedium
+          align-items flex-start
+      & + &
+        mt 30px
+        @media $desktopMedium
+          mt 20px
+    &-col
+      mb 40px
+      padding 0 15px
+      @media $desktopMedium
+        padding 0 10px
+      @media $PortraitMedium
+        flex 0 0 100%
+        max-width 100%
+        & + &
+          mt 20px
+      @media (max-width:950px) and (min-width:501px)
+        flex 0 0 50%
+        max-width 50%
+      @media $LandscapeMedium
+        &_towide
+          flex 0 0 100%
+          max-width 100%
+          text-align center
+      @media $LandscapeMediumMin
+        &_col3
+          flex 0 0 25%
+          max-width 25%
+        &_col4
+          flex 0 0 33.333333%
+          max-width 33.333333%
+        &_col5
+          flex 0 0 41.666667%
+          max-width 41.666667%
+        &_col8
+          flex 0 0 66.666667%
+          max-width 66.666667%
+        &_col12
+          flex 0 0 100%
+          max-width 100%
