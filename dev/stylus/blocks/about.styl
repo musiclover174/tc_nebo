@@ -46,3 +46,342 @@
     transition .7s border
     &:hover
       border-color transparent
+
+.company
+  &__about
+    max-width 770px
+    margin 0 auto
+    &-time
+      df(center, center)
+      bgc $gblue
+      mt 52px
+      @media $PortraitMax
+        padding 30px 0
+      &-text
+        c $blue
+        fontify 24px 700 38px
+    &-img
+      margin -10px 53px -10px -65px
+      @media $PortraitMax
+        dn()
+  &__we
+    pos relative
+    font-size 0
+    mt 73px
+    &-img
+      max-width 100%
+    &-title
+      c white
+      bgc $red
+      pos absolute
+      r 13%
+      t 75%
+      font-family $lf
+      fontify 32px 700 38px
+      padding 34px 33px 31px 39px
+      max-width 413px
+      @media $desktopMedium
+        fontify 24px 700 36px
+        padding 25px 31px 23px 33px
+        max-width 447px
+        t 83%
+      @media $PortraitMax
+        pos static
+        l 0
+        t 0
+        max-width none
+  &__text
+    max-width 770px
+    margin 103px auto 0
+    @media $PortraitMax
+      mt 60px
+  &__col
+    ib()
+    w calc(50% - 17px)
+    @media $PortraitMedium
+      w 100%
+    & + &
+      ml 26px
+      @media $PortraitMedium
+        ml 0
+        mt 25px
+  &__file
+    pos relative
+    pl 129px
+    mt 87px
+    pt 20px
+    @media $LandscapeMin
+      pt 25px
+      mt 60px
+    @media $PortraitMedium
+      pl 80px
+      pt 15px
+    &:before
+      content ""
+      pos absolute
+      l 0
+      t 0
+      size 100px
+      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEcAAABHCAQAAAD/uZKUAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAhUKNzYTKYc6AAACkUlEQVRo3u2asWsTURzHPykiooXUSrQolIIV3HRwcGm9Ls6uTmZwcjGL6J+gkwjSqUOdXPwLpNBrunZQ6GAxQktbqRYxhVqk0H4dgrkLJr53710vyZHvLXfvfu/3Pvl9710eeSkIb43wE4Dz1H1TDfnTpKkBTh/hFBQ2z0tcdstBEYA93ObFV3YjnBSmVnrqObPKzfO73Ac+U81s9GmuAW9532xRdFQkSfMis2NeklSJWnrMrAHOAMdVpxLEnmXWaYxHHJwEzmkeOOFU7HH62Ky/esFvq7gzPM0C57nlInQkOU4OzAKY4WXHeys8zBqnyI2O9+quMLkxq6EvbW2pdwtnn9C7IC3KlVkNXeFJy3WN193EKfG45XrJHSeHZu3yquW61l2cbSopZAFyZtYwQZvWOh+6g3OVxTatS20hrZQTs/b42PFeF2bWIjfTqkhcOTDrmfXSPROcxAtye/WxWYe8cRrj8GRwDiifREXi6jGzBjgDHFf9O7PGuZfZ6ONmnBlmsq1IXD1s1hZLHeMucR34xUriEW5xDvjEt44RW7Fzy92DOUnSrMO+w6wkac4u2tasKQCnvZxqrL9ZVtRjamjMoTqJ+tpVJwBgjR2H6uywFsthUBKc0AEm6meFY7fAuAPApuNyfTOWw6CCxc5sie+OdWnVxWhHuJNszLL6XOnksTErAGCfH84gFxgGAt4ZIy2m36okqeyxBVuWJK2aI82pRnUsSZrwwJmQJB1r1P+9M00B2GDd46lZZwMoMG0KNOM0npzQAybqH6SFs+yJs2yHY3K9qCNJ0qTHk4PQpCTpSEW/Z2eKIWDb5zcbAGpsA0Omb3YTTqO8oSdMlMNgl+k1uMAIQSr/Walym5CF/wf9AdrOLeoYMWZVAAAAAElFTkSuQmCC') no-repeat center $red
+      @media $PortraitMedium
+        size 60px
+        background-size 80%
+    &-download
+      c black
+      fontify 24px 800 30px
+      border-bottom 1px solid $blue
+      transition .7s border-color
+      @media $desktopMedium
+        fontify 21px 800 26px
+      @media $PortraitMedium
+        fontify 19px 800 24px
+      &:hover
+        border-color transparent
+    &-info
+      c black
+      fontify 16px 400 26px
+      mt 5px
+  &__presentation
+    pos relative
+    h 550px
+    mt 90px
+    max-height 80vh
+    background-size cover
+    background-repeat no-repeat
+    background-position center
+    @media $LandscapeMedium
+      h 450px
+    @media $LandscapeMin
+      h 400px
+    &-href
+      pos absolute
+      t 50%
+      l 50%
+      size 55px
+      bgc $red
+      mt -27px
+      ml -27px
+      border-radius 50%
+      &:before
+        content ""
+        pos absolute
+        t 20px
+        l 23px
+        size 13px 16px
+        background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAQAAABnqj2yAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAhYKAivAq4a7AAAAi0lEQVQY033RMQ5BURCF4bmEVyktgN4G7MACNFS2YAtvC5YgGgm92IANvF6r0Cm8RD71u3KdKf+cyZkzySCWkeIYbeRyAI256E5o0eBjZ9RFUKm1uFvkKISZG9gb5yj0bb3wsMpRCFNXcDLMUUg2nlj3oqzMNXEB5+7CYoxC+Ert/Xvyn6KK9abyU77UV/Jd9oAGswAAAABJRU5ErkJggg==') no-repeat center
+    &-text
+      pos absolute
+      l calc(100% + 40px)
+      c white
+      fontify 24px 700 30px
+      w 230px
+      t 50%
+      transform translateY(-50%)
+      @media $LandscapeMin
+        t calc(100% + 20px)
+        l 50%
+        w 280px
+        text-align center
+        transform translateX(-50%)
+        br
+          dn()
+  &__chars
+    max-width 770px
+    margin 70px auto 0
+    &-year
+      max-width 100%
+    &-list
+      df()
+      flex-wrap wrap
+      mt 93px
+      ml -30px
+      w calc(100% + 30px)
+      mb -60px
+      @media $PortraitMedium
+        mt 60px
+    &-item
+      df()
+      ml 30px
+      w calc(50% - 30px)
+      mb 60px
+      @media $LandscapeMin
+        w calc(100% - 30px)
+    &-imgover
+      w 100px
+      mr 30px
+    &-info
+      w calc(100% - 130px)
+    &-digit
+      c $blue
+      fontify 70px 800 60px
+      @media $LandscapeMedium
+        fontify 50px 700 38px
+    &-val
+      c $blue
+      fontify 21px 400 26px
+      mt 6px
+      @media $LandscapeMedium
+        fontify 19px 400 24px
+        mt 8px
+  &__choice
+    pos relative
+    font-size 0
+    mt 90px
+    &-img
+      max-width 100%
+    &-title
+      c white
+      bgc $red
+      pos absolute
+      l 13%
+      t 87%
+      font-family $lf
+      fontify 32px 700 38px
+      padding 34px 33px 31px 39px
+      max-width 413px
+      @media $desktopMedium
+        fontify 24px 700 36px
+        padding 25px 31px 23px 33px
+        max-width 357px
+        t 85%
+      @media $PortraitMax
+        pos static
+        l 0
+        t 0
+        max-width none
+    @media $PortraitMaxFrom
+      & + .clients
+        mt 150px
+  &__seo
+    max-width 770px
+    margin 70px auto 0
+  &__feats
+    mt 130px
+    text-align center
+    &-list
+      df()
+      flex-wrap wrap
+      ml -30px
+      w calc(100% + 30px)
+      text-align left
+      mb -55px
+      @media $LandscapeMin
+        mb -160px
+      @media $PortraitMedium
+        mb -100px
+    &-item
+      w calc(50% - 30px)
+      ml 30px
+      mb 55px
+      bgc white
+      box-shadow 0 3px 34.3px 0.7px rgba(112, 118, 126, 0.15)
+      @media $LandscapeMin
+        w calc(100% - 30px)
+        mb 160px
+      @media $PortraitMedium
+        mb 100px
+      @media $LandscapeMinFrom
+        &:nth-child(2n)
+          mt 90px
+    &-imgover
+      h 60px
+      dfv(center, flex-end)
+    &-img
+      @media $PortraitMedium
+        max-height 130px
+    &-text
+      c black
+      fontify 16px 400 26px
+      padding 18px 40px 30px 40px
+    &-toall
+      mt 40px
+  &__gallery
+    mt 70px
+    padding 70px 0
+    text-align center
+    &-title
+      mb 30px
+    &-list
+      df()
+      flex-wrap wrap
+      text-align left
+      ml -15px
+      mr -15px
+      mb -40px
+      @media $desktopMedium
+        ml -10px
+        mr -10px
+      &_bottom
+        align-items flex-end
+        @media $LandscapeMedium
+          align-items flex-start
+      & + &
+        mt 30px
+        @media $desktopMedium
+          mt 20px
+    &-item
+      mb 40px
+      padding 0 15px
+      @media $desktopMedium
+        padding 0 10px
+      @media $PortraitMedium
+        flex 0 0 100%
+        max-width 100%
+        & + &
+          mt 20px
+      @media (max-width:950px) and (min-width:501px)
+        flex 0 0 50%
+        max-width 50%
+      @media $LandscapeMediumMin
+        flex 0 0 33.333333%
+        max-width 33.333333%
+    &-imgover
+      db()
+      w 100%
+      pt 63%
+      overflow hidden
+      pos relative
+      mb 23px
+    &-img
+      pos absolute
+      l 0
+      t 0
+      size 100%
+      object-fit cover
+      object-position 100% 0
+      font-family 'object-fit: cover;'
+      transition 1.5s transform
+      will-change transform
+      -webkit-backface-visibility hidden
+      transform scale(1.017) translateZ(0)
+    &-imgover:hover &-img
+      transform scale(1) translateZ(0)
+    &-count
+      pos absolute
+      b 0
+      l 0
+      bgc $blue
+      pl 46px
+      pr 14px
+      c white
+      fontify 15px 400 37px
+      &:before
+        content ""
+        pos absolute
+        t 9px
+        l 16px
+        size 20px 17px
+        background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAQAAAB3TUQ1AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAhYKHjpMbPsUAAAA3ElEQVQoz5WSPW7CQBCFnw09AlFRAZJlSnqcC/ggUSpoENwCiZaSfnOCNMgcg4JIyA7pDCXFR8PPrjBYzDRPO5/ezI5GyMoPlvxy4sSWBX27dpcV5mz5pE2VCgFj/vl6BFt880PN8e+yYUbzCsaklEVGLFIix6coI1IP5Kk88C8iUSJJCmSUK5dR4JL+TXmSQq21UkcdrbRW6HpizWIY3fQUY1VwwZwGIiFBNDjaoF84etH3nraevGrdY8+QOnWG7Ok9B0WI4cABQ+i888bCM0Wl2EB/IiYrPYod8RnYkTg6PVrJMQAAAABJRU5ErkJggg==') no-repeat center
+    &-href
+      c black
+      fontify 21px 700 28px
+      border-bottom 1px solid $blue
+      transition .7s border, .7s color
+      &:hover
+        c $red
+        border-color transparent
+    &-imgover:hover + &-href
+      c $red
+      border-color transparent
+    &-more
+      mt 50px

@@ -61,6 +61,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  if (qs('.js-gallery-thumbs')) {
+    lightGallery(qs('.js-gallery-thumbs'), {
+      thumbnail: true,
+    });
+  }
+
   if (qs('.js-scrollTo')) {
     scrollToInit();
   }

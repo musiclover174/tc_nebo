@@ -1,0 +1,179 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+  
+    +b('main').main
+      .container
+        +b('section').breadcrumbs
+          +e.href(href="#") Главная
+          +e('span').delim
+        +e.content
+          h1 О торговом центре
+          +b('section').company
+            +e('section').about.h-anim
+              p Добро пожаловать в самый крупный торговый центр Ханты-Мансийска! ТЦ NEBO удобно расположен в центральной части города, на пересечении улиц: Мира и Красноармейская.
+              p Торговый центр, общей площадью 18 883  м², имеет 5 уровней (1 подземный и 4 надземных), подземную парковку для 130 автомобилей с удобным заездом по широкому пандусу, наземную парковку для 50 автомобилей.
+              +e('section').about-time
+                +e.about-img(src="img/time.png")
+                +e.about-time-text Режим работы ТЦ<br>с 10:00 до 21:00
+
+            +e('section').we.h-anim
+              +e.we-img(src="img/company1.jpg")
+              +e('p').we-title Мы создаем точку притяжения и новый центр жизни города
+
+            +e('section').text.h-anim
+              p ТЦ NEBO — это первый современный торговый центр в Ханты-Мансийске, собравший под одной крышей сильнейший микс международных и зарекомендовавших себя fashion брендов, 5 кафе и ресторанов, игротеку, продуктовый гипермаркет, салоны красоты, турагентства, а также офисный центр.
+              +e.col
+                p При выборе арендаторов мы отдаем предпочтение ведущим мировым маркам, что позволило нам создать современный торговый центр с большим выбором брендов. При этом NEBO остается демократичным и доступным местом, где современные технологии гармонируют с душевностью и радушием, чтобы каждый себя мог почувствовать в «новой стране» с новым качеством жизни.
+              +e.col
+                p На территории торгового центра расположены бутики женской и мужской, а также детской одежды. Здесь вы сможете оценить новые коллекции O’STIN, Medicine, Levi’s, Consept Club, Pompa, Oodji. Подберите сумочку и пару удобной и стильной обуви из ассортимента Kari и  Westfalika. Завершите образ яркими аксессуарами и изысканными украшениями из коллекций Sunlight, Pandora, Lady Collection.
+              +e.file
+                +e.file-download(href="#") Скачать презентацию ТЦ&nbsp;NEBO
+                +e('p').file-info .pdf, 4,4 Мб
+
+            +e('section').presentation.h-anim(style="background-image: url('img/company-video.jpg')")
+              +e.presentation-href.glightbox(href="https://www.youtube.com/watch?v=HEXWRTEbj1I")
+                +e('span').presentation-text Посмотрите <br>видео-презентацию <br>ТЦ NEBO 
+
+            +e('section').chars.h-anim
+              +e.chars-year(src="img/company-year.jpg")
+              +e('ul').chars-list
+                +e.chars-item
+                  +e.chars-imgover
+                    +e.chars-img(src="img/company-char1.png")
+                  +e.chars-info
+                    +e('p').chars-digit 5
+                    +e('p').chars-val Этажей
+                +e.chars-item
+                  +e.chars-imgover
+                    +e.chars-img(src="img/company-char2.png")
+                  +e.chars-info
+                    +e('p').chars-digit 18 883
+                    +e('p').chars-val Площадь м²
+                +e.chars-item
+                  +e.chars-imgover
+                    +e.chars-img(src="img/company-char3.png")
+                  +e.chars-info
+                    +e('p').chars-digit 60
+                    +e('p').chars-val Магазинов
+                +e.chars-item
+                  +e.chars-imgover
+                    +e.chars-img(src="img/company-char4.png")
+                  +e.chars-info
+                    +e('p').chars-digit 180
+                    +e('p').chars-val Парковочных мест
+
+            +e('section').choice.h-anim
+              +e.choice-img(src="img/company2.jpg")
+              +e('p').choice-title Огромный выбор ассортимента и услуг
+
+            +b('section').clients.h-anim
+              +e.car.swiper-container.js-clients
+                .swiper-wrapper
+                  .swiper-slide
+                    +e.img(src="img/clients1.jpg")
+                  .swiper-slide
+                    +e.img(src="img/clients2.jpg")
+                  .swiper-slide
+                    +e.img(src="img/clients3.jpg")
+                  .swiper-slide
+                    +e.img(src="img/clients4.jpg")
+                  .swiper-slide
+                    +e.img(src="img/clients2.jpg")
+              .swiper-buttons
+                .swiper-button-prev.swiper-button-prev_red
+                .swiper-button-next.swiper-button-next_red
+
+            +e('section').seo.h-anim
+              p ТЦ NEBO победитель национального этапа всемирного конкурса «FIABCI WORLD PRIX D'excellence» в номинации — «Лучший реализованный проект на российском рынке недвижимости 2016»
+              img(src="img/company3.jpg")
+              p 
+                b(style="font-size: 18px;") Локация
+              +e.col
+                ul
+                  li Расположен в жилом массиве густонаселенного района города.
+                  li Центральная часть города.
+              +e.col
+                ul
+                  li Удобная транспортная доступность.
+                  li Наземная и подземная парковка.
+              p 
+                b(style="font-size: 18px;") Концепция
+              +e.col
+                ul
+                  li Яркий современный центр притяжения для всех, кому нравится совершать приятные покупки и весело проводить время в уютных кафе и ресторанах.
+                  li Торговая галерея включает в себя более 60 магазинов, включая федеральные и международные бренды.
+              +e.col
+                ul
+                  li Формат «семейный торговый центр».
+                  li Пул арендаторов сформирован исходя из потребностей жителей города и специфики региона. Сегменты от «средний минус» до «средний плюс».
+              +e('section').feats
+                +e('ul').feats-list
+                  +e.feats-item.h-anim
+                    +e.feats-imgover
+                      +e.feats-img(src="img/company-feat1.png")
+                    +e('p').feats-text Стильный образ невозможен без косметики, ароматов и средств по уходу, которые всегда можно найти в магазинах Л’Этуаль, Yves Rosher, Морошка и Сиберия. 
+                  +e.feats-item.h-anim
+                    +e.feats-imgover
+                      +e.feats-img(src="img/company-feat2.png")
+                    +e('p').feats-text В NEBO работают магазины электроники и бытовой техники «М.Видео», Х.Store, Связной, салоны связи МТС, ТЕЛЕ2 другие.
+                  +e.feats-item.h-anim
+                    +e.feats-imgover
+                      +e.feats-img(src="img/company-feat3.png")
+                    +e('p').feats-text Для наших маленьких посетителей представлена широкая линейка детской одежды, обуви и игрушек: Acoola, Бегемотик, KOMOD, Оранжевый слон.
+                  +e.feats-item.h-anim
+                    +e.feats-imgover
+                      +e.feats-img(src="img/company-feat4.png")
+                    +e('p').feats-text Для любителей спорта и активного отдыха представлен огромный выбор одежды, обуви, аксессуаров и инвентаря в магазинах Спортмастер и Adidas. 
+                  +e.feats-item.h-anim
+                    +e.feats-imgover
+                      +e.feats-img(src="img/company-feat5.png")
+                    +e('p').feats-text Здесь вы также найдете товары для дома и отдыха, мебель и товары для творчества. Полный список магазинов представлен в каталоге магазинов.
+                  +e.feats-item.h-anim
+                    +e.feats-imgover
+                      +e.feats-img(src="img/company-feat6.png")
+                    +e('p').feats-text Подкрепиться и отдохнуть во время шопинга вы сможете в кафе и ресторанах: KFS, Burger King, кофейни Your Time и Traveler’s Coffee.
+                +e.feats-toall.btn.h-anim(type="button") Смотреть все магазины на карте
+
+            +e('section').gallery.common__bluebg
+              +e('p').gallery-title.common__title.common__title_small Фотогалерея
+              +e('ul').gallery-list.js-gallery-list
+                +e.gallery-item
+                  +e.gallery-imgover(href="#")
+                    +e.gallery-img(src="img/gal1.jpg")
+                    +e('span').gallery-count 2494
+                  +e.gallery-href(href="#") Длинное название данного фотоальбома в две строки
+                +e.gallery-item
+                  +e.gallery-imgover(href="#")
+                    +e.gallery-img(src="img/gal2.jpg")
+                    +e('span').gallery-count 453
+                  +e.gallery-href(href="#") 2 этаж Торгового центра «NEBO»
+                +e.gallery-item
+                  +e.gallery-imgover(href="#")
+                    +e.gallery-img(src="img/gal3.jpg")
+                    +e('span').gallery-count 103
+                  +e.gallery-href(href="#") Международный женский день в ТЦ «NEBO»
+                +e.gallery-item
+                  +e.gallery-imgover(href="#")
+                    +e.gallery-img(src="img/gal1.jpg")
+                    +e('span').gallery-count 2494
+                  +e.gallery-href(href="#") Длинное название данного фотоальбома в две строки
+                +e.gallery-item
+                  +e.gallery-imgover(href="#")
+                    +e.gallery-img(src="img/gal2.jpg")
+                    +e('span').gallery-count 453
+                  +e.gallery-href(href="#") 2 этаж Торгового центра «NEBO»
+                +e.gallery-item
+                  +e.gallery-imgover(href="#")
+                    +e.gallery-img(src="img/gal3.jpg")
+                    +e('span').gallery-count 103
+                  +e.gallery-href(href="#") Международный женский день в ТЦ «NEBO»
+              +e.gallery-more.btn(href="#").js-gallery-more Показать больше
+
+    include layout/__footer
+    include layout/__scripts

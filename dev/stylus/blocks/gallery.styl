@@ -17,3 +17,46 @@
   &__img
     @media $PortraitMedium
       w 100%
+
+.thumbnails
+  df()
+  flex-wrap wrap
+  ml -30px
+  w calc(100% + 30px)
+  @media $LandscapeMin
+    w calc(100% + 20px)
+    ml -20px
+    mb 20px
+  &__elem
+    pos relative
+    w calc(20% - 30px)
+    ml 30px
+    mb 30px
+    pt 11%
+    @media $desktopMedium
+      w calc(25% - 30px)
+      pt 15%
+    @media $LandscapeMedium
+      w calc(100% / 3 - 30px)
+      pt 20%
+    @media $LandscapeMin
+      w calc(100% / 3 - 20px)
+      mb 20px
+      ml 20px
+    @media $PortraitMedium
+      w calc(50% - 20px)
+      pt 30%
+    &-img
+      pos absolute
+      l 0
+      t 0
+      size 100%
+      object-fit cover
+      object-position 100% 0
+      font-family 'object-fit: cover;'
+      transition 1.5s transform
+      will-change transform
+      -webkit-backface-visibility hidden
+      transform scale(1.017) translateZ(0)
+    &:hover &-img
+      transform scale(1) translateZ(0)

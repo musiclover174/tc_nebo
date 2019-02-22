@@ -1,0 +1,55 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+  
+    +b('main').main
+      .container
+        +b('section').breadcrumbs
+          +e.href(href="#") Главная
+          +e('span').delim
+          +e.href(href="#") О торговом центре
+          +e('span').delim
+        +e.content
+          h1 Международный женский день в&nbsp;ТЦ&nbsp;«NEBO»
+
+          +b('section').thumbnails.js-gallery-thumbs
+            +e.elem(href="img/company1.jpg")
+              +e.elem-img(src="img/thumb1.jpg")
+            +e.elem(href="img/company1.jpg")
+              +e.elem-img(src="img/thumb2.jpg")
+            +e.elem(href="img/company1.jpg")
+              +e.elem-img(src="img/thumb3.jpg")
+            +e.elem(href="img/company1.jpg")
+              +e.elem-img(src="img/thumb4.jpg")
+            +e.elem(href="img/company1.jpg")
+              +e.elem-img(src="img/thumb5.jpg")
+            +e.elem(href="img/company1.jpg")
+              +e.elem-img(src="img/thumb1.jpg")
+            +e.elem(href="img/company1.jpg")
+              +e.elem-img(src="img/thumb2.jpg")
+            +e.elem(href="img/company1.jpg")
+              +e.elem-img(src="img/thumb3.jpg")
+            +e.elem(href="img/company1.jpg")
+              +e.elem-img(src="img/thumb4.jpg")
+            +e.elem(href="img/company1.jpg")
+              +e.elem-img(src="img/thumb5.jpg")
+            +e.elem(href="img/company1.jpg")
+              +e.elem-img(src="img/thumb1.jpg")
+            +e.elem(href="img/company1.jpg")
+              +e.elem-img(src="img/thumb2.jpg")
+            +e.elem(href="img/company1.jpg")
+              +e.elem-img(src="img/thumb3.jpg")
+            +e.elem(href="img/company1.jpg")
+              +e.elem-img(src="img/thumb4.jpg")
+            +e.elem(href="img/company1.jpg")
+              +e.elem-img(src="img/thumb5.jpg")
+
+          a(href="#").common__back Вернуться назад
+
+    include layout/__footer
+    include layout/__scripts
