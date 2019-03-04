@@ -3659,7 +3659,7 @@ div[class^="table-scroller"] {
 }
 .fakecheckbox__label a {
   color: inherit;
-  border-bottom: 1px solid #0066b3;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
   -webkit-transition: 0.7s border;
   transition: 0.7s border;
 }
