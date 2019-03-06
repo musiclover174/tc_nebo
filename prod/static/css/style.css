@@ -5101,6 +5101,10 @@ body.burgeropen .menu {
 .banner__car .swiper-slide-active .banner__img {
   -webkit-transform: scale(1.02) translateX(-50%);
   transform: scale(1.02) translateX(-50%);
+  -webkit-transition: 8s -webkit-transform linear;
+  transition: 8s -webkit-transform linear;
+  transition: 8s transform linear;
+  transition: 8s transform linear, 8s -webkit-transform linear;
 }
 @media (max-width: 1050px) {
   .banner__car .swiper-buttons {
@@ -5117,10 +5121,6 @@ body.burgeropen .menu {
   -webkit-transform: scale(1) translateX(-50%);
   transform: scale(1) translateX(-50%);
   will-change: transform;
-  -webkit-transition: 8s -webkit-transform linear;
-  transition: 8s -webkit-transform linear;
-  transition: 8s transform linear;
-  transition: 8s transform linear, 8s -webkit-transform linear;
 }
 .banner__title {
   color: #fff;

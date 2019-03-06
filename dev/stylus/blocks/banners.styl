@@ -12,6 +12,7 @@
         padding 60px 0
       &-active ^[0]__img
         transform scale(1.02) translateX(-50%)
+        transition 8s transform linear
     .swiper-buttons
       @media $desktopTablet
         dn()
@@ -24,7 +25,6 @@
     z-index -1
     transform scale(1) translateX(-50%)
     will-change transform
-    transition 8s transform linear
   &__title
     c white
     fontify 70px 800 70px
