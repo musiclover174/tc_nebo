@@ -4888,7 +4888,6 @@ body.burgeropen .menu {
   color: #000;
   font-family: "ProximaNova";
   font-size: 16px;
-  line-height: 400;
   -webkit-transition: 0.7s border;
   transition: 0.7s border;
 }
