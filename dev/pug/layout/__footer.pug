@@ -50,6 +50,20 @@ include ../bemto/bemto.pug
       +e('form').form._search
         input.popup__search-input(type="text", data-req="req", placeholder="Введите запрос")
         button.popup__search-sbm(type="submit", title="Найти")
+    +b.popup._city#city
+      +e.close.js-popclose(type="button", title="Закрыть")
+      +e('p').title(data-text="Выберите ваш город") Выберите ваш город
+      +e('ul').cities-list
+        +e.cities-item
+          +e(href="#").cities-href Асбест
+        +e.cities-item
+          +e(href="#").cities-href Новый Уренгой
+        +e.cities-item
+          +e(href="#").cities-href Серов
+        +e.cities-item
+          +e(href="#").cities-href._current Ханты-Мансийск NEBO
+        +e.cities-item
+          +e(href="#").cities-href Ханты-Мансийск Гостиный Двор 
     +b.popup#subs
       +e.close.js-popclose(type="button", title="Закрыть")
       +e('p').title(data-text="Подписка на новости") Подписка на новости
@@ -59,6 +73,33 @@ include ../bemto/bemto.pug
           label.common__label Имя
             span *
           input.common__input(type="text", data-req="req")
+          span.common__inperror Поле незаполнено или заполнено неверно
+        .common__row
+          label.common__label E-mail
+            span *
+          input.common__input(type="text", data-req="req", data-type="email")
+          span.common__inperror Поле незаполнено или заполнено неверно
+        .common__row
+          .fakecheckbox
+            input(type="checkbox", value="", name="agreement", checked)#agreement.fakecheckbox__truecheck
+            label(for="agreement").fakecheckbox__label Согласен на 
+              a(href="#") обработку персональных данных
+        .common__row
+          button.common__submit.btn(type="submit") Отправить
+    +b.popup#callback
+      +e.close.js-popclose(type="button", title="Закрыть")
+      +e('p').title(data-text="Связаться с нами") Связаться с нами
+      +e('p').subtitle Обратите внимание на то, что все поля обязательны для заполнения.
+      +e('form').form
+        .common__row
+          label.common__label ФИО
+            span *
+          input.common__input(type="text", data-req="req")
+          span.common__inperror Поле незаполнено или заполнено неверно
+        .common__row
+          label.common__label Телефон
+            span *
+          input.common__input.js-phone(type="text", data-req="req")
           span.common__inperror Поле незаполнено или заполнено неверно
         .common__row
           label.common__label E-mail

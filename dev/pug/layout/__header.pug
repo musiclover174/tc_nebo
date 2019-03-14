@@ -4,7 +4,7 @@ include ../bemto/bemto.pug
   .container
     +e('section').top
       +e('aside').top-left
-        +e('p').town Ханты-Мансийск
+        +e.town(type="button", data-popup, data-src="#city") Ханты-Мансийск
         +e('p').time Время работы:
           time 10:00 - 21:00
       +e.imgover(href="#")

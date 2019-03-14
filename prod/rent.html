@@ -17,8 +17,8 @@
                   <div class="container">
                                     <section class="header__top">
                                                       <aside class="header__top-left">
-                                                                        <p class="header__town">Ханты-Мансийск
-                                                                        </p>
+                                                                        <button class="header__town" type="button" data-popup data-src="#city">Ханты-Мансийск
+                                                                        </button>
                                                                         <p class="header__time">Время работы:
                                                                           <time>10:00 - 21:00</time>
                                                                         </p>
@@ -322,6 +322,24 @@
                                         <button class="popup__search-sbm" type="submit" title="Найти"></button>
                                       </form>
                     </div>
+                    <div class="popup popup_city" id="city">
+                                      <button class="popup__close js-popclose" type="button" title="Закрыть">
+                                      </button>
+                                      <p class="popup__title" data-text="Выберите ваш город">Выберите ваш город
+                                      </p>
+                                      <ul class="popup__cities-list">
+                                                        <li class="popup__cities-item"><a class="popup__cities-href" href="#">Асбест</a>
+                                                        </li>
+                                                        <li class="popup__cities-item"><a class="popup__cities-href" href="#">Новый Уренгой</a>
+                                                        </li>
+                                                        <li class="popup__cities-item"><a class="popup__cities-href" href="#">Серов</a>
+                                                        </li>
+                                                        <li class="popup__cities-item"><a class="popup__cities-href popup__cities-href_current" href="#">Ханты-Мансийск NEBO</a>
+                                                        </li>
+                                                        <li class="popup__cities-item"><a class="popup__cities-href" href="#">Ханты-Мансийск Гостиный Двор </a>
+                                                        </li>
+                                      </ul>
+                    </div>
                     <div class="popup" id="subs">
                                       <button class="popup__close js-popclose" type="button" title="Закрыть">
                                       </button>
@@ -333,6 +351,37 @@
                                         <div class="common__row">
                                           <label class="common__label">Имя<span>*</span></label>
                                           <input class="common__input" type="text" data-req="req"><span class="common__inperror">Поле незаполнено или заполнено неверно</span>
+                                        </div>
+                                        <div class="common__row">
+                                          <label class="common__label">E-mail<span>*</span></label>
+                                          <input class="common__input" type="text" data-req="req" data-type="email"><span class="common__inperror">Поле незаполнено или заполнено неверно</span>
+                                        </div>
+                                        <div class="common__row">
+                                          <div class="fakecheckbox">
+                                            <input class="fakecheckbox__truecheck" type="checkbox" value="" name="agreement" checked id="agreement">
+                                            <label class="fakecheckbox__label" for="agreement">Согласен на <a href="#">обработку персональных данных</a></label>
+                                          </div>
+                                        </div>
+                                        <div class="common__row">
+                                          <button class="common__submit btn" type="submit">Отправить</button>
+                                        </div>
+                                      </form>
+                    </div>
+                    <div class="popup" id="callback">
+                                      <button class="popup__close js-popclose" type="button" title="Закрыть">
+                                      </button>
+                                      <p class="popup__title" data-text="Связаться с нами">Связаться с нами
+                                      </p>
+                                      <p class="popup__subtitle">Обратите внимание на то, что все поля обязательны для заполнения.
+                                      </p>
+                                      <form class="popup__form">
+                                        <div class="common__row">
+                                          <label class="common__label">ФИО<span>*</span></label>
+                                          <input class="common__input" type="text" data-req="req"><span class="common__inperror">Поле незаполнено или заполнено неверно</span>
+                                        </div>
+                                        <div class="common__row">
+                                          <label class="common__label">Телефон<span>*</span></label>
+                                          <input class="common__input js-phone" type="text" data-req="req"><span class="common__inperror">Поле незаполнено или заполнено неверно</span>
                                         </div>
                                         <div class="common__row">
                                           <label class="common__label">E-mail<span>*</span></label>

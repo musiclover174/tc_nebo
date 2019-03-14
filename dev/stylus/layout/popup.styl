@@ -14,6 +14,15 @@
   transform scale(.9)
   will-change transform
   transition .7s .7s transform, .7s .7s opacity
+  @media $LandscapeMin
+    padding 60px 30px 30px 30px
+  &_city
+    max-width 710px
+    pb 50px
+    & ^[0]__title
+      text-align center
+      @media $LandscapeMin
+        text-align left
   &.show
     pos relative
     opacity 1
@@ -54,6 +63,10 @@
     c $blue
     fontify 48px 700 48px
     mb 5px
+    @media $desktopMedium
+      fontify 44px 700 46px
+    @media $PortraitMedium
+      fontify 40px 700 40px
     &:before
       content attr(data-text)
       pos absolute
@@ -63,6 +76,8 @@
       l 10px
       t 10px
       transition .7s 1s left, .7s 1s top
+      @media $PortraitMedium
+        dn()
   &__subtitle
     color black
     fontify 16px 400 26px
@@ -103,7 +118,41 @@
       transition .7s background-color
       &:hover
         bgc $dred
-
+  &__cities
+    &-list
+      df()
+      flex-wrap wrap
+      pos relative
+      margin 40px 0 -25px -30px
+      pt 45px
+      w calc(100% + 30px)
+      @media $PortraitMedium
+        flex-wrap wrap
+      &:before
+        content ""
+        pos absolute 
+        t 0
+        l -38px
+        bgc #e3e3e3
+        size calc(100% + 106px) 1px
+        @media $LandscapeMin
+          l 0
+          w calc(100% + 30px)
+    &-item
+      w calc(50% - 30px)
+      ml 30px
+      mb 25px
+      @media $PortraitMedium
+        w calc(100% - 30px)
+    &-href
+      c black
+      fontify 16px 400 26px
+      border-bottom 1px dashed $blue
+      transition .7s border-color, .7s color
+      &_current,
+      &:hover
+        c $red
+        border-color transparent
 
 .no-touchevents .popup-show
   mr 17px
