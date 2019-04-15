@@ -1,0 +1,22 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+  
+    +b('main').main
+      .container
+        +b('section').page404
+          +e.img(src="img/404.png")
+          h1 Страница не найдена
+          +e.text
+            p Вы неправильно набрали адрес. Возможно такой страницы больше не существует. Воспользуйтесь картой сайта, чтобы перейти на другую страницу.
+            p Вы также можете вернуться на 
+              a(href="#") главную страницу
+              |  сайта.
+
+    include layout/__footer
+    include layout/__scripts

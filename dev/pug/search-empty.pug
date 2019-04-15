@@ -1,0 +1,25 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+  
+    +b('main').main
+      .container
+        +b('section').text
+          +b('section').breadcrumbs
+            +e.href(href="#") Главная
+            +e('span').delim
+          +e.content
+            h1 Результаты поиска
+            +b('section').search
+              +e('form').form
+                +e('input').form-input(type="text", data-req="req", placeholder="Введите запрос", value="Центр")
+                +e.form-sbm(type="submit", title="Найти")
+              +e('p').info По вашему запросу «Центр» ничего не найдено.
+            
+    include layout/__footer
+    include layout/__scripts

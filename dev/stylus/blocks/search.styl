@@ -1,0 +1,84 @@
+.search
+  pos relative
+  &_empty
+    pb 150px
+  &__form
+    &-input
+      w 100%
+      h 40px
+      padding 0 60px 0 20px
+      border 1px solid #e3e3e3
+      bgc transparent
+      color black
+      font-family $os
+      font-size 16px
+      transition .7s border
+      &:focus
+        border-color $blue
+    &-sbm
+      pos absolute
+      z-index 1
+      t 0
+      r 0
+      size 40px
+      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAARCAQAAAB+puRPAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjARcNGBwyaNJfAAAA30lEQVQoz32QPU4CcRBHH2TPQNDELNnGzhtgbSI2HoBGQ8P2FhyB1hL1EtYUhoRiEztsSIhgAa4HMFbPgvyB1c3+ppnJvPmsCQAJN5zTIOeFBxbsVAcgJSNiwBUDIjLSPYCYOrMlO4ud2Q8Rxn4V0lskN976dXo88U5RSx7phRFT23/qEdtOQ4cmH/zXJ81wxYaTEqDBJgBjOiXAJeOww8HGZVeEP8SF9JtpiCLgHnhlxDNrjuhwyw/Z4ScRE4dOnDtxaOKFuWf7EWV27drTKgC7rmxVAdh37nFNKnTH9y9AkMAQtzyvuQAAAABJRU5ErkJggg==') no-repeat center $red
+      transition .7s background-color
+      &:hover
+        bgc $dred
+  &__info
+    c black
+    mb 55px
+    mt 23px
+    fontify 16px 400 26px
+    &:last-child
+      mb 0
+    span
+      c $red
+  &__list
+    counter-reset myCounter
+  &__item
+    pos relative
+    pl 44px
+    @media $LandscapeMin
+      pl 34px
+    &:before
+      counter-increment myCounter
+      content counter(myCounter)"." 
+      pos absolute
+      l 0
+      t 0
+      fontify 21px 700 28px
+      c black
+      @media $LandscapeMin
+        fontify 19px 700 25px
+    & + &
+      mt 34px
+    &-href
+      c black
+      fontify 21px 700 28px
+      border-bottom 1px solid $blue
+      transition .7s border-color
+      @media $LandscapeMin
+        fontify 19px 700 25px
+      &:hover
+        border-color transparent
+      span
+        c $red
+    &-text
+      c black
+      fontify 16px 400 26px
+      mt 17px
+      span
+        c $red
+  &__moreover
+    text-align center
+  &__more
+    mt 60px
+    &:after
+      content ""
+      display inline-block
+      vertical-align top
+      size 8px 6px
+      ml 10px
+      mt 15px
+      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAQAAABUDBdwAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAR0IACWGAOCBAAAASUlEQVQI1wXBwQ2CUABAsUc0XJ3kL8EYOpdOoBxZg3W4khhrm2EzS2abkR2ri8kbe4YDL08cRrI4wWlRkruvn4d0rWrt1tSn6g+zHDxaJdAq8wAAAABJRU5ErkJggg==') no-repeat center
