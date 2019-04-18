@@ -120,6 +120,12 @@ export default class Form {
                 checkResult = false;
               }
               break;
+            case 'checkbox':
+              if (!elem.checked) {
+                elem.classList.add('warning');
+                checkResult = false;
+              }
+              break;
             default:
               if (elem.value.trim() === '') {
                 elem.classList.add('warning');
@@ -129,14 +135,6 @@ export default class Form {
           }
         }
       });
-
-      qsAll('input[name^=agreement]', form).forEach((item) => {
-        if (!item.checked) {
-          item.classList.add('warning');
-          checkResult = false;
-        }
-      });
-
       return checkResult;
     }
   }

@@ -9,6 +9,7 @@ export default class Contacts {
 
   init() {
     const pinCoord = this.el.getAttribute('data-coords').split(', ');
+    const pinSrc = this.el.getAttribute('data-pin');
 
     const myMap = new ymaps.Map(this.el, {
       center: [parseFloat(pinCoord[0]), parseFloat(pinCoord[1])],
@@ -19,7 +20,7 @@ export default class Contacts {
     const PMitem = new ymaps.Placemark([parseFloat(pinCoord[0]), parseFloat(pinCoord[1])], {}, {
       iconLayout: 'default#image',
       iconImageSize: [54, 67],
-      iconImageHref: '/static/i/pin.png',
+      iconImageHref: pinSrc,
       iconImageOffset: [-32, -42],
     });
 
