@@ -190,6 +190,15 @@
     margin 70px auto 0
     &-year
       max-width 100%
+      &-wrapper
+        pos relative
+      &-value
+        pos absolute
+        t 25px
+        l 38px
+        c white
+        font-size 70px
+        font-weight bold
     &-list
       df()
       flex-wrap wrap
@@ -383,5 +392,5 @@
     &-imgover:hover + &-href
       c $red
       border-color transparent
-    &-more
-      mt 50px
+    // &-more
+    //   mt 50px

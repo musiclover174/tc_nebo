@@ -5107,6 +5107,17 @@ body.burgeropen .menu {
     margin-right: -10px;
   }
 }
+.filter__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
 .filter__col {
   position: relative;
   padding: 0 15px;
@@ -5764,6 +5775,7 @@ body.burgeropen .menu {
   border-color: #f1151d;
 }
 .news__moreover {
+  width: 100%;
   text-align: center;
   margin-bottom: 70px;
 }
@@ -6150,6 +6162,17 @@ body.burgeropen .menu {
 .company__chars-year {
   max-width: 100%;
 }
+.company__chars-year-wrapper {
+  position: relative;
+}
+.company__chars-year-value {
+  position: absolute;
+  top: 25px;
+  left: 38px;
+  color: #fff;
+  font-size: 70px;
+  font-weight: bold;
+}
 .company__chars-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6517,9 +6540,6 @@ body.burgeropen .menu {
   color: #f1151d;
   border-color: transparent;
 }
-.company__gallery-more {
-  margin-top: 50px;
-}
 .clients {
   position: relative;
   margin-top: 78px;
@@ -6841,6 +6861,11 @@ body.burgeropen .menu {
   .gallery__img {
     width: 100%;
   }
+}
+.gallery__moreover {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px;
 }
 .thumbnails {
   display: -webkit-box;
@@ -7839,6 +7864,7 @@ body.burgeropen .menu {
   }
 }
 .magazines__moreover {
+  width: 100%;
   text-align: center;
   margin-bottom: 10px;
   margin-top: 40px;
@@ -8909,42 +8935,6 @@ body.burgeropen .menu {
     margin-left: 0;
   }
 }
-.map {
-  max-width: 470px;
-  margin: 67px auto 0;
-  text-align: center;
-}
-.map__title {
-  color: $dark;
-  font-size: 26px;
-  font-weight: 700;
-  line-height: 30px;
-  margin-bottom: 29px;
-}
-.map__item + .map__item {
-  margin-top: 28px;
-}
-.map__item-href {
-  color: $dark;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 25px;
-  border-bottom: 1px solid #0066b3;
-  -webkit-transition: 0.7s border-color;
-  transition: 0.7s border-color;
-}
-.map__item-href_main {
-  font-weight: 700;
-}
-.map__item-href:hover {
-  border-color: transparent;
-}
-.map__sublist {
-  margin-top: 10px;
-}
-.map__sublist-item + .map__sublist-item {
-  margin-top: 10px;
-}
 .search {
   position: relative;
 }
@@ -9046,7 +9036,7 @@ body.burgeropen .menu {
 .search__item-href:hover {
   border-color: transparent;
 }
-.search__item-href span {
+.search__item-href b {
   color: #f1151d;
 }
 .search__item-text {
@@ -9056,7 +9046,7 @@ body.burgeropen .menu {
   line-height: 26px;
   margin-top: 17px;
 }
-.search__item-text span {
+.search__item-text b {
   color: #f1151d;
 }
 .search__moreover {
