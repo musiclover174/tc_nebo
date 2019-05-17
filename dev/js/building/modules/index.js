@@ -51,7 +51,7 @@ export default class Index {
           slidesPerView: 2,
           spaceBetween: 20,
         },
-        650: {
+        670: {
           slidesPerView: 1,
           spaceBetween: 10,
         },

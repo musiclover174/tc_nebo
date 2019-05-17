@@ -32,6 +32,8 @@
       mt -5px
       @media $LandscapeMedium
         mt -3px
+        order 2
+        w 290px
       @media $LandscapeMin
         dn()
     &-right
@@ -40,11 +42,15 @@
       @media $LandscapeMedium
         text-align right
         mt 0
+        order 3
+        w 55px
         .socials
           dn()
       @media $LandscapeMin
         ml 0
   &__imgover
+    @media $LandscapeMedium
+      order 1
     @media $LandscapeMin
       max-height 30px
   &__img
@@ -58,6 +64,7 @@
     ml 29px
     fontify 16px 400 18px
     border-bottom 1px dashed $blue
+    white-space nowrap
     transition .7s border-color
     &:hover
       border-color transparent
