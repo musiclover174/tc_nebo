@@ -5096,6 +5096,13 @@ body.burgeropen .menu {
   top: 7px;
   left: 4px;
 }
+.socials__href[data-type="ig"]:before {
+  width: 10px;
+  height: 10px;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAQAAAAnOwc2AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjBRQKFQx4C6PdAAAAgklEQVQI11WOMQ7BABhGXx9nIG3SjYsYnMFicxC7I1gtdobiKFYDiYGpkupvaFV8b/vy5cvD1MLKaKk8miUWTPllScq4zwSAJxtqZpx5scAwfDgSMfduGE25lpaVYQhA2X3WAM3yZi7i0IthJFb0gCtbSuakwBv3neOXEw7c/ckfzD4LKThtTKWFKAAAAABJRU5ErkJggg==") no-repeat center;
+  top: 6px;
+  left: 6px;
+}
 .socials__href:hover {
   background-color: #000;
   border-color: #000;
