@@ -14,7 +14,7 @@ import Contacts from './modules/contacts';
 import News from './modules/news';
 import Floors from './modules/floors';
 
-document.addEventListener('DOMContentLoaded', () => {
+window.onload = () => {
   const burger = new Burger();
 
   if (qs('.js-banner')) {
@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
       {
         bannerClass: '.js-banner',
         postersClass: '.js-posters',
+        posterDscClass: '.js-poster-dsc',
         galleryClass: '.js-gallery',
       },
     );
@@ -79,4 +80,4 @@ document.addEventListener('DOMContentLoaded', () => {
     eventScroll.initEvent('scroll', false, false);
   }
   window.dispatchEvent(eventScroll);
-});
+};

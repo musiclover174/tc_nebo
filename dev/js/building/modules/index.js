@@ -4,10 +4,12 @@ export default class Index {
   constructor({
     bannerClass,
     postersClass,
+    posterDscClass,
     galleryClass,
   }) {
     this.bannerClass = bannerClass;
     this.postersClass = postersClass;
+    this.posterDscClass = posterDscClass;
     this.galleryClass = galleryClass;
 
     if (qs(bannerClass)) this.bannerInit();
@@ -57,6 +59,8 @@ export default class Index {
         },
       },
     });
+
+    qsAll(this.posterDscClass).forEach(dsc => shave(dsc, 78));
   }
 
   galleryInit() {
