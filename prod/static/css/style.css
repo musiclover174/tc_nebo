@@ -3931,7 +3931,7 @@ textarea.warning {
   }
 }
 .header__img {
-  max-width: 100%;
+  max-width: 282px;
 }
 @media (max-width: 767px) {
   .header__img {
@@ -5200,7 +5200,6 @@ body.burgeropen .menu {
   color: #000;
   font-family: "ProximaNova";
   font-size: 16px;
-  line-height: 400;
   -webkit-transition: 0.7s border;
   transition: 0.7s border;
 }
@@ -5252,8 +5251,8 @@ body.burgeropen .menu {
   }
 }
 .banner__car .swiper-slide-active .banner__img {
-  -webkit-transform: scale(1.02) translateX(-50%);
-  transform: scale(1.02) translateX(-50%);
+  -webkit-transform: scale(1.02);
+  transform: scale(1.02);
   -webkit-transition: 8s -webkit-transform linear;
   transition: 8s -webkit-transform linear;
   transition: 8s transform linear;
@@ -5267,13 +5266,15 @@ body.burgeropen .menu {
 .banner__img {
   position: absolute;
   top: 0;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: -1;
-  -webkit-transform: scale(1) translateX(-50%);
-  transform: scale(1) translateX(-50%);
+  -webkit-transform: scale(1);
+  transform: scale(1);
   will-change: transform;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 .banner__title {
   color: #fff;
