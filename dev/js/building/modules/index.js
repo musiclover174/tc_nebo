@@ -69,6 +69,7 @@ export default class Index {
       slidesPerView: 'auto',
       spaceBetween: -30,
       loop: true,
+      autoHeight: true,
       loopedSlides: qsAll(`${this.galleryClass} .swiper-slide`).length,
       breakpoints: {
         500: {
