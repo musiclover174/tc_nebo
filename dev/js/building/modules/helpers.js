@@ -53,16 +53,46 @@ function fadeOut(elem, ms, cb) {
   }
 }
 
-function scrollTo(to, duration) {
-  if (duration <= 0) return;
-  const element = document.documentElement;
-  const difference = to - element.scrollTop;
-  const perTick = difference / duration * 10;
+function scrollIt(destination, duration = 1500, callback) {
+  const start = window.pageYOffset;
+  const startTime = 'now' in window.performance ? performance.now() : new Date().getTime();
 
-  setTimeout(() => {
-    element.scrollTop += perTick;
-    scrollTo(to, duration - 10);
-  }, 10);
+  const documentHeight = Math.max(
+    document.body.scrollHeight,
+    document.body.offsetHeight,
+    document.documentElement.clientHeight,
+    document.documentElement.scrollHeight,
+    document.documentElement.offsetHeight,
+  );
+  const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
+  const destinationOffset = typeof destination === 'number' ? destination : destination.offsetTop - 20;
+  const destinationOffsetToScroll = Math.round(documentHeight - destinationOffset < windowHeight ? documentHeight - windowHeight : destinationOffset);
+
+  if ('requestAnimationFrame' in window === false) {
+    window.scroll(0, destinationOffsetToScroll);
+    if (callback) {
+      callback();
+    }
+    return;
+  }
+
+  function scroll() {
+    const now = 'now' in window.performance ? performance.now() : new Date().getTime();
+    const time = Math.min(1, ((now - startTime) / duration));
+    const timingFunction = time * (2 - time);
+    window.scroll(0, Math.ceil((timingFunction * (destinationOffsetToScroll - start)) + start));
+
+    if (window.pageYOffset === destinationOffsetToScroll) {
+      if (callback) {
+        callback();
+      }
+      return;
+    }
+
+    requestAnimationFrame(scroll);
+  }
+
+  scroll();
 }
 
 function visChecker(el) {
@@ -109,13 +139,10 @@ function elemVisCheck() {
 function scrollToInit() {
   qsAll('.js-scrollTo').forEach((elem) => {
     elem.addEventListener('click', (e) => {
-      const toElem = qs(`[data-scrollId="${elem.getAttribute('data-to')}"]`);
-      const { top } = toElem.getBoundingClientRect();
       const duration = elem.getAttribute('data-duration') || 1000;
-      
-      scrollTo(top, duration);
+      scrollIt(qs(`[data-scrollId="${elem.getAttribute('data-to')}"]`), duration);
       e.preventDefault();
-    })
+    });
   });
 }
 
