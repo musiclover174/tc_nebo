@@ -13,6 +13,11 @@ html
           +e.href(href="#") Главная
           +e('span').delim
         h1 Новости
+        +b('section').types
+          +e.wrapper
+            +e.href._active(href="#") Новости
+            +e.href(href="#") Акции
+            +e.href(href="#") События
         +b('section').news.js-news
           +e.row
             +e.col._col12

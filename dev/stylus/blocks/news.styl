@@ -301,3 +301,45 @@
       ml 10px
       size 6px 8px
       background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAICAQAAABwz0azAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAR0OGAqrRzkzAAAARElEQVQI113MsQ1AUAAG4d+rzCJvBluYwyr20JmBdbQq+RQiwnWXXC6qVScisWDX39KacRgkophwGkteml/2GVTbs74ASKE6wqc+1iYAAAAASUVORK5CYII=') no-repeat center
+
+.types
+  df(flex-start, center)
+  mb 79px
+  @media $PortraitMedium
+    mb 50px
+  &__wrapper
+    pos relative
+    df()
+    &:before
+      content ""
+      pos absolute
+      h 1px
+      b -27px
+      l -60px
+      r -60px
+      bgc #e3e3e3
+      @media $PortraitMedium
+        dn()
+  &__href
+    pos relative
+    c black
+    fontify 21px 400 21px
+    transition .7s color
+    @media $PortraitMedium
+      fontify 18px 400 18px
+    &_active,
+    &:hover
+      c $red
+    &_active:before
+      content ""
+      pos absolute
+      l 0
+      b -27px
+      size 100% 2px
+      bgc $red
+      @media $PortraitMedium
+        b -5px
+    & + &
+      ml 29px
+      @media $PortraitMedium
+        ml 19px
