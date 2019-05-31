@@ -7650,7 +7650,7 @@ body.burgeropen .menu {
   position: relative;
   margin-right: 0;
   margin-left: auto;
-  max-width: 985px;
+  max-width: 1280px;
 }
 .map__floors {
   position: absolute;
@@ -7745,7 +7745,7 @@ body.burgeropen .menu {
 .map__floor-title {
   position: absolute;
   left: 0;
-  top: 51px;
+  top: 0;
 }
 @media (max-width: 670px) {
   .map__floor-title {
