@@ -99,7 +99,7 @@ function visChecker(el) {
   const rect = el.getBoundingClientRect();
   const wHeight = window.innerHeight || document.documentElement.clientHeight;
   return (
-    rect.top <= wHeight * 0.65
+    rect.top <= wHeight * 0.85
   );
 }
 

@@ -4126,6 +4126,8 @@ body:not(.index) .header {
 }
 .menu__href {
   position: relative;
+  display: inline-block;
+  vertical-align: top;
   color: #000;
   font-size: 15px;
   font-weight: 700;
