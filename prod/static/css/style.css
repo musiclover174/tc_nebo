@@ -7973,6 +7973,7 @@ body.burgeropen .menu {
 @media (max-width: 950px) {
   .magazines__item-info {
     margin-top: 20px;
+    width: 100%;
   }
 }
 @media (min-width: 951px) {
@@ -7986,6 +7987,7 @@ body.burgeropen .menu {
     opacity: 0;
     visibility: hidden;
     background-color: #fff;
+    min-height: 45px;
     -webkit-box-shadow: 0 3px 34.3px 0.7px rgba(112,118,126,0.15);
     box-shadow: 0 3px 34.3px 0.7px rgba(112,118,126,0.15);
     -webkit-transition: 0.7s opacity, 0.7s visibility, 0.7s top;
