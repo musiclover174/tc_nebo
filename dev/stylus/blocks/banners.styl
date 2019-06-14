@@ -10,21 +10,30 @@
       @media $LandscapeMin
         min-height 320px
         padding 60px 0
-      &-active ^[0]__img
-        transform scale(1.02)
-        transition 8s transform linear
+      // &-active ^[0]__img
+      //   transform scale(1.02)
+      //   transition 8s transform linear
     .swiper-buttons
       @media $desktopTablet
         dn()
   &__img
-    pos absolute
-    t 0
-    l 0
-    size 100%
-    z-index -1
-    transform scale(1)
-    will-change transform
-    object-fit cover
+    h 100%
+    // pos absolute
+    // t 0
+    // l 0
+    // size 100%
+    // z-index -1
+    // transform scale(1)
+    // will-change transform
+    // object-fit cover
+    &-wrapper 
+      pos absolute
+      z-index -1
+      l 0
+      t 0
+      oh()
+      df(center, center)
+      size 100%
   &__title
     c white
     fontify 70px 800 70px

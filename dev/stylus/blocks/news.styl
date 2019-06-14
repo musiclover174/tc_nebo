@@ -74,6 +74,9 @@
         max-width 100%
         text-align center
     @media $LandscapeMediumMin
+      &_col2_5
+        flex 0 0 20.8333335%
+        max-width 20.8333335%
       &_col3
         flex 0 0 25%
         max-width 25%
@@ -83,6 +86,9 @@
       &_col5
         flex 0 0 41.666667%
         max-width 41.666667%
+      &_col5_5
+        flex 0 0 45.8333335%
+        max-width 45.8333335%
       &_col8
         flex 0 0 66.666667%
         max-width 66.666667%
@@ -104,9 +110,11 @@
       @media $desktopMedium
         pt 80%
     &_vertical
-      pt calc(95% + 1px)
+      // pt calc(95% + 1px)
+      pt 133%
       @media $desktopMedium
-        pt 102%
+        // pt 102%
+        pt calc(143% + 1px)
       @media $LandscapeMedium
         dn()
     &_large
@@ -126,7 +134,8 @@
             mt -65px
             mr 57px
             w calc(50% + 30px)
-            pt 33%
+            // pt 33%
+            h 370px
           &-content
             w calc(50% - 95px)
       @media (min-width:951px) and (max-width:1270px)
@@ -139,19 +148,29 @@
           &-content
             w calc(50% - 20px)
     &-img
-      pos absolute
-      l 0
-      t 0
-      size 100%
-      object-fit cover
-      object-position 100% 0
-      font-family 'object-fit: cover;'
-      transition 1.5s transform
-      will-change transform
-      -webkit-backface-visibility hidden
-      transform scale(1.017) translateZ(0)
+      w 100%
+      will-change opacity
+      transition .7s opacity
+      &-wrapper
+        pos absolute
+        l 0
+        t 0
+        oh()
+        df(center, center)
+        size 100%
+      // pos absolute
+      // l 0
+      // t 0
+      // size 100%
+      // object-fit cover
+      // object-position 100% 0
+      // font-family 'object-fit: cover;'
+      // transition 1.5s transform
+      // will-change transform
+      // -webkit-backface-visibility hidden
+      // transform scale(1.017) translateZ(0)
     &:hover &-img
-      transform scale(1) translateZ(0)
+      opacity .85
     &-titleover
       pos absolute
       l 0
@@ -184,9 +203,10 @@
       border-bottom 1px solid transparent
       transition .7s border
     &-imgover
-      db()
+      df(center, center)
       w 100%
-      pt 63%
+      h 233px
+      // pt 63%
       overflow hidden
       pos relative
     &-content
