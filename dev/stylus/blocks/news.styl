@@ -60,6 +60,9 @@
     padding 0 15px
     @media $desktopMedium
       padding 0 10px
+    @media $LandscapeMedium
+      &:nth-child(2n + 3)
+        mt 20px
     @media $PortraitMedium
       flex 0 0 100%
       max-width 100%
@@ -104,9 +107,7 @@
         mb 30px
     &_index
       oh()
-      pt 70%
-      @media $desktopMax
-        pt 71%
+      pt 68%
       @media $desktopMedium
         pt 80%
     &_vertical

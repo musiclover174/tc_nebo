@@ -202,7 +202,7 @@
       pos absolute
       l 0
       b 0
-      size 100% calc(100% - 15px)
+      size 100% 100%
       object-fit contain
       font-family 'object-fit: contain;'
     &-name
@@ -298,13 +298,19 @@
     ml auto
     // max-width 985px
     max-width 1280px
+    @media $PortraitMax
+      pt 40px
   &__floors
     pos absolute
     z-index 1
-    dfv()
+    df()
     r 0
-    t 50%
-    transform translateY(-50%)
+    t -2px
+    @media $PortraitMax
+      l 50%
+      r auto
+      t 0
+      transform translateX(-50%)
     &-btn
       pos relative
       size 60px
@@ -337,9 +343,7 @@
     &:not(.active)
       dn()
     &-img
-      max-width calc(100% - 83px)
-      @media $LandscapeMin
-        max-width calc(100% - 53px)
+      max-width 100%
     &-title
       pos absolute
       l 0
