@@ -36,7 +36,7 @@ window.onload = () => {
 
   if (qsAll('.h-anim').length) elemVisCheck();
 
-  if (qs('.js-contacts-map')) {
+  if (typeof(ymaps) !== 'undefined' && qs('.js-contacts-map')) {
     const contacts = new Contacts('.js-contacts-map');
   }
 
